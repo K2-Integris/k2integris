@@ -24,6 +24,8 @@ body {
   font-size: 62.5%;
   outline: none;
   border: none;
+
+  list-style-type: none;
 }
 
 a {
@@ -35,8 +37,19 @@ a, button, label, input, textarea {
   cursor: pointer;
 }
 
-h1 {
+h1, h1 span {
+  font-size: 8rem;
+  font-weight: 100;
 
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+h1 span {
+  font-weight: 300;
+  display: block;
 }
 
 h2 {
@@ -51,9 +64,52 @@ p {
 
 }
 
+.wrapper {
+  width: min(90vw, 130rem);
+  margin: auto;
+}
+
+nav {
+  width: 100vw;
+}
+
+nav ul a {
+  color: var(--gold);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 3rem 3rem;
+  display: block;
+}
+
+ul.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  margin: auto;
+  display: inline-block;
+  padding: 2rem 0;
+}
+
+#text-logo {
+  font-family: "Amiri";
+  font-size: 5.7rem;
+  color: #aa8d61;
+}
+
+nav .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 header {
   width: 100vw;
   min-height: 100vh;
 
-  background: linear-gradient(to bottom, var(--black) 5%, var(--gold) 95%);
+  background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
+}
+
+header h1 {
+  margin-top: 8rem;
 }

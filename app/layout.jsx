@@ -1,8 +1,13 @@
-import { Outfit } from "next/font/google";
+import { Outfit, Amiri } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",
+  subsets: ["latin"],
+});
+
+const amiri = Outfit({
+  variable: "--font-amiri",
   subsets: ["latin"],
 });
 
@@ -14,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable}`}>{children}</body>
+      <body className={`${outfit.variable} ${amiri.variable}`}>{children}</body>
     </html>
   );
 }
