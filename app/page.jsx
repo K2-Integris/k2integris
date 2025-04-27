@@ -7,16 +7,18 @@ export default function Home() {
   return (
     <>
       <header>
-        <Navigation />
-        <div className="wrapper">
-          <h1>
-            We help you grow <span>your business</span>
-          </h1>
+        <div className="overlay">
+          <Navigation />
+          <div className="wrapper">
+            <h1>
+              We help you grow <span>your business</span>
+            </h1>
+          </div>
+          <Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />
+          <button>
+            OUR SERVICES
+          </button>
         </div>
-        <Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />
-        <button>
-          OUR SERVICES
-        </button>
       </header>
     </>
   );

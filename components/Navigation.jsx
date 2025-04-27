@@ -6,7 +6,7 @@ const Navigation = () => {
         <nav>
             <div className="wrapper">
                 <a id="logo" href="https://k2integris.com">
-                    <Image src="/images/logo.png" width={79.5} height={47} alt="K2Integris Logo" />
+                    <Image src="/images/logo.png" width={50} height={30} alt="K2Integris Logo" />
                 </a>
             </div>
 
