@@ -1,35 +1,51 @@
 nav {
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
-    #logo {
-        margin: 0.5rem auto 0;
-        display: inline-block;
-        padding: 2rem 0;
-    }
-    
-    #text-logo {
-        font-family: "Amiri";
-        font-size: 2.7rem;
-        color: #aa8d61;
-    }
+    background-color: var(--black);
+    background-color: transparent;
 
     .wrapper {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    ul {
-        .wrapper {
-            display: flex;
-            align-items: center;
-        }
+    .logo-wrapper {
+        padding: 3rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-        a {
-            color: var(--gold);
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            padding: 3rem 1rem;
+    #text-logo {
+        font-size: 1.7rem;
+        color: var(--gold);
+        font-family: 'Amiri';
+    }
+
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        background-color: transparent;
+
+        span {
             display: block;
+
+            width: 2.3rem;
+            height: 0.1rem;
+
+            background-color: var(--gold);
+
+            &:nth-of-type(2) {
+                width: 1.8rem;
+            }
         }
     }
 }

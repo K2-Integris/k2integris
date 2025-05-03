@@ -1,24 +1,33 @@
-import Image from "next/image";
+import ScrollSeperator from "@/components/ScrollSeperator";
 import styles from "./page.module.css";
 
 import Navigation from "@/components/Navigation";
 
 export default function Home() {
+
   return (
     <>
+      <Navigation />
       <header>
-        <Navigation />
-        <div className="overlay">
-          <div className="wrapper header">
-            <h1>
-              Empowering <span>Businesses</span> to Reach New Digital <span>Heights</span>
-            </h1>
+       <div className="overlay"></div>
+       <article className="wrapper">
+        <h1>
+            Empowering<br />Businesses to <span>Reach</span><br /> New Digital <span>Heights</span>
+          </h1>
 
-            <button>
-              REQUEST A CONSULTATION
-            </button>
-          </div>
-        </div>
+          <button className="cta">
+            Our Solutions
+          </button>
+       </article>
+
+       <ScrollSeperator />
+
+       <article className="wrapper">
+        <h2>
+          A Strategic <span>Partner</span>,<br />
+          Not Just a Vendor
+        </h2>
+       </article>
       </header>
     </>
   );

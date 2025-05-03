@@ -5,44 +5,21 @@ const Navigation = () => {
     return (
         <nav>
             <div className="wrapper">
-                <a id="logo" href="https://k2integris.com">
-                    <Image src="/images/logo.png" width={50} height={30} alt="K2Integris Logo" />
-                </a>
-            </div>
+                <div className="logo-wrapper">
+                    <Link id="logo" href="https://k2integris.com">
+                        <Image src="/images/logo.png" width={29} height={17} alt="K2Integris Logo" />
+                    </Link>
+                    <Link id="text-logo" href="https://k2integris.com">
+                        K2INTEGRIS
+                    </Link>
+                </div>
 
-            <div className="wrapper">
-                <a id="text-logo" href="https://k2integris.com">
-                    K2INTEGRIS
-                </a>
+                <button id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
-            <ul className="wrapper">
-                <li>
-                    <Link href="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/">
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link href="">
-                        Services
-                    </Link>
-                </li>
-                <li>
-                    <Link href="">
-                        Work
-                    </Link>
-                </li>
-                <li>
-                    <Link href="">
-                        Contact
-                    </Link>
-                </li>
-            </ul>
         </nav>
     )
 }

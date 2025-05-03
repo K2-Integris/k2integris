@@ -1,4 +1,4 @@
-import { Outfit, Amiri } from "next/font/google";
+import { Outfit, Amiri, Syncopate } from "next/font/google";
 import "./css/style.css";
 
 const outfit = Outfit({
@@ -6,9 +6,16 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-const amiri = Outfit({
+const amiri = Amiri({
   variable: "--font-amiri",
   subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const syncopate = Syncopate({
+  variable: "--font-syncopate",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -19,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${amiri.variable}`}>{children}</body>
+      <body className={`${outfit.variable} ${amiri.variable}  ${syncopate.variable}`}>{children}</body>
     </html>
   );
 }
