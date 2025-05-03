@@ -1,6 +1,5 @@
 header {
     width: 100vw;
-    height: 100vh;
 
     margin-bottom: 100vh;
 
@@ -34,7 +33,11 @@ header {
         }
 
         &:nth-of-type(2) {
-            padding-top: 4rem;
+            padding-top: 6rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
         }
 
         h1, h1 span, h2, h2 span {
@@ -59,23 +62,36 @@ header {
             text-align: right;
         }
 
+        p {
+            color: var(--white);
+            opacity: 0.6;
+            text-align: center;
+            font-size: 1.9rem;
+            line-height: 3rem;
+            font-weight: 300;
+        }
+
         .cta {
             display: block;
             padding: 0 4rem;
             margin: 5rem auto;
             
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 100;
 
             color: var(--white);
 
             height: 4.4rem;
-            border-radius: 2.2rem;
+            border-radius: 1.2rem;
 
             background-color: #0000001f;
             border: 1px solid var(--gold);
             // TODO gradient border
             backdrop-filter: blur(10px);
+
+            text-transform: uppercase;
+            font-family: 'Syncopate';
+            letter-spacing: 0.3rem;
         }
     }
 
@@ -102,6 +118,63 @@ header {
             width: 0.1rem;
             background-color: var(--gold);
             margin: 0 1rem -0.4rem;
+        }
+    }
+
+    .snapp {
+        white-space: nowrap;
+        overflow: scroll !important;
+        scroll-snap-type: x mandatory;
+        width: 100vw;
+        margin-top: 5rem;
+        padding: 0 3rem;
+
+        position: relative;
+        z-index: 10;
+
+        .card {
+            display: inline-block;
+            width: 25rem;
+            
+            margin-right: 3rem;
+
+            border: 2px solid var(--gold);
+            border-radius: 1rem;
+
+            background-color: #111517bf;
+            backdrop-filter: blur(10px);
+            scroll-snap-align: center;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            svg {
+                display: block;
+                margin: 3rem auto 1rem;
+                width: 5rem;
+                height: 5rem;
+            }
+
+            h3, p {
+                text-align: center;
+                color: var(--white);
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                line-height: 3.2rem;
+                margin: 2rem 0;
+                font-weight: 200;
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                opacity: 0.6;
+                white-space: wrap;
+                margin: 0 3rem 3rem;
+            }
         }
     }
 }

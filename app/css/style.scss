@@ -10,12 +10,15 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    background-color: var(--black);
+}
+
 body {
     font-family: Outfit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: var(--black);
     background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
 }
 
@@ -29,6 +32,7 @@ body {
     border: none;
 
     list-style-type: none;
+    scrollbar-width: none;
 }
 
 a {

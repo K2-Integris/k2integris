@@ -6,8 +6,8 @@ nav {
     right: 0;
     z-index: 1000;
 
-    background-color: var(--black);
-    background-color: transparent;
+    background-color: #111517d4;
+    backdrop-filter: blur(10px);
 
     .wrapper {
         display: flex;
