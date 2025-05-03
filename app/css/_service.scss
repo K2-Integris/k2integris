@@ -1,0 +1,69 @@
+#service {
+    position: relative;
+    margin-bottom: 100vh;
+
+    .overlay {
+        background-image: url('/images/Logo-Pattern.png');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: 350vw;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -20rem;
+        background-attachment: fixed;
+        opacity: 0.6;
+
+        z-index: 0;
+    }
+
+    .wrapper {
+        z-index: 100;
+        position: relative;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+
+        white-space: wrap;
+
+        .card {
+            white-space: wrap;
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(-45deg, #111517a8 54%, #bc976f29);
+            padding: 5rem 3rem;
+            margin-right: 5vw;
+            margin-bottom: 3rem;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+
+                h2 {
+                    color: white;
+                    font-size: 3rem;
+                    font-weight: 200;
+                    line-height: 4rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    color: var(--gold);
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 200;
+                }
+
+                p {
+                    color: white;
+                    opacity: 0.6;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
+}

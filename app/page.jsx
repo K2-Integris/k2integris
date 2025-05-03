@@ -2,6 +2,7 @@ import ScrollSeperator from "@/components/ScrollSeperator";
 import styles from "./page.module.css";
 
 import Navigation from "@/components/Navigation";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -16,7 +17,7 @@ export default function Home() {
           </h1>
 
           <button className="cta">
-            Our Solutions
+            Request a Consultation
           </button>
        </article>
 
@@ -30,6 +31,20 @@ export default function Home() {
         <p>
           At K2Integris, we don't just write code or push pixels. We align digital solutions with your core business goals — delivering long-term value through strategic thinking, clean engineering, and operational insight.
         </p>
+        <div className="info-box">
+          <Link href="">
+            Business Apps
+          </Link>
+          <Link href="">
+            Websites
+          </Link>
+          <Link href="">
+            eCommerce
+          </Link>
+          <Link href="">
+            Advertisement
+          </Link>
+        </div>
        </article>
 
        <article className="snapp">
@@ -124,6 +139,76 @@ export default function Home() {
         </div>
        </article>
       </header>
+
+      <section id="service">
+        <div className="overlay"></div>
+
+        <div className="wrapper">
+          <article className="card">
+            <div className="content">
+              <h2>
+                Business Applications
+              </h2>
+
+              <h3>
+                Custom-built tools to streamline your operations.
+              </h3>
+
+              <p>
+                We design and develop secure, scalable business applications tailored to your workflow — from internal platforms to client-facing portals. Seamless integration with your existing systems is our standard.
+              </p>
+            </div>
+          </article>
+
+          <article className="card">
+            <dic className="content">
+              <h2>
+                Custom Websites
+              </h2>
+
+              <h3>
+                More than just beautiful — engineered for results.
+              </h3>
+
+              <p>
+                Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices, and blazing fast.
+              </p>
+            </dic>
+          </article>
+
+          <article className="card">
+            <div className="content">
+              <h2>
+                E - Commerce
+              </h2>
+
+              <h3>
+                Enterprise-grade online stores that scale.
+              </h3>
+
+              <p>
+                Whether B2B or B2C, we create e-commerce platforms that deliver. From UX to payment integrations, multilingual and multicurrency support, we optimize every step of the buyer journey for growth.
+              </p>
+            </div>
+          </article>
+
+          <article className="card">
+            <div className="content">
+              <h2>
+                Digital<br />Marketing & SEO
+              </h2>
+
+              <h3>
+                We don't just build — we help you grow.
+              </h3>
+
+              <p>
+                Get found, get clicks, get results. We offer full-service SEO, Google Ads, LinkedIn, and Meta campaigns tailored to your market. Backed by analytics and ROI tracking, always focused on business outcomes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </>
   );
 }
