@@ -1,5 +1,5 @@
 import { Outfit, Amiri } from "next/font/google";
-import "./globals.css";
+import "./css/style.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",

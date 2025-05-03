@@ -7,19 +7,21 @@ export default function Home() {
   return (
     <>
       <header>
+        <Navigation />
         <div className="overlay">
-          <Navigation />
-          <div className="wrapper">
+          <div className="wrapper header">
             <h1>
-              We help you grow <span>your business</span>
+              Empowering <span>Businesses</span> to Reach New Digital <span>Heights</span>
             </h1>
+
+            <button>
+              REQUEST A CONSULTATION
+            </button>
           </div>
-          <Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />
-          <button>
-            OUR SERVICES
-          </button>
         </div>
       </header>
     </>
   );
 }
+
+//<Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />

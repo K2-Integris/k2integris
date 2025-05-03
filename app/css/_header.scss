@@ -1,0 +1,52 @@
+header {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
+
+
+    .overlay {
+       background-image: url('/images/Background-SVG-Group.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: 220vw;
+      
+        width: 100%;
+        height: 100%;
+
+        .wrapper.header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+      }
+
+      h1, span {
+        font-size: 3rem;
+        font-weight: 200;
+        line-height: 5rem;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: var(--white);
+
+        span {
+            font-weight: 400;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        color: var(--white);
+
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 2px solid var(--gold);
+      }
+}
