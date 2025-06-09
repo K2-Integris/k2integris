@@ -10,20 +10,103 @@ export default function Home() {
     <>
       <Navigation />
       <header>
-       <div className="overlay"></div>
        <article className="wrapper">
         <h1>
-            Empowering<br />Businesses to <span>Reach</span><br /> New Digital <span>Heights</span>
-          </h1>
+          Empowering<br />Businesses to <span>Reach</span><br /> New Digital <span>Heights</span>
+        </h1>
 
-          <button className="cta">
-            Request a Consultation
-          </button>
+        <ScrollSeperator />
+
+        <button className="cta">
+          Request a Consultation
+        </button>
        </article>
+      </header>
 
-       <ScrollSeperator />
+      <section id="service">
+        <div className="overlay"></div>
 
-       <article className="wrapper">
+        <div className="wrapper">
+          <h2>
+            A Strategic <span>Partner</span>,<br />
+            Not Just a Vendor
+          </h2>
+        </div>
+
+        <div className="card-wrapper">
+          <article className="card">
+            <div className="content">
+              <h2>
+                Business Applications
+              </h2>
+
+              <h3>
+                Custom-built tools to streamline your operations.
+              </h3>
+
+              <p>
+                We design and develop secure, scalable business applications tailored to your workflow — from internal platforms to client-facing portals. Seamless integration with your existing systems is our standard.
+              </p>
+            </div>
+          </article>
+
+          <article className="card">
+            <dic className="content">
+              <h2>
+                Custom Websites
+              </h2>
+
+              <h3>
+                More than just beautiful — engineered for results.
+              </h3>
+
+              <p>
+                Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices, and blazing fast.
+              </p>
+            </dic>
+          </article>
+
+          <article className="card">
+            <div className="content">
+              <h2>
+                E - Commerce
+              </h2>
+
+              <h3>
+                Enterprise-grade online stores that scale.
+              </h3>
+
+              <p>
+                Whether B2B or B2C, we create e-commerce platforms that deliver. From UX to payment integrations, multilingual and multicurrency support, we optimize every step of the buyer journey for growth.
+              </p>
+            </div>
+          </article>
+
+          <article className="card">
+            <div className="content">
+              <h2>
+                Marketing & SEO
+              </h2>
+
+              <h3>
+                We don't just build — we help you grow.
+              </h3>
+
+              <p>
+                Get found, get clicks, get results. We offer full-service SEO, Google Ads, LinkedIn, and Meta campaigns tailored to your market. Backed by analytics and ROI tracking, always focused on business outcomes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
+
+//<Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />
+
+/*
+
         <h2>
           A Strategic <span>Partner</span>,<br />
           Not Just a Vendor
@@ -45,9 +128,9 @@ export default function Home() {
             Advertisement
           </Link>
         </div>
-       </article>
 
-       <article className="snapp">
+
+               <article className="snapp">
         <div className="card">
           <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M32.0833 13.125V15.3533C31.3892 16.3596 26.5198 18.2277 17.8354 18.2277C8.73687 18.2277 3.63708 16.2473 2.91667 15.1827V13.125H32.0833ZM35 10.2083H0V15.2994C0 19.1742 8.97458 21.1458 17.8354 21.1458C26.4717 21.1458 35 19.2733 35 15.4656V10.2083ZM32.0833 21.9829V29.1667H2.91667V21.8735C1.71646 21.3821 0.76125 20.8367 0 20.2752V32.0833H35V20.491C34.1498 21.0773 33.1596 21.5717 32.0833 21.9829ZM20.4167 24.8383C20.4167 26.4235 19.11 27.7083 17.5 27.7083C15.89 27.7083 14.5833 26.4235 14.5833 24.8383V23.3333H20.4167V24.8383ZM13.125 2.91666C11.515 2.91666 10.2083 4.22332 10.2083 5.83332V8.74999H13.125V6.56249C13.125 6.15999 13.4517 5.83332 13.8542 5.83332H21.1458C21.5483 5.83332 21.875 6.15999 21.875 6.56249V8.74999H24.7917V5.83332C24.7917 4.22332 23.485 2.91666 21.875 2.91666H13.125Z" fill="url(#paint0_linear_106_367)"/>
@@ -138,12 +221,8 @@ export default function Home() {
           </p>
         </div>
        </article>
-      </header>
 
-      <section id="service">
-        <div className="overlay"></div>
-
-        <div className="wrapper">
+<div className="wrapper">
           <article className="card">
             <div className="content">
               <h2>
@@ -208,9 +287,4 @@ export default function Home() {
             </div>
           </article>
         </div>
-      </section>
-    </>
-  );
-}
-
-//<Image src="/images/persons.png" alt="Mateusz Kaminski & Viktor Karpinski" width={862} height={470} id="us" />
+*/

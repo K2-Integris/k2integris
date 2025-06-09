@@ -124,25 +124,14 @@ nav #hamburger span:nth-of-type(2) {
 
 header {
   width: 100vw;
-  overflow: hidden;
   background-color: transparent;
   position: relative;
-}
-
-header .overlay {
-  background-position: center 10rem;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 200%;
-  position: absolute;
-  z-index: 0;
 }
 
 header .wrapper {
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 
 header .wrapper:first-of-type {
@@ -195,7 +184,6 @@ header .wrapper h1, header .wrapper h1 span, header .wrapper h2, header .wrapper
 
 header .wrapper h1 span, header .wrapper h1 span span, header .wrapper h2 span, header .wrapper h2 span span {
   font-weight: 500;
-  color: var(--gold);
 }
 
 header .wrapper h2, header .wrapper h2 span {
@@ -215,12 +203,13 @@ header .wrapper p {
 
 header .wrapper .cta {
   display: block;
-  padding: 0 4rem;
-  margin: 6rem auto 4rem;
+  padding: 2rem 4rem;
+  margin: 15rem auto 4rem;
+  width: 100%;
   font-size: 1.4rem;
   font-weight: 100;
   color: var(--white);
-  height: 4.4rem;
+  height: 5.5rem;
   border-radius: 0rem;
   background-color: #0000001f;
   border: 1px solid var(--gold);
@@ -233,13 +222,16 @@ header .wrapper .cta {
 header .scroll-seperator {
   white-space: nowrap;
   padding: 2rem 1rem 0;
-  position: relative;
+  position: absolute;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: -webkit-transform 0s linear;
   transition: -webkit-transform 0s linear;
   transition: transform 0s linear;
   transition: transform 0s linear, -webkit-transform 0s linear;
+  z-index: 10;
+  margin-top: 4rem;
+  left: -1rem;
 }
 
 header .scroll-seperator p, header .scroll-seperator div {
@@ -248,14 +240,17 @@ header .scroll-seperator p, header .scroll-seperator div {
 
 header .scroll-seperator p {
   color: var(--gold);
+  color: var(--white);
   font-size: 1rem;
   font-family: 'Syncopate';
+  font-weight: 900;
 }
 
 header .scroll-seperator div {
   height: 1.5rem;
   width: 0.1rem;
   background-color: var(--gold);
+  background-color: var(--white);
   margin: 0 1rem -0.4rem;
 }
 
@@ -315,44 +310,65 @@ header .snapp .card p {
   margin: 0 3rem 3rem;
 }
 
-#service {
-  position: relative;
-  margin-bottom: 100vh;
-}
-
 #service .overlay {
-  background-image: url("/images/Logo-Pattern.png");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: 350vw;
-  width: 100%;
-  height: 100%;
+  background-image: url("/images/Header-Background.png");
+  background-position: center 3rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  aspect-ratio: 1 / 2;
   position: absolute;
-  top: -20rem;
-  background-attachment: fixed;
-  opacity: 0.6;
   z-index: 0;
 }
 
 #service .wrapper {
   z-index: 100;
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
   white-space: wrap;
 }
 
-#service .wrapper .card {
+#service .wrapper h2, #service .wrapper h2 span {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+#service .wrapper h2 span, #service .wrapper h2 span span {
+  font-weight: 500;
+}
+
+#service .card-wrapper {
+  margin: 0rem 0 6rem 0;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+#service .card-wrapper .card {
   white-space: wrap;
   display: inline-block;
-  width: 100%;
-  background: linear-gradient(-45deg, #111517a8 54%, #bc976f29);
-  padding: 5rem 3rem;
-  margin-right: 5vw;
+  width: calc(100% - 10%);
+  scroll-snap-align: center;
+  background: #1111110D;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  padding: 3.5rem 2.5rem;
+  margin-left: 5vw;
+  border: 1px solid #BC976F4F;
   margin-bottom: 3rem;
 }
 
-#service .wrapper .card .content {
+#service .card-wrapper .card:last-of-type {
+  margin-right: 5vw;
+}
+
+#service .card-wrapper .card .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,31 +376,32 @@ header .snapp .card p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
-#service .wrapper .card .content h2 {
+#service .card-wrapper .card .content h2 {
   color: white;
-  font-size: 3rem;
-  font-weight: 200;
-  line-height: 4rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-#service .wrapper .card .content h3 {
   font-size: 2rem;
-  color: var(--gold);
+  font-weight: 300;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#service .card-wrapper .card .content h3 {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: var(--white);
   text-transform: uppercase;
   text-align: center;
   font-weight: 200;
 }
 
-#service .wrapper .card .content p {
+#service .card-wrapper .card .content p {
   color: white;
-  opacity: 0.6;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: center;
   line-height: 2.5rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

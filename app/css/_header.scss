@@ -1,31 +1,15 @@
 header {
     width: 100vw;
 
-    overflow: hidden;
-
-//    background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
+//  background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
     background-color: transparent;
 
     position: relative;
 
-
-   .overlay {
-       // background-image: url('/images/Header-Background.png');
-        background-position: center 10rem;
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        width: 100%;
-        height: 200%;
-
-        position: absolute;
-        z-index: 0;
-    }
-
     .wrapper {
         position: relative;
         z-index: 1;
-        overflow: hidden;
+        overflow: visible;
 
         &:first-of-type {
             padding-top: 15rem;
@@ -71,7 +55,7 @@ header {
 
             span {
                 font-weight: 500;
-                color: var(--gold);
+                //color: var(--gold);
                 // TODO text gradient
             }
         }
@@ -93,15 +77,16 @@ header {
 
         .cta {
             display: block;
-            padding: 0 4rem;
-            margin: 6rem auto 4rem;
+            padding: 2rem 4rem;
+            margin: 15rem auto 4rem;
+            width: 100%;
             
             font-size: 1.4rem;
             font-weight: 100;
 
             color: var(--white);
 
-            height: 4.4rem;
+            height: 5.5rem;
             border-radius: 0rem;
 
             background-color: #0000001f;
@@ -117,9 +102,14 @@ header {
     .scroll-seperator {
         white-space: nowrap;
         padding: 2rem 1rem 0;
-        position: relative;
+        position: absolute;
         transform: translateX(0);
         transition: transform 0s linear;
+        z-index: 10;
+
+        margin-top: 4rem;
+
+        left: -1rem;
 
         p, div {
             display: inline-block;
@@ -127,15 +117,18 @@ header {
         
         p {
             color: var(--gold);
+            color: var(--white);
 
             font-size: 1rem;
             font-family: 'Syncopate';
+            font-weight: 900;
         }
 
         div {
             height: 1.5rem;
             width: 0.1rem;
             background-color: var(--gold);
+            background-color: var(--white);
             margin: 0 1rem -0.4rem;
         }
     }

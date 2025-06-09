@@ -1,56 +1,85 @@
 #service {
-    position: relative;
-    margin-bottom: 100vh;
-
     .overlay {
-        background-image: url('/images/Logo-Pattern.png');
-        background-position: center;
-        background-repeat: repeat;
-        background-size: 350vw;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: -20rem;
-        background-attachment: fixed;
-        opacity: 0.6;
+        background-image: url('/images/Header-Background.png');
+        background-position: center 3rem;
+        background-repeat: no-repeat;
+        background-size: contain;
 
+        width: 100vw;
+        aspect-ratio: 1 / 2;
+
+        position: absolute;
         z-index: 0;
     }
 
     .wrapper {
         z-index: 100;
         position: relative;
-        padding-top: 5rem;
-        padding-bottom: 10rem;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
 
         white-space: wrap;
+
+        h2, h2 span {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 200;
+            line-height: 4rem;
+            text-transform: uppercase;
+
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .card-wrapper {
+        margin: 0rem 0 6rem 0;
+
+        white-space: nowrap;
+        overflow-x: scroll;
+
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
 
         .card {
             white-space: wrap;
             display: inline-block;
-            width: 100%;
-            background: linear-gradient(-45deg, #111517a8 54%, #bc976f29);
-            padding: 5rem 3rem;
-            margin-right: 5vw;
+            width: calc(100% - 10%);
+
+            scroll-snap-align: center;
+            
+            background: #1111110D;
+            backdrop-filter: blur(3px);
+            
+            padding: 3.5rem 2.5rem;
+            margin-left: 5vw;
+
+            border: 1px solid #BC976F4F;
             margin-bottom: 3rem;
+
+            &:last-of-type {
+                margin-right: 5vw;
+            }
 
             .content {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
+                gap: 3.5rem;
 
                 h2 {
                     color: white;
-                    font-size: 3rem;
-                    font-weight: 200;
-                    line-height: 4rem;
+                    font-size: 2rem;
+                    font-weight: 300;
+                    line-height: 3rem;
                     text-transform: uppercase;
                     text-align: center;
                 }
 
                 h3 {
-                    font-size: 2rem;
-                    color: var(--gold);
+                    font-size: 1.6rem;
+                    line-height: 3rem;
+                    color: var(--white);
                     text-transform: uppercase;
                     text-align: center;
                     font-weight: 200;
@@ -58,10 +87,10 @@
 
                 p {
                     color: white;
-                    opacity: 0.6;
-                    font-size: 1.6rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     line-height: 2.5rem;
+                    font-weight: 300;
                 }
             }
         }
