@@ -1,5 +1,6 @@
 :root {
     --black: #111517;
+    --black: #0f0f0f;
     --gold: #BC976F;
     --white: #ffffff;
   }
@@ -20,6 +21,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
+    
+    background: var(--black);
 }
 
 * {

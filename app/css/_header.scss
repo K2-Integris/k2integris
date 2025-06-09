@@ -10,7 +10,7 @@ header {
 
 
    .overlay {
-        background-image: url('/images/Header-Background.png');
+       // background-image: url('/images/Header-Background.png');
         background-position: center 10rem;
         background-repeat: no-repeat;
         background-size: contain;
@@ -119,7 +119,7 @@ header {
         padding: 2rem 1rem 0;
         position: relative;
         transform: translateX(0);
-        transition: transform 0.1s linear;
+        transition: transform 0s linear;
 
         p, div {
             display: inline-block;

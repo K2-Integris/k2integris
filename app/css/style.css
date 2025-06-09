@@ -1,5 +1,6 @@
 :root {
   --black: #111517;
+  --black: #0f0f0f;
   --gold: #BC976F;
   --white: #ffffff;
 }
@@ -20,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--black)), color-stop(20%, #161919), color-stop(45%, #2E2B26), color-stop(90%, #463D32), color-stop(100%, #514638), color-stop(120%, var(--gold)));
   background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
+  background: var(--black);
 }
 
 * {
@@ -63,7 +65,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #111517d4;
+  background-color: var(--black);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -128,7 +130,6 @@ header {
 }
 
 header .overlay {
-  background-image: url("/images/Header-Background.png");
   background-position: center 10rem;
   background-repeat: no-repeat;
   background-size: contain;
@@ -235,10 +236,10 @@ header .scroll-seperator {
   position: relative;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.1s linear;
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0s linear;
+  transition: -webkit-transform 0s linear;
+  transition: transform 0s linear;
+  transition: transform 0s linear, -webkit-transform 0s linear;
 }
 
 header .scroll-seperator p, header .scroll-seperator div {
