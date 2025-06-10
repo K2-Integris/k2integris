@@ -33,8 +33,34 @@
         }
     }
 
+    .card-wrapper-arrows {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0 1rem;
+        margin-top: -2.5rem;
+
+        button {
+            padding: 0rem 0rem;
+            width: 3rem;
+            background-color: transparent;
+            transition: 0.2s;
+
+            &:last-of-type {
+                margin-right: -1rem;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+            }
+
+            svg {
+                stroke: var(--gold);
+            }
+        }
+    }
+
     .card-wrapper {
-        margin: 0rem 0 6rem 0;
+        margin: 0rem 0 0rem 0;
 
         white-space: nowrap;
         overflow-x: scroll;
@@ -92,6 +118,28 @@
                     line-height: 2.5rem;
                     font-weight: 300;
                 }
+            }
+        }
+    }
+
+    .card-wrapper-bullets {
+        padding: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .bullet {
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            background: #1111110D;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            opacity: 0.21;
+            transition: 0.3s;
+
+            &.active {
+                opacity: 1;
             }
         }
     }

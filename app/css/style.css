@@ -341,8 +341,39 @@ header .snapp .card p {
   font-weight: 500;
 }
 
+#service .card-wrapper-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 0 1rem;
+  margin-top: -2.5rem;
+}
+
+#service .card-wrapper-arrows button {
+  padding: 0rem 0rem;
+  width: 3rem;
+  background-color: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#service .card-wrapper-arrows button:last-of-type {
+  margin-right: -1rem;
+}
+
+#service .card-wrapper-arrows button:disabled {
+  opacity: 0.5;
+}
+
+#service .card-wrapper-arrows button svg {
+  stroke: var(--gold);
+}
+
 #service .card-wrapper {
-  margin: 0rem 0 6rem 0;
+  margin: 0rem 0 0rem 0;
   white-space: nowrap;
   overflow-x: scroll;
   overflow: scroll;
@@ -403,5 +434,34 @@ header .snapp .card p {
   text-align: center;
   line-height: 2.5rem;
   font-weight: 300;
+}
+
+#service .card-wrapper-bullets {
+  padding: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+#service .card-wrapper-bullets .bullet {
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  background: #1111110D;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.21;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#service .card-wrapper-bullets .bullet.active {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
