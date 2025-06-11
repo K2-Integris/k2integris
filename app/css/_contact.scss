@@ -1,0 +1,49 @@
+#contact-cta {
+    width: 100%;
+    margin-top: -2rem;
+    padding: 0rem 0rem 10rem;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        h2, h2 span {
+            display: block;
+            color: white;
+            font-size: 3.2rem;
+            font-weight: 200;
+            line-height: 5rem;
+            text-transform: uppercase;
+            text-align: center;
+
+            span {
+                font-size: 3.6rem;
+                font-weight: 500;
+            }
+        }
+
+        a {
+            display: block;
+            width: max-content;
+            border: 1px solid var(--gold);
+
+            margin: 0 auto;
+            padding: 1.5rem 6.2rem;
+            
+
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            font-size: 1.6rem;
+            font-weight: 750;
+            text-align: center;
+            word-spacing: 0.3rem;
+            color: var(--black);
+
+            background-color: #0000001f;
+            background-color: var(--gold);
+            background-color: #BC976Fbd;
+            backdrop-filter: blur(10px);            
+        }
+    }
+}

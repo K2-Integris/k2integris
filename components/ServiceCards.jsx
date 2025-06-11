@@ -87,7 +87,7 @@ const ServiceCards = () => {
               </h3>
 
               <p>
-                Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices, and blazing fast.
+                Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices<br />and blazing fast.
               </p>
 
                <Link href="custom-websites">

@@ -184,6 +184,18 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <section id="contact-cta">
+        <article className="wrapper">
+          <h2>
+            Let's talk about<br /><span>your project</span>
+          </h2>
+
+          <Link href="">
+            GET IN TOUCH
+          </Link>
+        </article>
+      </section>
     </>
   );
 }

@@ -349,7 +349,7 @@ header .snapp .card p {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 0 0 1rem;
-  margin-top: -2.5rem;
+  margin-top: -0.5rem;
 }
 
 #service .card-wrapper-arrows button {
@@ -391,7 +391,7 @@ header .snapp .card p {
           backdrop-filter: blur(3px);
   padding: 3.5rem 0rem 0;
   margin-left: 5vw;
-  border: 1px solid #BC976F4F;
+  border: 1px solid #BC976Fbd;
   margin-bottom: 3rem;
 }
 
@@ -443,13 +443,14 @@ header .snapp .card p {
   padding: 0 2rem;
   font-size: 1.6rem;
   margin-top: 1rem;
-  height: 4.5rem;
-  line-height: 4.3rem;
-  background-color: #BC976F4F;
-  color: white;
+  height: 4.6rem;
+  line-height: 4.4rem;
+  background-color: #BC976Fbd;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.3rem;
   text-align: center;
   text-transform: uppercase;
-  font-variant: small-caps;
   letter-spacing: 0.2rem;
 }
 
@@ -511,7 +512,7 @@ header .snapp .card p {
 
 #testemonials {
   position: relative;
-  padding-bottom: 8rem;
+  padding-bottom: 9rem;
 }
 
 #testemonials .overlay {
@@ -531,7 +532,7 @@ header .snapp .card p {
   font-weight: 200;
   text-transform: uppercase;
   line-height: 4rem;
-  padding-top: 6rem;
+  padding-top: 7rem;
 }
 
 #testemonials h2 span, #testemonials h2 span span {
@@ -565,6 +566,9 @@ header .snapp .card p {
   background-color: var(--black);
   white-space: wrap;
   margin-left: 5vw;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: #1111110d;
 }
 
 #testemonials .testemonial .profile-box {
@@ -579,7 +583,7 @@ header .snapp .card p {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 3rem 2rem 2rem;
 }
 
 #testemonials .testemonial .profile-box .profile-name {
@@ -620,5 +624,59 @@ header .snapp .card p {
   font-size: 1.5rem;
   line-height: 2.5rem;
   text-align: center;
+}
+
+#contact-cta {
+  width: 100%;
+  margin-top: -2rem;
+  padding: 0rem 0rem 10rem;
+}
+
+#contact-cta .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+#contact-cta .wrapper h2, #contact-cta .wrapper h2 span {
+  display: block;
+  color: white;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#contact-cta .wrapper h2 span, #contact-cta .wrapper h2 span span {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+#contact-cta .wrapper a {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid var(--gold);
+  margin: 0 auto;
+  padding: 1.5rem 6.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 1.6rem;
+  font-weight: 750;
+  text-align: center;
+  word-spacing: 0.3rem;
+  color: var(--black);
+  background-color: #0000001f;
+  background-color: var(--gold);
+  background-color: #BC976Fbd;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 /*# sourceMappingURL=style.css.map */
