@@ -1,0 +1,85 @@
+#testemonials {
+    position: relative;
+    padding-bottom: 8rem;
+
+    .overlay {
+        background-image: url('/images/Logo-Pattern.png');
+        background-position: center -8rem;
+        background-repeat: repeat;
+        background-size: 200vw;
+
+        width: 100vw;
+        height: 100%;
+
+        position: absolute;
+        z-index: 0;
+    }
+
+    h2, h2 span {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        line-height: 4rem;
+
+        padding-top: 6rem;
+
+        span {
+            font-weight: 500;
+            font-size: 2.8rem;
+            letter-spacing: 0.3rem;
+        }
+    }
+
+    .testemonial {
+        position: relative;
+        z-index: 1;
+        width: 90%;
+        margin: 2rem auto 2rem;
+        border: 1px solid var(--gold);
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        background-color: var(--black);
+
+        .profile-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+
+            .profile-name {
+                color: white;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+
+            .profile-picture {
+                width: 5rem;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .stars-box {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .comment {
+            padding: 1rem 2rem 3rem;
+            color: white;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+    }
+}

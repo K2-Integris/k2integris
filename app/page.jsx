@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Navigation from "@/components/Navigation";
 import Link from "next/link";
 import ServiceCards from "@/components/ServiceCards";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -65,6 +66,51 @@ export default function Home() {
               Are you seeking a new digital partner or looking to transfer an existing project to our agency for further development and/or maintenance? We provide assistance throughout the entire process .
             </p>
           </div>
+        </article>
+      </section>
+
+      <section id="testemonials">
+        <div className="overlay"></div>
+
+        <div className="wrapper">
+          <h2>
+            Trust our <br /><span>testimonials</span>
+          </h2>
+        </div>
+
+        <article className="testemonial">
+
+          <div className="profile-box">
+            <div className="profile-picture">
+              <Image src="/images/ThomasGrausgruber.png" width={50} height={50} alt="Thomas Grausgruber" />
+            </div>
+            <p className="profile-name">
+              Thomas Grausgruber
+            </p>
+          </div>
+
+          <div className="stars-box">
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 0L15.3064 8.2918H24.3882L17.0409 13.4164L19.8473 21.7082L12.5 16.5836L5.15268 21.7082L7.95911 13.4164L0.611794 8.2918H9.69357L12.5 0Z" fill="#BC976F"/>
+            </svg>
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 0L15.3064 8.2918H24.3882L17.0409 13.4164L19.8473 21.7082L12.5 16.5836L5.15268 21.7082L7.95911 13.4164L0.611794 8.2918H9.69357L12.5 0Z" fill="#BC976F"/>
+            </svg>
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 0L15.3064 8.2918H24.3882L17.0409 13.4164L19.8473 21.7082L12.5 16.5836L5.15268 21.7082L7.95911 13.4164L0.611794 8.2918H9.69357L12.5 0Z" fill="#BC976F"/>
+            </svg>
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 0L15.3064 8.2918H24.3882L17.0409 13.4164L19.8473 21.7082L12.5 16.5836L5.15268 21.7082L7.95911 13.4164L0.611794 8.2918H9.69357L12.5 0Z" fill="#BC976F"/>
+            </svg>
+            <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 0L15.3064 8.2918H24.3882L17.0409 13.4164L19.8473 21.7082L12.5 16.5836L5.15268 21.7082L7.95911 13.4164L0.611794 8.2918H9.69357L12.5 0Z" fill="#BC976F"/>
+            </svg>
+          </div>
+
+          <p className="comment">
+            Great results in no time! Simply impressive! Top! Lorem ipsum dolor sit amet igmund siegmund freud
+          </p>
+
         </article>
       </section>
     </>

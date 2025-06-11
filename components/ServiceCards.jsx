@@ -77,7 +77,7 @@ const ServiceCards = () => {
           </article>
 
           <article className="card">
-            <dic className="content">
+            <div className="content">
               <h2>
                 Custom Websites
               </h2>
@@ -93,7 +93,7 @@ const ServiceCards = () => {
                <Link href="custom-websites">
                 details
               </Link>
-            </dic>
+            </div>
           </article>
 
           <article className="card">
