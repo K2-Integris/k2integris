@@ -78,7 +78,7 @@
             background: #1111110D;
             backdrop-filter: blur(3px);
             
-            padding: 3.5rem 2.5rem;
+            padding: 3.5rem 0rem 0;
             margin-left: 5vw;
 
             border: 1px solid #BC976F4F;
@@ -109,6 +109,7 @@
                     text-transform: uppercase;
                     text-align: center;
                     font-weight: 200;
+                    margin-inline: 2.5rem;
                 }
 
                 p {
@@ -117,6 +118,22 @@
                     text-align: center;
                     line-height: 2.5rem;
                     font-weight: 300;
+                    margin-inline: 2.5rem;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 0 2rem;
+                    font-size: 1.6rem;
+                    margin-top: 1rem;
+                    height: 4.5rem;
+                    line-height: 4.3rem;
+                    background-color: #BC976F4F;
+                    color: white;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-variant: small-caps;
+                    letter-spacing: 0.2rem;
                 }
             }
         }
@@ -141,6 +158,28 @@
             &.active {
                 opacity: 1;
             }
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        margin-top: 4rem;
+
+        h4 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 200;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: white;
+            line-height: 2.5rem;
+            opacity: 0.8;
         }
     }
 }

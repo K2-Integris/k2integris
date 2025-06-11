@@ -26,14 +26,46 @@ export default function Home() {
       <section id="service">
         <div className="overlay"></div>
 
-        <div className="wrapper">
+        <article className="wrapper">
           <h2>
             A Strategic <span>Partner</span>,<br />
             Not Just a Vendor
           </h2>
-        </div>
+        </article>
 
         <ServiceCards />
+
+        <article className="wrapper info">
+          <div>
+            <h4>
+              Brand Identity
+            </h4>
+
+            <p>
+              Forge a distinctive and memorable identity for your company with our expertise in brand creation, thereby strengthening your brand personality and establishing a lasting connection with your audience.
+            </p>
+          </div>
+
+          <div>
+            <h4>
+              HOSTING
+            </h4>
+
+            <p>
+              To ensure the best availability for your project, we have invested in a self-managed hosting infrastructure, allowing us to stay at the forefront in terms of quality and support
+            </p>
+          </div>
+
+          <div>
+            <h4>
+              Migration
+            </h4>
+
+            <p>
+              Are you seeking a new digital partner or looking to transfer an existing project to our agency for further development and/or maintenance? We provide assistance throughout the entire process .
+            </p>
+          </div>
+        </article>
       </section>
     </>
   );

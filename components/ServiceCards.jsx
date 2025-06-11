@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const ServiceCards = () => {
@@ -68,6 +69,10 @@ const ServiceCards = () => {
               <p>
                 We design and develop secure, scalable business applications tailored to your workflow — from internal platforms to client-facing portals. Seamless integration with your existing systems is our standard.
               </p>
+
+              <Link href="business-applications">
+                details
+              </Link>
             </div>
           </article>
 
@@ -84,6 +89,10 @@ const ServiceCards = () => {
               <p>
                 Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices, and blazing fast.
               </p>
+
+               <Link href="custom-websites">
+                details
+              </Link>
             </dic>
           </article>
 
@@ -100,6 +109,10 @@ const ServiceCards = () => {
               <p>
                 Whether B2B or B2C, we create e-commerce platforms that deliver. From UX to payment integrations, multilingual and multicurrency support, we optimize every step of the buyer journey for growth.
               </p>
+
+               <Link href="e-commerce">
+                details
+              </Link>
             </div>
           </article>
 
@@ -116,6 +129,10 @@ const ServiceCards = () => {
               <p>
                 Get found, get clicks, get results. We offer full-service SEO, Google Ads, LinkedIn, and Meta campaigns tailored to your market. Backed by analytics and ROI tracking, always focused on business outcomes.
               </p>
+
+               <Link href="marketing-seo">
+                details
+              </Link>
             </div>
           </article>
         </div>
