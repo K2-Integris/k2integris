@@ -49,5 +49,19 @@
 }
 
 #contact {
-    
+    padding-top: 15rem;
+
+    h1, h1 span, h2, h2 span {
+        text-transform: uppercase;
+
+        font-size: 3.2rem;
+        font-weight: 100;
+        line-height: 4.5rem;
+
+        color: var(--white);
+
+        span {
+            font-weight: 500;
+        }
+    }
 }
