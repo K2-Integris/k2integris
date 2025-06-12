@@ -629,7 +629,7 @@ header .snapp .card p {
 #contact-cta {
   width: 100%;
   margin-top: -2rem;
-  padding: 0rem 0rem 9rem;
+  padding: 1rem 0rem 9rem;
 }
 
 #contact-cta .wrapper {
@@ -678,6 +678,10 @@ header .snapp .card p {
   background-color: #BC976Fbd;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+#faq {
+  margin-top: 2rem;
 }
 
 #faq h2, #faq h2 span {
