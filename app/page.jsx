@@ -1,17 +1,13 @@
 import ScrollSeperator from "@/components/ScrollSeperator";
 import styles from "./page.module.css";
 
-import Navigation from "@/components/Navigation";
 import Link from "next/link";
 import ServiceCards from "@/components/ServiceCards";
 import Image from "next/image";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navigation />
       <header>
        <article className="wrapper">
         <h1>
@@ -55,7 +51,7 @@ export default function Home() {
             </h4>
 
             <p>
-              To ensure the best availability for your project, we have invested in a self-managed hosting infrastructure, allowing us to stay at the forefront in terms of quality and support
+              To ensure the best availability for your project, we have invested in a self-managed hosting infrastructure, allowing us to stay at the forefront in terms of quality and support.
             </p>
           </div>
 
@@ -65,7 +61,7 @@ export default function Home() {
             </h4>
 
             <p>
-              Are you seeking a new digital partner or looking to transfer an existing project to our agency for further development and/or maintenance? We provide assistance throughout the entire process .
+              Are you seeking a new digital partner or looking to transfer an existing project to our agency for further development and/or maintenance? We provide assistance throughout the entire process.
             </p>
           </div>
         </article>
@@ -198,10 +194,6 @@ export default function Home() {
           </Link>
         </article>
       </section>
-
-      <Faq />
-
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,8 @@
 import { Outfit, Amiri, Syncopate } from "next/font/google";
 import "./css/style.css";
+import Navigation from "@/components/Navigation";
+import Faq from "@/components/Faq";
+import Footer from "@/components/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -26,7 +29,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${amiri.variable}  ${syncopate.variable}`}>{children}</body>
+      <body className={`${outfit.variable} ${amiri.variable}  ${syncopate.variable}`}>
+        <Navigation />
+
+        {children}
+
+         <Faq />
+
+        <Footer />
+      </body>
     </html>
   );
 }
