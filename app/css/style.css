@@ -826,4 +826,79 @@ header .snapp .card p {
 #faq .wrapper.faq .faq-box.active p {
   padding-bottom: 3rem;
 }
+
+footer {
+  width: 100vw;
+  background-color: var(--gold);
+  padding: 7rem 0 7rem;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+footer .wrapper .horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .wrapper .horizontal a {
+  font-size: 1.6rem;
+}
+
+footer .wrapper .horizontal a svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+footer .wrapper .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(50% - 1.5rem);
+}
+
+footer .wrapper .list li.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+footer .wrapper .list li .link {
+  display: block;
+  font-size: 1.8rem;
+  padding: 0.8rem 0;
+}
+
+footer .wrapper:first-of-type {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+footer .wrapper:last-of-type {
+  padding-top: 7rem;
+  gap: 5rem;
+}
 /*# sourceMappingURL=style.css.map */
