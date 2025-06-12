@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Link from "next/link";
 import ServiceCards from "@/components/ServiceCards";
 import Image from "next/image";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -196,6 +197,8 @@ export default function Home() {
           </Link>
         </article>
       </section>
+
+      <Faq />
     </>
   );
 }

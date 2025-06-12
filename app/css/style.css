@@ -512,7 +512,7 @@ header .snapp .card p {
 
 #testemonials {
   position: relative;
-  padding-bottom: 9rem;
+  padding-bottom: 10rem;
 }
 
 #testemonials .overlay {
@@ -629,7 +629,7 @@ header .snapp .card p {
 #contact-cta {
   width: 100%;
   margin-top: -2rem;
-  padding: 0rem 0rem 10rem;
+  padding: 0rem 0rem 9rem;
 }
 
 #contact-cta .wrapper {
@@ -678,5 +678,148 @@ header .snapp .card p {
   background-color: #BC976Fbd;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+#faq h2, #faq h2 span {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 200;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+#faq h2 span, #faq h2 span span {
+  font-weight: 500;
+}
+
+#faq .selection-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  padding: 4rem 5vw 4rem 0;
+  overflow-x: scroll;
+}
+
+#faq .selection-box .row {
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 5vw;
+  white-space: nowrap;
+}
+
+#faq .selection-box .row button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  white-space: nowrap;
+  padding: 1rem;
+  border: 1px solid #BC976Fbd;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #ffffffbd;
+  border-radius: 0.3rem;
+  scroll-snap-align: start;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  margin-left: 1rem;
+}
+
+#faq .selection-box .row button.active {
+  background-color: #BC976Fbd;
+  color: var(--black);
+  font-weight: 700;
+}
+
+#faq .selection-box .row button:first-of-type {
+  margin-left: 0rem;
+}
+
+#faq .selection-box .row button:last-of-type {
+  margin-right: 5vw;
+}
+
+#faq .wrapper.faq {
+  margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+#faq .wrapper.faq .faq-box {
+  border-bottom: 1px solid #BC976Fbd;
+}
+
+#faq .wrapper.faq .faq-box .faq-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 2.6rem;
+}
+
+#faq .wrapper.faq .faq-box .faq-button .faq-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line {
+  width: 2rem;
+  height: 0.1rem;
+  background-color: var(--white);
+  display: block;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:first-of-type {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:last-of-type {
+  -webkit-transform: rotate(90deg) translate(-4%, -15%);
+          transform: rotate(90deg) translate(-4%, -15%);
+  top: 50%;
+}
+
+#faq .wrapper.faq .faq-box p {
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  color: white;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#faq .wrapper.faq .faq-box.active .faq-button .faq-icon .faq-line:last-of-type {
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
+#faq .wrapper.faq .faq-box.active p {
+  padding-bottom: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
