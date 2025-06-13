@@ -58,13 +58,13 @@ const ServiceCards = () => {
         <div className="card-wrapper" ref={cardWrapperRef}>
           <article className="card">
             <div className="content">
-              <h2>
-                Business Applications
-              </h2>
-
               <h3>
-                Custom-built tools to streamline your operations.
+                Business Applications
               </h3>
+
+              <h4>
+                Custom-built tools to streamline your operations.
+              </h4>
 
               <p>
                 We design and develop secure, scalable business applications tailored to your workflow — from internal platforms to client-facing portals. Seamless integration with your existing systems is our standard.
@@ -78,13 +78,13 @@ const ServiceCards = () => {
 
           <article className="card">
             <div className="content">
-              <h2>
-                Custom Websites
-              </h2>
-
               <h3>
-                More than just beautiful — engineered for results.
+                Custom Websites
               </h3>
+
+              <h4>
+                More than just beautiful — engineered for results.
+              </h4>
 
               <p>
                 Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices<br />and blazing fast.
@@ -98,13 +98,13 @@ const ServiceCards = () => {
 
           <article className="card">
             <div className="content">
-              <h2>
-                E - Commerce
-              </h2>
-
               <h3>
-                Enterprise-grade online stores that scale.
+                E - Commerce
               </h3>
+
+              <h4>
+                Enterprise-grade online stores that scale.
+              </h4>
 
               <p>
                 Whether B2B or B2C, we create e-commerce platforms that deliver. From UX to payment integrations, multilingual and multicurrency support, we optimize every step of the buyer journey for growth.
@@ -118,13 +118,13 @@ const ServiceCards = () => {
 
           <article className="card">
             <div className="content">
-              <h2>
-                Marketing & SEO
-              </h2>
-
               <h3>
-                We don't just build — we help you grow.
+                Marketing & SEO
               </h3>
+
+              <h4>
+                We don't just build — we help you grow.
+              </h4>
 
               <p>
                 Get found, get clicks, get results. We offer full-service SEO, Google Ads, LinkedIn, and Meta campaigns tailored to your market. Backed by analytics and ROI tracking, always focused on business outcomes.

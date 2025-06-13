@@ -36,9 +36,9 @@ export default function Home() {
 
         <article className="wrapper info">
           <div>
-            <h4>
+            <h3>
               Brand Identity
-            </h4>
+            </h3>
 
             <p>
               Forge a distinctive and memorable identity for your company with our expertise in brand creation, thereby strengthening your brand personality and establishing a lasting connection with your audience.
@@ -46,9 +46,9 @@ export default function Home() {
           </div>
 
           <div>
-            <h4>
+            <h3>
               HOSTING
-            </h4>
+            </h3>
 
             <p>
               To ensure the best availability for your project, we have invested in a self-managed hosting infrastructure, allowing us to stay at the forefront in terms of quality and support.
@@ -56,9 +56,9 @@ export default function Home() {
           </div>
 
           <div>
-            <h4>
+            <h3>
               Migration
-            </h4>
+            </h3>
 
             <p>
               Are you seeking a new digital partner or looking to transfer an existing project to our agency for further development and/or maintenance? We provide assistance throughout the entire process.

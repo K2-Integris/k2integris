@@ -1,7 +1,8 @@
 :root {
-  --black: #111517;
   --black: #0f0f0f;
+  --black-transparent: #1111110d;
   --gold: #BC976F;
+  --gold-transparent: #BC976Fbd;
   --white: #ffffff;
 }
 
@@ -19,9 +20,8 @@ body {
   font-family: Outfit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--black)), color-stop(20%, #161919), color-stop(45%, #2E2B26), color-stop(90%, #463D32), color-stop(100%, #514638), color-stop(120%, var(--gold)));
-  background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
   background: var(--black);
+  padding-top: 15rem;
 }
 
 * {
@@ -34,6 +34,7 @@ body {
   border: none;
   list-style-type: none;
   scrollbar-width: none;
+  color: var(--white);
 }
 
 a {
@@ -43,6 +44,49 @@ a {
 
 a, button, label, input, textarea {
   cursor: pointer;
+}
+
+h1, h1 span, h2, h2 span, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+h1, h1 span, h2, h2 span {
+  font-size: 3.2rem;
+  font-weight: 100;
+  line-height: 4.5rem;
+}
+
+h1 span, h1 span span, h2 span, h2 span span {
+  font-weight: 500;
+}
+
+h2, h2 span {
+  font-size: 2.5rem;
+  font-weight: 200;
+  line-height: 4rem;
+}
+
+h2 span, h2 span span {
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  font-weight: 200;
+}
+
+p {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
 }
 
 ::-moz-selection {
@@ -134,10 +178,6 @@ header .wrapper {
   overflow: visible;
 }
 
-header .wrapper:first-of-type {
-  padding-top: 15rem;
-}
-
 header .wrapper:nth-of-type(2) {
   margin-top: 6rem;
   padding: 5rem 3rem;
@@ -174,33 +214,6 @@ header .wrapper:nth-of-type(2) .info-box a {
   text-underline-offset: 0.7rem;
 }
 
-header .wrapper h1, header .wrapper h1 span, header .wrapper h2, header .wrapper h2 span {
-  text-transform: uppercase;
-  font-size: 3.2rem;
-  font-weight: 100;
-  line-height: 4.5rem;
-  color: var(--white);
-}
-
-header .wrapper h1 span, header .wrapper h1 span span, header .wrapper h2 span, header .wrapper h2 span span {
-  font-weight: 500;
-}
-
-header .wrapper h2, header .wrapper h2 span {
-  font-size: 2.8rem;
-  line-height: 3.8rem;
-  text-align: center;
-}
-
-header .wrapper p {
-  color: var(--white);
-  opacity: 0.6;
-  text-align: center;
-  font-size: 1.9rem;
-  line-height: 3rem;
-  font-weight: 300;
-}
-
 header .wrapper .cta {
   display: block;
   padding: 2rem 4rem;
@@ -211,8 +224,8 @@ header .wrapper .cta {
   color: var(--white);
   height: 5.5rem;
   border-radius: 0rem;
-  background-color: #0000001f;
-  border: 1px solid var(--gold);
+  background-color: var(--black-transparent);
+  border: 1px solid var(--gold-transparent);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   text-transform: uppercase;
@@ -239,7 +252,6 @@ header .scroll-seperator p, header .scroll-seperator div {
 }
 
 header .scroll-seperator p {
-  color: var(--gold);
   color: var(--white);
   font-size: 1rem;
   font-family: 'Syncopate';
@@ -249,65 +261,8 @@ header .scroll-seperator p {
 header .scroll-seperator div {
   height: 1.5rem;
   width: 0.1rem;
-  background-color: var(--gold);
   background-color: var(--white);
   margin: 0 1rem -0.4rem;
-}
-
-header .snapp {
-  display: none;
-  white-space: nowrap;
-  overflow: scroll !important;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  width: 100vw;
-  margin-top: 5rem;
-  padding: 0 3rem;
-  position: relative;
-  z-index: 10;
-}
-
-header .snapp .card {
-  display: inline-block;
-  width: 25rem;
-  margin-right: 3rem;
-  border: 2px solid var(--gold);
-  border-radius: 2.5rem;
-  background-color: #111517bf;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  scroll-snap-align: center;
-}
-
-header .snapp .card:last-of-type {
-  margin-right: 0;
-}
-
-header .snapp .card svg {
-  display: block;
-  margin: 3rem auto 1rem;
-  width: 5rem;
-  height: 5rem;
-}
-
-header .snapp .card h3, header .snapp .card p {
-  text-align: center;
-  color: var(--white);
-}
-
-header .snapp .card h3 {
-  font-size: 2.5rem;
-  line-height: 3.2rem;
-  margin: 2rem 0;
-  font-weight: 200;
-}
-
-header .snapp .card p {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  opacity: 0.6;
-  white-space: wrap;
-  margin: 0 3rem 3rem;
 }
 
 #service .overlay {
@@ -327,18 +282,6 @@ header .snapp .card p {
   padding-top: 4rem;
   padding-bottom: 1rem;
   white-space: wrap;
-}
-
-#service .wrapper h2, #service .wrapper h2 span {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 200;
-  line-height: 4rem;
-  text-transform: uppercase;
-}
-
-#service .wrapper h2 span, #service .wrapper h2 span span {
-  font-weight: 500;
 }
 
 #service .card-wrapper-arrows {
@@ -410,31 +353,17 @@ header .snapp .card p {
   gap: 3.5rem;
 }
 
-#service .card-wrapper .card .content h2 {
-  color: white;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 3rem;
-  text-transform: uppercase;
+#service .card-wrapper .card .content h3 {
   text-align: center;
 }
 
-#service .card-wrapper .card .content h3 {
-  font-size: 1.6rem;
-  line-height: 3rem;
-  color: var(--white);
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 200;
+#service .card-wrapper .card .content h4 {
   margin-inline: 2.5rem;
+  text-align: center;
 }
 
 #service .card-wrapper .card .content p {
-  color: white;
-  font-size: 1.5rem;
   text-align: center;
-  line-height: 2.5rem;
-  font-weight: 300;
   margin-inline: 2.5rem;
 }
 
@@ -495,18 +424,12 @@ header .snapp .card p {
   margin-top: 4rem;
 }
 
-#service .info h4 {
-  font-size: 2rem;
-  text-transform: uppercase;
+#service .info h3 {
   color: var(--gold);
   margin-bottom: 2rem;
-  font-weight: 200;
 }
 
 #service .info p {
-  font-size: 1.5rem;
-  color: white;
-  line-height: 2.5rem;
   opacity: 0.8;
 }
 
@@ -527,16 +450,10 @@ header .snapp .card p {
 }
 
 #testemonials h2, #testemonials h2 span {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 200;
-  text-transform: uppercase;
-  line-height: 4rem;
   padding-top: 7rem;
 }
 
 #testemonials h2 span, #testemonials h2 span span {
-  font-weight: 500;
   font-size: 2.8rem;
   letter-spacing: 0.3rem;
 }
@@ -620,9 +537,6 @@ header .snapp .card p {
 
 #testemonials .testemonial .comment {
   padding: 3rem 2rem 4rem;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
   text-align: center;
 }
 
@@ -698,18 +612,6 @@ header .snapp .card p {
 
 #faq {
   margin-top: 2rem;
-}
-
-#faq h2, #faq h2 span {
-  color: white;
-  font-size: 2.8rem;
-  font-weight: 200;
-  line-height: 4rem;
-  text-transform: uppercase;
-}
-
-#faq h2 span, #faq h2 span span {
-  font-weight: 500;
 }
 
 #faq .selection-box {
@@ -823,9 +725,6 @@ header .snapp .card p {
 }
 
 #faq .wrapper.faq .faq-box p {
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-  color: white;
   padding-left: 4rem;
   padding-top: 3rem;
   height: 0px;
@@ -847,6 +746,10 @@ footer {
   width: 100vw;
   background-color: var(--gold);
   padding: 7rem 0 7rem;
+}
+
+footer li, footer a {
+  color: var(--black);
 }
 
 footer .wrapper {
@@ -881,6 +784,12 @@ footer .wrapper .horizontal a {
 footer .wrapper .horizontal a svg {
   width: 3rem;
   height: 3rem;
+  stroke: var(--black);
+}
+
+footer .wrapper .horizontal a svg.x {
+  stroke: none;
+  fill: var(--black);
 }
 
 footer .wrapper .list {

@@ -1,7 +1,6 @@
 header {
     width: 100vw;
 
-//  background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
     background-color: transparent;
 
     position: relative;
@@ -10,10 +9,6 @@ header {
         position: relative;
         z-index: 1;
         overflow: visible;
-
-        &:first-of-type {
-            padding-top: 15rem;
-        }
 
         &:nth-of-type(2) {
             margin-top: 6rem;
@@ -44,35 +39,6 @@ header {
             }
         }
 
-        h1, h1 span, h2, h2 span {
-            text-transform: uppercase;
-
-            font-size: 3.2rem;
-            font-weight: 100;
-            line-height: 4.5rem;
-
-            color: var(--white);
-
-            span {
-                font-weight: 500;
-            }
-        }
-
-        h2, h2 span {
-            font-size: 2.8rem;
-            line-height: 3.8rem;
-            text-align: center;
-        }
-
-        p {
-            color: var(--white);
-            opacity: 0.6;
-            text-align: center;
-            font-size: 1.9rem;
-            line-height: 3rem;
-            font-weight: 300;
-        }
-
         .cta {
             display: block;
             padding: 2rem 4rem;
@@ -87,9 +53,10 @@ header {
             height: 5.5rem;
             border-radius: 0rem;
 
-            background-color: #0000001f;
-            border: 1px solid var(--gold);
-            // TODO gradient border
+            background-color: var(--black-transparent);
+
+            border: 1px solid var(--gold-transparent);
+
             backdrop-filter: blur(10px);
 
             text-transform: uppercase;
@@ -114,7 +81,6 @@ header {
         }
         
         p {
-            color: var(--gold);
             color: var(--white);
 
             font-size: 1rem;
@@ -125,67 +91,8 @@ header {
         div {
             height: 1.5rem;
             width: 0.1rem;
-            background-color: var(--gold);
             background-color: var(--white);
             margin: 0 1rem -0.4rem;
-        }
-    }
-
-    .snapp {
-        display: none;
-        white-space: nowrap;
-        overflow: scroll !important;
-        scroll-snap-type: x mandatory;
-        width: 100vw;
-        margin-top: 5rem;
-        padding: 0 3rem;
-
-        position: relative;
-        z-index: 10;
-
-        .card {
-            display: inline-block;
-            width: 25rem;
-            
-            margin-right: 3rem;
-
-            border: 2px solid var(--gold);
-            border-radius: 2.5rem;
-
-            background-color: #111517bf;
-            backdrop-filter: blur(10px);
-            scroll-snap-align: center;
-
-            &:last-of-type {
-                margin-right: 0;
-            }
-
-            svg {
-                display: block;
-                margin: 3rem auto 1rem;
-                width: 5rem;
-                height: 5rem;
-            }
-
-            h3, p {
-                text-align: center;
-                color: var(--white);
-            }
-
-            h3 {
-                font-size: 2.5rem;
-                line-height: 3.2rem;
-                margin: 2rem 0;
-                font-weight: 200;
-            }
-
-            p {
-                font-size: 1.6rem;
-                line-height: 2.2rem;
-                opacity: 0.6;
-                white-space: wrap;
-                margin: 0 3rem 3rem;
-            }
         }
     }
 }
