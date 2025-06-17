@@ -629,7 +629,7 @@ header .scroll-seperator div {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  padding: 4rem 5vw 4rem 0;
+  padding: 2.5rem 5vw 4rem 0;
   overflow-x: scroll;
 }
 
