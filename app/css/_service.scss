@@ -83,16 +83,19 @@
 
                 h3 {
                     text-align: center;
+                    letter-spacing: 0.1rem;
                 }
 
                 h4 {
                     margin-inline: 2.5rem;
                     text-align: center;
+                    letter-spacing: 0.05rem;
                 }
 
                 p {
                     text-align: center;
                     margin-inline: 2.5rem;
+                    letter-spacing: 0.05rem;
                 }
 
                 a {
@@ -145,10 +148,12 @@
         h3 {
             color: var(--gold);
             margin-bottom: 2rem;
+            letter-spacing: 0.05rem;
         }
 
         p {
-            opacity: 0.8;
+            opacity: 0.9;
+            letter-spacing: 0.05rem;
         }
     }
 }

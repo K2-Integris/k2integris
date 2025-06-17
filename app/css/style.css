@@ -355,16 +355,19 @@ header .scroll-seperator div {
 
 #service .card-wrapper .card .content h3 {
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 
 #service .card-wrapper .card .content h4 {
   margin-inline: 2.5rem;
   text-align: center;
+  letter-spacing: 0.05rem;
 }
 
 #service .card-wrapper .card .content p {
   text-align: center;
   margin-inline: 2.5rem;
+  letter-spacing: 0.05rem;
 }
 
 #service .card-wrapper .card .content a {
@@ -427,10 +430,12 @@ header .scroll-seperator div {
 #service .info h3 {
   color: var(--gold);
   margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
 }
 
 #service .info p {
-  opacity: 0.8;
+  opacity: 0.9;
+  letter-spacing: 0.05rem;
 }
 
 #testemonials {
@@ -565,6 +570,7 @@ header .scroll-seperator div {
   line-height: 5rem;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.15rem;
 }
 
 #contact-cta .wrapper h2 span, #contact-cta .wrapper h2 span span {

@@ -99,7 +99,7 @@ const ServiceCards = () => {
           <article className="card">
             <div className="content">
               <h3>
-                E - Commerce
+                E-Commerce
               </h3>
 
               <h4>

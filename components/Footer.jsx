@@ -10,7 +10,7 @@ const Footer = () => {
                     </li>
                     <li>
                         <Link href="" className="link">
-                            Business Apllications
+                            Business Applications
                         </Link>
                     </li>
                     <li>
