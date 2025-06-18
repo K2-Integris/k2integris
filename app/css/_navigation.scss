@@ -8,18 +8,12 @@ nav {
 
     background-color: var(--black);
     backdrop-filter: blur(10px);
+    padding: 2.5rem 0;
 
     .wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .logo-wrapper {
-        padding: 3rem 0;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
     }
 
     #text-logo {
@@ -35,16 +29,39 @@ nav {
 
         background-color: transparent;
 
+        &.open {
+            span {
+                &:first-of-type {
+                    transform: rotate(45deg);
+                    top: 7px;
+                }
+
+                &:nth-of-type(2) {
+                    width: 0;
+                    opacity: 0;
+                }
+
+                &:last-of-type {
+                    transform: rotate(-45deg);
+                    top: -7px;
+                }
+            }
+        }
+
         span {
             display: block;
+            transition: 0.3s;
 
             width: 2.3rem;
             height: 0.1rem;
 
             background-color: var(--gold);
+            position: relative;
+            top: 0;
 
             &:nth-of-type(2) {
                 width: 1.8rem;
+                transition: 0.2s;
             }
         }
     }
