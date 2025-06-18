@@ -5,7 +5,9 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
         padding: 2.5rem 5vw 4rem 0;
+
         overflow-x: scroll;
 
         .row {
@@ -16,7 +18,6 @@
 
             button {
                 flex-shrink: 0;
-                white-space: nowrap;
                 padding: 1rem;
                 border: 1px solid #BC976Fbd;
                 font-size: 1.4rem;
@@ -117,6 +118,63 @@
                         padding-bottom: 3rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    #faq {
+        display: grid;
+        grid-template-areas: 
+            'headeing faq' 
+            'selection faq';
+        grid-template-rows: 100px calc(100% - 100px);
+        grid-template-columns: 345px calc(100% - 345px);
+        column-gap: 4rem;
+        row-gap: 6.7rem;
+
+        width: Min(90vw, 130rem);
+
+        margin: auto;
+        overflow: hidden;
+        padding: 10vh 0;
+
+        .selection-box {
+            grid-area: selection;
+            overflow-x: hidden;
+            padding: 0rem 0 0;
+            gap: 0.5rem;
+            height: 100%;
+
+            .row {
+                width: 100%;
+                white-space: wrap;
+                padding: 0;
+                gap: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                button {
+                    width: 100%;
+                    margin: 0;
+                    border: none;
+                    background-color: #8f74560f;
+                }
+            }
+        }
+
+        .wrapper {
+           grid-area: headeing;
+           width: 100%;
+           align-items: flex-end;
+
+            &.faq {
+                grid-area: faq;
+                margin: 0;
+                padding-top: 0.5rem;
+                align-items:normal;
             }
         }
     }

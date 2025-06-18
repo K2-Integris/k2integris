@@ -125,3 +125,18 @@
         font-family: Outfit;
     }
 }
+
+@media only screen and (min-width: 860px) {
+    #contact-cta {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .wrapper {
+            h2, h2 span {
+                font-size: 8.2rem !important;
+                line-height: 12rem;
+            }
+        }
+    }
+}

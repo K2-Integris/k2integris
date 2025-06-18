@@ -394,18 +394,17 @@ header .scroll-seperator div {
 
 #service .card-wrapper .card .content a {
   display: inline-block;
-  padding: 0 2rem;
-  font-size: 1.6rem;
-  margin-top: 1rem;
   height: 4.6rem;
-  line-height: 4.4rem;
-  background-color: #BC976Fbd;
-  color: var(--black);
+  padding: 0 2rem;
+  margin-top: 1rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
+  line-height: 4.4rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  background-color: #BC976Fbd;
+  color: var(--black);
 }
 
 #service .card-wrapper-bullets {
@@ -458,6 +457,40 @@ header .scroll-seperator div {
 #service .info p {
   opacity: 0.9;
   letter-spacing: 0.05rem;
+}
+
+@media only screen and (min-width: 860px) {
+  #service {
+    margin-bottom: 10rem;
+  }
+  #service .overlay {
+    background: transparent;
+  }
+  #service .card-wrapper {
+    white-space: wrap;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: calc(50% - 1rem) calc(50% - 1rem);
+        grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+    margin: 0;
+    width: Min(90vw, 130rem);
+    margin: 3rem auto 0;
+    gap: 2rem;
+    overflow: hidden;
+  }
+  #service .card-wrapper .card {
+    margin: 0;
+    width: 100%;
+  }
+  #service .card-wrapper .card .content {
+    height: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #service .card-wrapper-bullets, #service .card-wrapper-arrows {
+    display: none;
+  }
 }
 
 #testemonials {
@@ -565,6 +598,29 @@ header .scroll-seperator div {
 #testemonials .testemonial .comment {
   padding: 3rem 2rem 4rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 860px) {
+  #testemonials {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #testemonials h2, #testemonials h2 span {
+    padding-top: 0rem;
+  }
+  #testemonials .overlay {
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
 
 #contact-cta {
@@ -720,6 +776,22 @@ header .scroll-seperator div {
   font-family: Outfit;
 }
 
+@media only screen and (min-width: 860px) {
+  #contact-cta {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact-cta .wrapper h2, #contact-cta .wrapper h2 span {
+    font-size: 8.2rem !important;
+    line-height: 12rem;
+  }
+}
+
 #faq {
   margin-top: 2rem;
 }
@@ -747,7 +819,6 @@ header .scroll-seperator div {
 #faq .selection-box .row button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  white-space: nowrap;
   padding: 1rem;
   border: 1px solid #BC976Fbd;
   font-size: 1.4rem;
@@ -852,6 +923,74 @@ header .scroll-seperator div {
   padding-bottom: 3rem;
 }
 
+@media only screen and (min-width: 860px) {
+  #faq {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'headeing faq'  'selection faq';
+    -ms-grid-rows: 100px calc(100% - 100px);
+        grid-template-rows: 100px calc(100% - 100px);
+    -ms-grid-columns: 345px calc(100% - 345px);
+        grid-template-columns: 345px calc(100% - 345px);
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
+    row-gap: 6.7rem;
+    width: Min(90vw, 130rem);
+    margin: auto;
+    overflow: hidden;
+    padding: 10vh 0;
+  }
+  #faq .selection-box {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: selection;
+    overflow-x: hidden;
+    padding: 0rem 0 0;
+    gap: 0.5rem;
+    height: 100%;
+  }
+  #faq .selection-box .row {
+    width: 100%;
+    white-space: wrap;
+    padding: 0;
+    gap: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+  }
+  #faq .selection-box .row button {
+    width: 100%;
+    margin: 0;
+    border: none;
+    background-color: #8f74560f;
+  }
+  #faq .wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: headeing;
+    width: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #faq .wrapper.faq {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: faq;
+    margin: 0;
+    padding-top: 0.5rem;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+}
+
 footer {
   width: 100vw;
   background-color: var(--gold);
@@ -948,6 +1087,17 @@ footer .wrapper:last-of-type {
   }
   .small {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  h1, h1 span {
+    font-size: 4.2rem;
+    line-height: 5.5rem;
+  }
+  h2, h2 span {
+    font-size: 3.8rem !important;
+    line-height: 4.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -29,7 +29,7 @@ const Faq = () => {
                 question: "Can you guarantee the website/app speed and performance?",
                 answer: "We build with performance-first principles. From clean code and optimized assets to proper caching and server configurations — speed and reliability are always part of the delivery. We use tools like Google PageSpeed, Lighthouse, and GTmetrix to ensure your website or app loads fast, works smoothly, and performs reliably on all devices."
             },
-            {
+            /*{
                 question: "Do you offer responsive design for mobile and tablet?",
                 answer: "Yes, all our solutions are fully responsive and mobile-friendly by default. We design with every device in mind to ensure a seamless experience for your users."
             },
@@ -48,7 +48,7 @@ const Faq = () => {
             {
                 question: "Will there be support after the project is finished?",
                 answer: "Yes. We offer various post-launch support options, including retainers for continuous development, maintenance, or ad-hoc support. Our goal is to build long-term partnerships, not one-off projects."
-            }
+            }*/
         ],
 
         // 1: Marketing / SEO
@@ -73,10 +73,10 @@ const Faq = () => {
                 question: "Can you help improve my current website’s SEO performance without rebuilding it?",
                 answer: "Yes, we can audit your existing site and optimize it without a full rebuild if the current structure allows. If major technical issues are found, we’ll advise transparently on whether a rebuild makes sense."
             },
-            {
+            /*{
                 question: "Do you offer analytics and reporting on campaign performance?",
                 answer: "Yes. Our campaigns include performance dashboards and regular reports. We prioritize clarity: you will know exactly where your budget goes and what results it brings."
-            }
+            }*/
         ],
 
         // 2: Design / Branding
@@ -125,10 +125,10 @@ const Faq = () => {
                 question: "What project management tools do you use (e.g. Jira, Trello, ClickUp)?",
                 answer: "We work with ClickUp, Trello, or Jira, depending on the project scale and your preference. You’ll have full visibility into your project board."
             },
-            {
+            /*{
                 question: "Who will be working on our project? Do you outsource or is your team in-house?",
                 answer: "Our core team handles strategy, project management, and development. We may involve trusted external specialists, but you’ll always work directly with K2INTEGRIS."
-            }
+            }*/
         ],
 
         // 4: Pricing / Legal
@@ -153,14 +153,14 @@ const Faq = () => {
                 question: "Do you provide NDAs or contracts to protect confidentiality?",
                 answer: "Yes. We provide NDAs and contracts by default to safeguard your ideas and sensitive data. Confidentiality is a core value."
             },
-            {
+            /*{
                 question: "What happens if we decide to terminate the project early?",
                 answer: "Our contracts include fair termination terms. Work completed to date is billed and handed over. We ensure a professional handoff."
             },
             {
                 question: "How do you handle intellectual property rights?",
                 answer: "You own all IP upon project completion and payment. If any third-party tools or licenses are involved, we’ll disclose and document them fully to avoid surprises."
-            }
+            }*/
         ],
 
         // 5: Technical / Hosting
@@ -176,6 +176,10 @@ const Faq = () => {
             {
                 question: "Do you offer support packages or retainers for ongoing maintenance?",
                 answer: "Yes. We offer monthly support retainers including monitoring, updates, backups, and security patches tailored to your needs."
+            },
+            {
+                question: "How quickly can you respond to technical issues or emergencies?",
+                answer: "Our response times vary by support level. Retainer clients receive priority responses — typically within hours for emergencies."
             },
             {
                 question: "How quickly can you respond to technical issues or emergencies?",
