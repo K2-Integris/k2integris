@@ -50,7 +50,7 @@
 }
 
 #contact {
-    padding-top: 0rem;
+    padding-bottom: 5rem;
 
     p {
         margin-top: 2rem;
@@ -71,12 +71,6 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
-        }
-    }
-
-    .wrapper {
-        &:last-of-type {
-            padding: 4rem 0 6rem;
         }
     }
 
