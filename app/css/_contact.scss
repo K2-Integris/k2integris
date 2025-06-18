@@ -50,19 +50,84 @@
 }
 
 #contact {
-    padding-top: 15rem;
+    padding-top: 0rem;
 
-    h1, h1 span, h2, h2 span {
-        text-transform: uppercase;
+    p {
+        margin-top: 2rem;
+        opacity: 0.9;
+    }
 
-        font-size: 3.2rem;
-        font-weight: 100;
-        line-height: 4.5rem;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 3rem 0;
 
-        color: var(--white);
-
-        span {
-            font-weight: 500;
+        button {
+            font-size: 1.6rem;
+            background-color: var(--gold);
+            color: var(--black);
+            padding: 1.8rem 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
         }
+    }
+
+    .wrapper {
+        &:last-of-type {
+            padding: 4rem 0 6rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 0;
+
+        li {
+            a {
+                font-size: 1.6rem;
+                opacity: 0.9;
+            }
+        }
+        
+        &.horizontal {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+
+            svg {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+
+    input, textarea {
+        background-color: transparent;
+        border: 1px solid #ffffff50;
+        padding: 1.8rem 1.5rem;
+        color: white;
+        font-size: 1.6rem;
+        transition: 0.3s;
+        letter-spacing: 0.1rem;
+
+        &:focus {
+            border-color: var(--gold-transparent);
+        }
+    }
+
+    textarea {
+        height: 12rem;
+        font-family: Outfit;
     }
 }

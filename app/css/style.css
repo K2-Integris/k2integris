@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--black);
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 
 * {
@@ -183,6 +183,7 @@ header {
   width: 100vw;
   background-color: transparent;
   position: relative;
+  padding-top: 5rem;
 }
 
 header .wrapper {
@@ -622,19 +623,105 @@ header .scroll-seperator div {
 }
 
 #contact {
-  padding-top: 15rem;
+  padding-top: 0rem;
 }
 
-#contact h1, #contact h1 span, #contact h2, #contact h2 span {
+#contact p {
+  margin-top: 2rem;
+  opacity: 0.9;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  padding: 3rem 0;
+}
+
+#contact form button {
+  font-size: 1.6rem;
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 1.8rem 0;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 3.2rem;
-  font-weight: 100;
-  line-height: 4.5rem;
-  color: var(--white);
+  letter-spacing: 0.1rem;
 }
 
-#contact h1 span, #contact h1 span span, #contact h2 span, #contact h2 span span {
-  font-weight: 500;
+#contact .wrapper:last-of-type {
+  padding: 4rem 0 6rem;
+}
+
+#contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+#contact ul li a {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+#contact ul.horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+#contact ul.horizontal svg {
+  width: 2rem;
+}
+
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.input-box input, .input-box textarea {
+  background-color: transparent;
+  border: 1px solid #ffffff50;
+  padding: 1.8rem 1.5rem;
+  color: white;
+  font-size: 1.6rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  letter-spacing: 0.1rem;
+}
+
+.input-box input:focus, .input-box textarea:focus {
+  border-color: var(--gold-transparent);
+}
+
+.input-box textarea {
+  height: 12rem;
+  font-family: Outfit;
 }
 
 #faq {

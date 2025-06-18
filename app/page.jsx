@@ -189,7 +189,7 @@ export default function Home() {
             Let's talk about<br /><span>your project</span>
           </h2>
 
-          <Link href="">
+          <Link href="contact">
             GET IN TOUCH
           </Link>
         </article>
