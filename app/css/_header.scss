@@ -96,3 +96,15 @@ header {
         }
     }
 }
+
+@media only screen and (max-width: 380px) {
+    header {
+        .wrapper {
+            .cta {
+                padding: 1rem 1rem;
+                font-size: 1.2rem;
+                height: 4.5rem;
+            }
+        }
+    }
+}

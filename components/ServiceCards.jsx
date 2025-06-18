@@ -63,7 +63,7 @@ const ServiceCards = () => {
               </h3>
 
               <h4>
-                Custom-built tools to streamline your operations.
+                Custom-built toolsto streamline your operations.
               </h4>
 
               <p>
@@ -83,7 +83,7 @@ const ServiceCards = () => {
               </h3>
 
               <h4>
-                More than just beautiful — engineered for results.
+                More than just beautiful — engineered for <span className="small"></span>results.
               </h4>
 
               <p>
@@ -103,7 +103,7 @@ const ServiceCards = () => {
               </h3>
 
               <h4>
-                Enterprise-grade online stores that scale.
+                Enterprise-grade online stores that <span className="small"></span>scale.
               </h4>
 
               <p>
@@ -123,7 +123,7 @@ const ServiceCards = () => {
               </h3>
 
               <h4>
-                We don't just build — we help you grow.
+                We don't just build — we help you <span className="small"></span>grow.
               </h4>
 
               <p>

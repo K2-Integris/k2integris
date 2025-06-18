@@ -110,3 +110,19 @@ p {
 @import "contact";
 @import "faq";
 @import "footer";
+
+@media only screen and (max-width: 380px) {
+    h1, h1 span {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+
+    h2, h2 span {
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    .small {
+        display: block;
+    }
+}
