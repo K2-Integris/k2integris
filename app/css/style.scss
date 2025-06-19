@@ -138,3 +138,11 @@ p {
         line-height: 4.8rem;
     }
 }
+
+@media only screen and (min-width: 1000px) {
+    h1, h1 span {
+        font-size: 6.2rem;
+        line-height: 8.2rem;
+        text-align: center;
+    }
+}

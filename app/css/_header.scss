@@ -109,3 +109,19 @@ header {
         }
     }
 }
+
+@media only screen and (min-width: 1000px) {
+    header {
+        .scroll-seperator {
+            padding-top: 6rem;
+            left: -5vw;
+        }
+
+        .wrapper {
+            .cta {
+                margin-top: 22rem;
+                width: auto;
+            }
+        }
+    }
+}

@@ -167,6 +167,7 @@
 
         .overlay {
             background: transparent;
+            display: none;
         }
         
         .card-wrapper {
@@ -183,6 +184,7 @@
             .card {
                 margin: 0;
                 width: 100%;
+                margin: 0 !important;
 
                 .content {
                     height: 100%;
@@ -193,6 +195,40 @@
 
         .card-wrapper-bullets, .card-wrapper-arrows {
             display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #service {
+        margin-top: 10rem;
+
+        h2 {
+            margin-bottom: 4rem;
+        }
+
+        h2, h2 span {
+            font-size: 5.2rem !important;
+            line-height: 6.4rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .info {
+            margin-top: 8rem;
+            flex-direction: row;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #service {
+        .card-wrapper {
+            display: flex;
+
+            .card {
+                width: 25%;
+            }
         }
     }
 }

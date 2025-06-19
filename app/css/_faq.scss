@@ -123,7 +123,7 @@
     }
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 1000px) {
     #faq {
         display: grid;
         grid-template-areas: 
@@ -132,7 +132,7 @@
         grid-template-rows: 100px calc(100% - 100px);
         grid-template-columns: 345px calc(100% - 345px);
         column-gap: 4rem;
-        row-gap: 6.7rem;
+        row-gap: 5rem;
 
         width: Min(90vw, 130rem);
 
@@ -175,6 +175,7 @@
                 margin: 0;
                 padding-top: 0.5rem;
                 align-items:normal;
+                gap: 3.5rem;
             }
         }
     }

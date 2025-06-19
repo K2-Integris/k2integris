@@ -287,6 +287,17 @@ header .scroll-seperator div {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  header .scroll-seperator {
+    padding-top: 6rem;
+    left: -5vw;
+  }
+  header .wrapper .cta {
+    margin-top: 22rem;
+    width: auto;
+  }
+}
+
 #service .overlay {
   background-image: url("/images/Header-Background.png");
   background-position: center 3rem;
@@ -465,6 +476,7 @@ header .scroll-seperator div {
   }
   #service .overlay {
     background: transparent;
+    display: none;
   }
   #service .card-wrapper {
     white-space: wrap;
@@ -481,6 +493,7 @@ header .scroll-seperator div {
   #service .card-wrapper .card {
     margin: 0;
     width: 100%;
+    margin: 0 !important;
   }
   #service .card-wrapper .card .content {
     height: 100%;
@@ -490,6 +503,39 @@ header .scroll-seperator div {
   }
   #service .card-wrapper-bullets, #service .card-wrapper-arrows {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #service {
+    margin-top: 10rem;
+  }
+  #service h2 {
+    margin-bottom: 4rem;
+  }
+  #service h2, #service h2 span {
+    font-size: 5.2rem !important;
+    line-height: 6.4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  #service .info {
+    margin-top: 8rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #service .card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #service .card-wrapper .card {
+    width: 25%;
   }
 }
 
@@ -602,7 +648,6 @@ header .scroll-seperator div {
 
 @media only screen and (min-width: 860px) {
   #testemonials {
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -618,8 +663,14 @@ header .scroll-seperator div {
     padding-top: 0rem;
   }
   #testemonials .overlay {
-    background-attachment: fixed;
     background-position: center;
+  }
+  #testemonials .testemonial {
+    width: 33%;
+    margin-left: 2rem;
+  }
+  #testemonials .testemonial:first-of-type {
+    margin-left: 5vw;
   }
 }
 
@@ -778,7 +829,7 @@ header .scroll-seperator div {
 
 @media only screen and (min-width: 860px) {
   #contact-cta {
-    height: 100vh;
+    height: 80vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -923,7 +974,7 @@ header .scroll-seperator div {
   padding-bottom: 3rem;
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 1000px) {
   #faq {
     display: -ms-grid;
     display: grid;
@@ -934,7 +985,7 @@ header .scroll-seperator div {
         grid-template-columns: 345px calc(100% - 345px);
     -webkit-column-gap: 4rem;
             column-gap: 4rem;
-    row-gap: 6.7rem;
+    row-gap: 5rem;
     width: Min(90vw, 130rem);
     margin: auto;
     overflow: hidden;
@@ -988,6 +1039,7 @@ header .scroll-seperator div {
     -webkit-box-align: normal;
         -ms-flex-align: normal;
             align-items: normal;
+    gap: 3.5rem;
   }
 }
 
@@ -1098,6 +1150,14 @@ footer .wrapper:last-of-type {
   h2, h2 span {
     font-size: 3.8rem !important;
     line-height: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1, h1 span {
+    font-size: 6.2rem;
+    line-height: 8.2rem;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

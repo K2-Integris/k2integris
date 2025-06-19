@@ -94,7 +94,6 @@
 
 @media only screen and (min-width: 860px) {
     #testemonials {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -104,8 +103,21 @@
         }
 
         .overlay {
-            background-attachment: fixed;
+            //background-attachment: fixed;
             background-position: center;
+        }
+
+        .testimonials-wrapper {
+
+        }
+
+        .testemonial {
+            width: 33%;
+            margin-left: 2rem;
+
+            &:first-of-type {
+                margin-left: 5vw;
+            }
         }
     }
 }

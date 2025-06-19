@@ -23,7 +23,7 @@ const Contact = () => {
                         </li>
                         <li>
                             <Link href="/">
-                                plac Dworcowy 4, 34-480 Jabłonka, Poland
+                                Przyszowa 146, 34-604 Przyszowa, Poland
                             </Link>
                         </li>
                     </ul>
