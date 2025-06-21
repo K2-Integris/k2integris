@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-html {
+html, section, header {
     background-color: var(--black);
 }
 
@@ -23,8 +23,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     
     background: var(--black);
-
-    padding-top: 10rem;
+    padding-bottom: 772px;
 }
 
 * {
@@ -101,6 +100,11 @@ p {
 .wrapper {
     width: Min(90vw, 130rem);
     margin: auto;
+}
+
+section, header {
+    position: relative;
+    z-index: 100;
 }
 
 @import "navigation";

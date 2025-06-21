@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-html {
+html, section, header {
   background-color: var(--black);
 }
 
@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--black);
-  padding-top: 10rem;
+  padding-bottom: 772px;
 }
 
 * {
@@ -100,6 +100,11 @@ p {
 .wrapper {
   width: Min(90vw, 130rem);
   margin: auto;
+}
+
+section, header {
+  position: relative;
+  z-index: 100;
 }
 
 nav {
@@ -181,9 +186,9 @@ nav #hamburger span:nth-of-type(2) {
 
 header {
   width: 100vw;
-  background-color: transparent;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 15rem;
+  padding-bottom: 4rem;
 }
 
 header .wrapper {
@@ -231,7 +236,7 @@ header .wrapper:nth-of-type(2) .info-box a {
 header .wrapper .cta {
   display: block;
   padding: 2rem 4rem;
-  margin: 15rem auto 4rem;
+  margin: 15rem auto 0;
   width: 100%;
   font-size: 1.4rem;
   font-weight: 100;
@@ -844,7 +849,9 @@ header .scroll-seperator div {
 }
 
 #faq {
-  margin-top: 2rem;
+  padding-top: 2rem;
+  background-color: var(--black);
+  margin-top: -2px;
 }
 
 #faq .selection-box {
@@ -897,7 +904,7 @@ header .scroll-seperator div {
 }
 
 #faq .wrapper.faq {
-  margin-bottom: 9rem;
+  padding-bottom: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1047,6 +1054,9 @@ footer {
   width: 100vw;
   background-color: var(--gold);
   padding: 7rem 0 7rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 90;
 }
 
 footer li, footer a {
@@ -1062,6 +1072,10 @@ footer .wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
+}
+
+footer .wrapper .logo {
+  margin: 0rem auto 0;
 }
 
 footer .wrapper .horizontal {
@@ -1097,17 +1111,28 @@ footer .wrapper .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: calc(50% - 1.5rem);
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 1px solid #0f0f0f5e;
+  padding-block: 4rem 2rem;
+}
+
+footer .wrapper .list:last-of-type {
+  padding-bottom: 0;
+}
+
+footer .wrapper .list li {
+  width: 50%;
 }
 
 footer .wrapper .list li.heading {
   font-size: 2rem;
   font-weight: 700;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 footer .wrapper .list li .link {
@@ -1116,15 +1141,16 @@ footer .wrapper .list li .link {
   padding: 0.8rem 0;
 }
 
-footer .wrapper:first-of-type {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+footer .wrapper .list li:nth-of-type(odd) {
+  padding-right: 1.5rem;
 }
 
-footer .wrapper:last-of-type {
-  padding-top: 7rem;
+footer .wrapper .list li:nth-of-type(even) {
+  padding-left: 1.5rem;
+}
+
+footer .wrapper:first-of-type {
+  padding-bottom: 7rem;
   gap: 5rem;
 }
 
