@@ -470,6 +470,14 @@ header .scroll-seperator div {
   letter-spacing: 0.05rem;
 }
 
+#service .info h3::-moz-selection {
+  color: var(--black) !important;
+}
+
+#service .info h3::selection {
+  color: var(--black) !important;
+}
+
 #service .info p {
   opacity: 0.9;
   letter-spacing: 0.05rem;
@@ -1061,6 +1069,16 @@ footer {
 
 footer li, footer a {
   color: var(--black);
+}
+
+footer ::-moz-selection {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+footer ::selection {
+  background-color: var(--black);
+  color: var(--gold);
 }
 
 footer .wrapper {

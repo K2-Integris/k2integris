@@ -5,6 +5,7 @@ import { useState } from "react";
 const Faq = () => {
 
     const [ category, setCategory ] = useState(0);
+    const [openIndex, setOpenIndex] = useState(null);
 
     const faq = [
         // 0: Web / App Development
@@ -218,6 +219,13 @@ const Faq = () => {
         el.classList.toggle('active')
 
         if (el.classList.length > 1) {
+            el.parentElement.childNodes.forEach((faq, index) => {
+                if (faq.id !== el.id) {
+                    faq.classList.remove('active')
+                    faq.children[1].style.height = "0px"
+                } 
+            })
+            
             el.children[1].style.height = `${el.children[1].scrollHeight + 30}px`
         } else {
             el.children[1].style.height = "0px"

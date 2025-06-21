@@ -11,6 +11,11 @@ footer {
         color: var(--black);
     }
 
+    ::selection {
+        background-color: var(--black);
+        color: var(--gold);
+    }
+
     .wrapper {
         display: flex;
         flex-direction: column;
