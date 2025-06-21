@@ -86,3 +86,19 @@ footer {
     
     }
 }
+
+@media only screen and (min-width: 860px) {
+    footer {
+        .wrapper {
+            &:last-of-type {
+                border-top: 1px solid #0f0f0f5e;
+                flex-direction: row;
+
+                .list {
+                    border-top: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

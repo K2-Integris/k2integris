@@ -1,9 +1,30 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 const Footer = () => {
+    const footerRef = useRef();
+
+    useEffect(() => {
+        const updateBodyPadding = () => {
+            if (footerRef.current) {
+                const footerHeight = footerRef.current.offsetHeight;
+                document.body.style.paddingBottom = `${footerHeight}px`;
+            }
+        };
+
+        updateBodyPadding();
+        window.addEventListener("resize", updateBodyPadding);
+
+        return () => {
+            window.removeEventListener("resize", updateBodyPadding);
+        };
+    }, []);
+
     return (
-        <footer>
+        <footer ref={footerRef}>
             <article className="wrapper">
                 <Link className="logo" href="https://k2integris.com">
                     <Image src="/images/logo-black.png" width={79} height={50} alt="K2Integris Logo" />

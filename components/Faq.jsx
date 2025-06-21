@@ -212,7 +212,6 @@ const Faq = () => {
         ]
     ];
 
-
     const handle = (ev) => {
         let el = ev.target.parentElement
 
@@ -223,83 +222,84 @@ const Faq = () => {
         } else {
             el.children[1].style.height = "0px"
         }
-
     }
 
     return (
         <section id="faq">
-            <article className="wrapper">
-                <h2>
-                    Frequently<br />asked <span>Questions</span>
-                </h2>
-            </article>
+            <div className="faq-wrapper">
+                <article className="wrapper">
+                    <h2>
+                        Frequently<br />asked <span>Questions</span>
+                    </h2>
+                </article>
 
-            <article className="selection-box">
-                <div className="row">
-                    <button 
-                        className={category === 0 ? "active" : ""}
-                        onClick={() => { setCategory(0) }}
-                    >
-                        Web- / App-Development
-                    </button>
-                    <button 
-                        className={category === 1 ? "active" : ""}
-                        onClick={() => { setCategory(1) }}
-                    >
-                        Marketing / SEO
-                    </button>
-                    <button 
-                        className={category === 3 ? "active" : ""}
-                        onClick={() => { setCategory(3) }}
-                    >
-                        Process / Communication
-                    </button>
-                </div>
-                <div className="row">
-                    <button 
-                        className={category === 2 ? "active" : ""}
-                        onClick={() => { setCategory(2) }}
-                    >
-                        Design / Branding
-                    </button>
-                     <button 
-                        className={category === 4 ? "active" : ""}
-                        onClick={() => { setCategory(4) }}
-                    >
-                        Pricing / Legal
-                    </button>
-                    <button 
-                        className={category === 5 ? "active" : ""}
-                        onClick={() => { setCategory(5) }}
-                    >
-                        Technical / Hosting
-                    </button>
-                     <button 
-                        className={category === 6 ? "active" : ""}
-                        onClick={() => { setCategory(6) }}
-                    >
-                        Strategy / Business
-                    </button>
-                </div>
-            </article>
-
-            <article className="wrapper faq">
-                {faq[category].map((faq, index) => (
-                    <div className="faq-box" key={index} id={"faq-" + index}>
-                        <button className="faq-button" onClick={(ev) => handle(ev)}>
-                            <div className="faq-icon">
-                                <span className="faq-line"></span>
-                                <span className="faq-line"></span>
-                            </div>
-                            {faq.question}
+                <article className="selection-box">
+                    <div className="row">
+                        <button 
+                            className={category === 0 ? "active" : ""}
+                            onClick={() => { setCategory(0) }}
+                        >
+                            Web- / App-Development
                         </button>
-                        <p>
-                            {faq.answer}
-                        </p>
+                        <button 
+                            className={category === 1 ? "active" : ""}
+                            onClick={() => { setCategory(1) }}
+                        >
+                            Marketing / SEO
+                        </button>
+                        <button 
+                            className={category === 3 ? "active" : ""}
+                            onClick={() => { setCategory(3) }}
+                        >
+                            Process / Communication
+                        </button>
                     </div>
-                ))}
-            </article>
-      </section>
+                    <div className="row">
+                        <button 
+                            className={category === 2 ? "active" : ""}
+                            onClick={() => { setCategory(2) }}
+                        >
+                            Design / Branding
+                        </button>
+                        <button 
+                            className={category === 4 ? "active" : ""}
+                            onClick={() => { setCategory(4) }}
+                        >
+                            Pricing / Legal
+                        </button>
+                        <button 
+                            className={category === 5 ? "active" : ""}
+                            onClick={() => { setCategory(5) }}
+                        >
+                            Technical / Hosting
+                        </button>
+                        <button 
+                            className={category === 6 ? "active" : ""}
+                            onClick={() => { setCategory(6) }}
+                        >
+                            Strategy / Business
+                        </button>
+                    </div>
+                </article>
+
+                <article className="wrapper faq">
+                    {faq[category].map((faq, index) => (
+                        <div className="faq-box" key={index} id={"faq-" + index}>
+                            <button className="faq-button" onClick={(ev) => handle(ev)}>
+                                <div className="faq-icon">
+                                    <span className="faq-line"></span>
+                                    <span className="faq-line"></span>
+                                </div>
+                                {faq.question}
+                            </button>
+                            <p>
+                                {faq.answer}
+                            </p>
+                        </div>
+                    ))}
+                </article>
+            </div>
+        </section>
     )
 }
 

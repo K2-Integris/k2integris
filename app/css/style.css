@@ -477,7 +477,7 @@ header .scroll-seperator div {
 
 @media only screen and (min-width: 860px) {
   #service {
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
   #service .overlay {
     background: transparent;
@@ -513,7 +513,7 @@ header .scroll-seperator div {
 
 @media only screen and (min-width: 1000px) {
   #service {
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
   #service h2 {
     margin-bottom: 4rem;
@@ -854,7 +854,7 @@ header .scroll-seperator div {
   margin-top: -2px;
 }
 
-#faq .selection-box {
+#faq .faq-wrapper .selection-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -867,14 +867,14 @@ header .scroll-seperator div {
   overflow-x: scroll;
 }
 
-#faq .selection-box .row {
+#faq .faq-wrapper .selection-box .row {
   gap: 1rem;
   padding-bottom: 0.5rem;
   padding-left: 5vw;
   white-space: nowrap;
 }
 
-#faq .selection-box .row button {
+#faq .faq-wrapper .selection-box .row button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 1rem;
@@ -889,21 +889,21 @@ header .scroll-seperator div {
   margin-left: 1rem;
 }
 
-#faq .selection-box .row button.active {
+#faq .faq-wrapper .selection-box .row button.active {
   background-color: #BC976Fbd;
   color: var(--black);
   font-weight: 700;
 }
 
-#faq .selection-box .row button:first-of-type {
+#faq .faq-wrapper .selection-box .row button:first-of-type {
   margin-left: 0rem;
 }
 
-#faq .selection-box .row button:last-of-type {
+#faq .faq-wrapper .selection-box .row button:last-of-type {
   margin-right: 5vw;
 }
 
-#faq .wrapper.faq {
+#faq .faq-wrapper .wrapper.faq {
   padding-bottom: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -915,11 +915,11 @@ header .scroll-seperator div {
   gap: 4rem;
 }
 
-#faq .wrapper.faq .faq-box {
+#faq .faq-wrapper .wrapper.faq .faq-box {
   border-bottom: 1px solid #BC976Fbd;
 }
 
-#faq .wrapper.faq .faq-box .faq-button {
+#faq .faq-wrapper .wrapper.faq .faq-box .faq-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -935,13 +935,13 @@ header .scroll-seperator div {
   line-height: 2.6rem;
 }
 
-#faq .wrapper.faq .faq-box .faq-button .faq-icon {
+#faq .faq-wrapper .wrapper.faq .faq-box .faq-button .faq-icon {
   width: 2rem;
   height: 2rem;
   position: relative;
 }
 
-#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line {
+#faq .faq-wrapper .wrapper.faq .faq-box .faq-button .faq-icon .faq-line {
   width: 2rem;
   height: 0.1rem;
   background-color: var(--white);
@@ -951,19 +951,19 @@ header .scroll-seperator div {
   transition: 0.3s;
 }
 
-#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:first-of-type {
+#faq .faq-wrapper .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:first-of-type {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-#faq .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:last-of-type {
+#faq .faq-wrapper .wrapper.faq .faq-box .faq-button .faq-icon .faq-line:last-of-type {
   -webkit-transform: rotate(90deg) translate(-4%, -15%);
           transform: rotate(90deg) translate(-4%, -15%);
   top: 50%;
 }
 
-#faq .wrapper.faq .faq-box p {
+#faq .faq-wrapper .wrapper.faq .faq-box p {
   padding-left: 4rem;
   padding-top: 3rem;
   height: 0px;
@@ -972,17 +972,17 @@ header .scroll-seperator div {
   transition: 0.3s;
 }
 
-#faq .wrapper.faq .faq-box.active .faq-button .faq-icon .faq-line:last-of-type {
+#faq .faq-wrapper .wrapper.faq .faq-box.active .faq-button .faq-icon .faq-line:last-of-type {
   -webkit-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
 }
 
-#faq .wrapper.faq .faq-box.active p {
+#faq .faq-wrapper .wrapper.faq .faq-box.active p {
   padding-bottom: 3rem;
 }
 
 @media only screen and (min-width: 1000px) {
-  #faq {
+  #faq .faq-wrapper {
     display: -ms-grid;
     display: grid;
         grid-template-areas: 'headeing faq'  'selection faq';
@@ -996,9 +996,9 @@ header .scroll-seperator div {
     width: Min(90vw, 130rem);
     margin: auto;
     overflow: hidden;
-    padding: 10vh 0;
+    padding: 5vh 0 0;
   }
-  #faq .selection-box {
+  #faq .faq-wrapper .selection-box {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: selection;
@@ -1007,7 +1007,7 @@ header .scroll-seperator div {
     gap: 0.5rem;
     height: 100%;
   }
-  #faq .selection-box .row {
+  #faq .faq-wrapper .selection-box .row {
     width: 100%;
     white-space: wrap;
     padding: 0;
@@ -1021,13 +1021,13 @@ header .scroll-seperator div {
             flex-direction: column;
     gap: 0.5rem;
   }
-  #faq .selection-box .row button {
+  #faq .faq-wrapper .selection-box .row button {
     width: 100%;
     margin: 0;
     border: none;
     background-color: #8f74560f;
   }
-  #faq .wrapper {
+  #faq .faq-wrapper .wrapper {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: headeing;
@@ -1036,7 +1036,7 @@ header .scroll-seperator div {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  #faq .wrapper.faq {
+  #faq .faq-wrapper .wrapper.faq {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
@@ -1152,6 +1152,20 @@ footer .wrapper .list li:nth-of-type(even) {
 footer .wrapper:first-of-type {
   padding-bottom: 7rem;
   gap: 5rem;
+}
+
+@media only screen and (min-width: 860px) {
+  footer .wrapper:last-of-type {
+    border-top: 1px solid #0f0f0f5e;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .wrapper:last-of-type .list {
+    border-top: none;
+    padding-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 380px) {
