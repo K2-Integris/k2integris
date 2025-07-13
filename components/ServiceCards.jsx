@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 const ServiceCards = () => {
   const cardWrapperRef = useRef();
+  const cursorRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const scrollToCard = (index) => {
@@ -22,17 +23,50 @@ const ServiceCards = () => {
     scrollToCard(nextIndex);
   };
 
-  useEffect(() => {
-    const wrapper = cardWrapperRef.current;
-    const handleScroll = () => {
-      const scrollLeft = wrapper.scrollLeft;
-      const cardWidth = wrapper.firstChild.offsetWidth;
-      const newIndex = Math.round(scrollLeft / cardWidth);
-      setActiveIndex(newIndex);
-    };
-    wrapper.addEventListener("scroll", handleScroll);
-    return () => wrapper.removeEventListener("scroll", handleScroll);
-  }, []);
+useEffect(() => {
+  const cursor = cursorRef.current;
+  const wrapper = cardWrapperRef.current;
+
+  if (!cursor || !wrapper) return;
+
+  let visible = false;
+
+  const handleMouseMove = (e) => {
+    const x = e.clientX - 150;
+    const y = e.clientY - 150;
+
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+
+    if (!visible) {
+      cursor.style.display = "block";
+      requestAnimationFrame(() => {
+        cursor.style.transform = "scale(1)";
+      });
+      visible = true;
+    }
+  };
+
+  const handleLeave = () => {
+    if (visible) {
+      cursor.style.transform = "scale(0)";
+      setTimeout(() => {
+        cursor.style.display = "none";
+      }, 200);
+      visible = false;
+    }
+  };
+
+  wrapper.addEventListener("mousemove", handleMouseMove);
+  wrapper.addEventListener("mouseleave", handleLeave);
+
+  return () => {
+    wrapper.removeEventListener("mousemove", handleMouseMove);
+    wrapper.removeEventListener("mouseleave", handleLeave);
+  };
+}, []);
+
+
 
   return (
     <>
@@ -135,6 +169,7 @@ const ServiceCards = () => {
               </Link>
             </div>
           </article>
+          <div className="cursor" ref={cursorRef}></div>
         </div>
 
         <div className="wrapper card-wrapper-bullets">

@@ -1,9 +1,6 @@
 import ScrollSeperator from "@/components/ScrollSeperator";
-import styles from "./page.module.css";
-
 import Link from "next/link";
 import ServiceCards from "@/components/ServiceCards";
-import Image from "next/image";
 
 export default function Home() {
   return (

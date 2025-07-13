@@ -417,6 +417,24 @@ header .scroll-seperator div {
   z-index: 0;
 }
 
+#service .cursor {
+  display: none;
+  position: fixed;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: 0;
+  opacity: 0.5;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: radial-gradient(circle 10vmax, #ffffff30 0%, #ffffff20 10%, var(--black) 100%);
+}
+
 #service .wrapper {
   z-index: 100;
   position: relative;
@@ -476,6 +494,8 @@ header .scroll-seperator div {
   margin-left: 5vw;
   border: 1px solid #BC976Fbd;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 3;
 }
 
 #service .card-wrapper .card:last-of-type {

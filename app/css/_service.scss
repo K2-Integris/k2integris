@@ -12,6 +12,25 @@
         z-index: 0;
     }
 
+    .cursor {
+        display: none;
+
+        position: fixed;
+        width: 30rem;
+        height: 30rem;
+
+        border-radius: 50%;
+        pointer-events: none;
+
+        transition: transform 0.3s;
+        z-index: 0;
+        opacity: 0.5;
+
+        transform: scale(0);
+
+        background: radial-gradient(circle 10vmax,#ffffff30 0%,#ffffff20 10%, var(--black) 100%);
+    }
+
     .wrapper {
         z-index: 100;
         position: relative;
@@ -70,6 +89,9 @@
 
             border: 1px solid #BC976Fbd;
             margin-bottom: 3rem;
+
+            position: relative;
+            z-index: 3;
 
             &:last-of-type {
                 margin-right: 5vw;
