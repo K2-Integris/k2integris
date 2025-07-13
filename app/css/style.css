@@ -114,9 +114,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--black);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: transparent;
   padding: 2.5rem 0;
 }
 
@@ -188,7 +186,6 @@ header {
   width: 100vw;
   position: relative;
   padding-top: 15rem;
-  padding-bottom: 4rem;
 }
 
 header .wrapper {
@@ -284,6 +281,109 @@ header .scroll-seperator div {
   margin: 0 1rem -0.4rem;
 }
 
+.transition {
+  width: 100vw;
+  height: 10rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--black)));
+  background: linear-gradient(to bottom, transparent, var(--black));
+  position: relative;
+  z-index: 3;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+  z-index: 1;
+}
+
+.lines .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#705c4626), to(#ffffff03));
+  background: linear-gradient(#705c4626, #ffffff03);
+  overflow: hidden;
+}
+
+.lines .line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff30));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff30 100%);
+  -webkit-animation: drop 7s 0s infinite;
+          animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.lines .line:nth-child(1) {
+  margin-left: -40%;
+}
+
+.lines .line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.lines .line:nth-child(2) {
+  margin-left: -20%;
+}
+
+.lines .line:nth-child(2)::after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.lines .line:nth-child(4) {
+  margin-left: 20%;
+}
+
+.lines .line:nth-child(4)::after {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.lines .line:nth-child(5) {
+  margin-left: 40%;
+}
+
+.lines .line:nth-child(5)::after {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
 @media only screen and (max-width: 380px) {
   header .wrapper .cta {
     padding: 1rem 1rem;
@@ -301,6 +401,9 @@ header .scroll-seperator div {
     margin-top: 22rem;
     width: auto;
   }
+  .transition {
+    height: 16rem;
+  }
 }
 
 #service .overlay {
@@ -317,7 +420,6 @@ header .scroll-seperator div {
 #service .wrapper {
   z-index: 100;
   position: relative;
-  padding-top: 4rem;
   padding-bottom: 1rem;
   white-space: wrap;
 }
@@ -520,9 +622,6 @@ header .scroll-seperator div {
 }
 
 @media only screen and (min-width: 1000px) {
-  #service {
-    padding-top: 10rem;
-  }
   #service h2 {
     margin-bottom: 4rem;
   }
@@ -689,8 +788,7 @@ header .scroll-seperator div {
 
 #contact-cta {
   width: 100%;
-  margin-top: -2rem;
-  padding: 1rem 0rem 9rem;
+  padding: 10rem 0rem;
 }
 
 #contact-cta .wrapper {

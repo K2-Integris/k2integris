@@ -9,6 +9,14 @@ export default function Home() {
   return (
     <>
       <header>
+        <div className="lines">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+
        <article className="wrapper">
         <h1>
           Empowering<br />Businesses to <span>Reach</span><br /> New Digital <span>Heights</span>
@@ -20,6 +28,8 @@ export default function Home() {
           Request a Consultation
         </button>
        </article>
+
+       <div className="transition"></div>
       </header>
 
       <section id="service">
@@ -67,7 +77,24 @@ export default function Home() {
         </article>
       </section>
 
-      <section id="testemonials">
+      
+      <section id="contact-cta">
+        <article className="wrapper">
+          <h2>
+            Let's talk about<br /><span>your project</span>
+          </h2>
+
+          <Link href="contact">
+            GET IN TOUCH
+          </Link>
+        </article>
+      </section>
+    </>
+  );
+}
+
+/*
+<section id="testemonials">
         <div className="overlay"></div>
 
         <div className="wrapper">
@@ -288,17 +315,4 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact-cta">
-        <article className="wrapper">
-          <h2>
-            Let's talk about<br /><span>your project</span>
-          </h2>
-
-          <Link href="contact">
-            GET IN TOUCH
-          </Link>
-        </article>
-      </section>
-    </>
-  );
-}
+*/
