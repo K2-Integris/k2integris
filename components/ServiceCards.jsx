@@ -6,15 +6,23 @@ import { useEffect, useRef, useState } from "react";
 const ServiceCards = () => {
   const cardWrapperRef = useRef();
   const cursorRef = useRef(null);
+  const isManuallyScrolling = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const scrollToCard = (index) => {
     const cardWidth = cardWrapperRef.current.firstChild.offsetWidth;
+    isManuallyScrolling.current = true;
+
     cardWrapperRef.current.scrollTo({
-      left: index * (cardWidth + 0), 
+      left: index * cardWidth,
       behavior: "smooth",
     });
+
     setActiveIndex(index);
+
+    setTimeout(() => {
+      isManuallyScrolling.current = false;
+    }, 500); 
   };
 
   const handleArrow = (direction) => {
@@ -57,15 +65,26 @@ useEffect(() => {
     }
   };
 
+  const handleScroll = () => {
+    if (isManuallyScrolling.current) return;
+
+    const cardWidth = wrapper.firstChild.offsetWidth;
+    const scrollLeft = wrapper.scrollLeft;
+    const index = Math.round(scrollLeft / cardWidth);
+    setActiveIndex(index);
+  };
+
+
   wrapper.addEventListener("mousemove", handleMouseMove);
   wrapper.addEventListener("mouseleave", handleLeave);
+  wrapper.addEventListener("scroll", handleScroll);
 
   return () => {
     wrapper.removeEventListener("mousemove", handleMouseMove);
     wrapper.removeEventListener("mouseleave", handleLeave);
+    wrapper.removeEventListener("scroll", handleScroll);
   };
 }, []);
-
 
 
   return (
