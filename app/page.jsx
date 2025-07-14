@@ -86,7 +86,7 @@ export default function Home() {
           </Link>
         </article>
         <div className="wrap">
-          {Array.from({ length: 300 }).map((_, i) => (
+          {Array.from({ length: 200 }).map((_, i) => (
             <div className="c" key={i} />
           ))}
         </div>

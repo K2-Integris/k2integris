@@ -126,18 +126,10 @@
 }
 
 @media only screen and (min-width: 860px) {
-    $total: 300;
-    $orb-size: 300px;
-    $particle-size: 2px;
-    $time: 14s; 
-    $base-hue: 0;
-
-    $c-colors: #434343bd, var(--gold), var(--gold-transparent), var(--white);
-
     #contact-cta {
         display: flex;
         align-items: center;
-        padding: 27rem 0!important;
+        padding: 27rem 0 27rem !important;
 
         .wrapper {
             h2, h2 span {
@@ -148,11 +140,20 @@
 
         overflow: hidden;
     }
+}
+
+$total: 200;
+    $orb-size: 100px;
+    $particle-size: 2px;
+    $time: 14s; 
+    $base-hue: 0;
+
+    $c-colors: #434343bd, var(--gold), var(--gold-transparent), var(--white);
 
     .wrap {
         position: relative;
         top: 0%;
-        left: -50%;
+        left: 50%;
         width: 0; 
         height: 0; 
         transform-style: preserve-3d;
@@ -203,4 +204,3 @@
             }
         }
     }
-}
