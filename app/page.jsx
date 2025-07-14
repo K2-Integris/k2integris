@@ -85,6 +85,11 @@ export default function Home() {
             GET IN TOUCH
           </Link>
         </article>
+        <div className="wrap">
+          {Array.from({ length: 300 }).map((_, i) => (
+            <div className="c" key={i} />
+          ))}
+        </div>
       </section>
     </>
   );
