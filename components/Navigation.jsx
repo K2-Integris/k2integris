@@ -2,18 +2,36 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const Navigation = () => {
-
-    const menu = useRef()
+    const menu = useRef();
+    const navRef = useRef();
 
     const handleMenu = () => {
-        menu.current.classList.toggle('open')
-    }
+        menu.current.classList.toggle('open');
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                navRef.current.classList.add("background");
+            } else {
+                navRef.current.classList.remove("background");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <nav>
+        <nav ref={navRef}>
             <div className="wrapper">
                 <Link id="logo" href="https://k2integris.com">
                     <Image src="/images/logo.png" width={29} height={17} alt="K2Integris Logo" />
@@ -29,7 +47,7 @@ const Navigation = () => {
                 </button>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navigation;

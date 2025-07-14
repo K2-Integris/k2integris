@@ -116,6 +116,12 @@ nav {
   z-index: 1000;
   background-color: transparent;
   padding: 2.5rem 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav.background {
+  background-color: var(--black);
 }
 
 nav .wrapper {
