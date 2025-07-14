@@ -232,6 +232,25 @@ const Faq = () => {
         }
     }
 
+    const handleCategorySwitch = (newCategory) => {
+        if (newCategory === category) return;
+
+        const openFaq = document.querySelector(".faq-box.active");
+        if (openFaq) {
+            const content = openFaq.querySelector("p");
+            openFaq.classList.remove("active");
+            content.style.height = "0px";
+
+            setTimeout(() => {
+                setCategory(newCategory);
+            }, 300);
+        } else {
+            setCategory(newCategory);
+        }
+
+        setOpenIndex(null);
+    };
+
     return (
         <section id="faq">
             <div className="faq-wrapper">
@@ -245,19 +264,19 @@ const Faq = () => {
                     <div className="row">
                         <button 
                             className={category === 0 ? "active" : ""}
-                            onClick={() => { setCategory(0) }}
+                            onClick={() => handleCategorySwitch(0) }
                         >
                             Web- / App-Development
                         </button>
                         <button 
                             className={category === 1 ? "active" : ""}
-                            onClick={() => { setCategory(1) }}
+                            onClick={() => handleCategorySwitch(1) }
                         >
                             Marketing / SEO
                         </button>
                         <button 
                             className={category === 3 ? "active" : ""}
-                            onClick={() => { setCategory(3) }}
+                            onClick={() => handleCategorySwitch(3) }
                         >
                             Process / Communication
                         </button>
@@ -265,32 +284,32 @@ const Faq = () => {
                     <div className="row">
                         <button 
                             className={category === 2 ? "active" : ""}
-                            onClick={() => { setCategory(2) }}
+                            onClick={() => handleCategorySwitch(2) }
                         >
                             Design / Branding
                         </button>
                         <button 
                             className={category === 4 ? "active" : ""}
-                            onClick={() => { setCategory(4) }}
+                            onClick={() => handleCategorySwitch(4) }
                         >
                             Pricing / Legal
                         </button>
                         <button 
                             className={category === 5 ? "active" : ""}
-                            onClick={() => { setCategory(5) }}
+                            onClick={() => handleCategorySwitch(5) }
                         >
                             Technical / Hosting
                         </button>
                         <button 
                             className={category === 6 ? "active" : ""}
-                            onClick={() => { setCategory(6) }}
+                            onClick={() => handleCategorySwitch(6) }
                         >
                             Strategy / Business
                         </button>
                     </div>
                 </article>
 
-                <article className="wrapper faq">
+                <article className="wrapper faq" key={category}>
                     {faq[category].map((faq, index) => (
                         <div className="faq-box" key={index} id={"faq-" + index}>
                             <button className="faq-button" onClick={(ev) => handle(ev)}>

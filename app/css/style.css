@@ -658,7 +658,7 @@ header .scroll-seperator div {
     margin-bottom: 4rem;
   }
   #service .info {
-    margin-top: 8rem;
+    margin-top: 12rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -973,6 +973,7 @@ header .scroll-seperator div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 7rem 0 14rem !important;
   }
   #contact-cta .wrapper h2, #contact-cta .wrapper h2 span {
     font-size: 8.2rem !important;
@@ -1122,8 +1123,8 @@ header .scroll-seperator div {
         grid-template-rows: 100px calc(100% - 100px);
     -ms-grid-columns: 345px calc(100% - 345px);
         grid-template-columns: 345px calc(100% - 345px);
-    -webkit-column-gap: 4rem;
-            column-gap: 4rem;
+    -webkit-column-gap: 5rem;
+            column-gap: 5rem;
     row-gap: 5rem;
     width: Min(90vw, 130rem);
     margin: auto;
@@ -1157,7 +1158,11 @@ header .scroll-seperator div {
     width: 100%;
     margin: 0;
     border: none;
-    background-color: #8f74560f;
+    background-color: transparent;
+    border: 1px dashed #434343bd;
+  }
+  #faq .faq-wrapper .selection-box .row button.active {
+    border: none;
   }
   #faq .faq-wrapper .wrapper {
     -ms-grid-row: 1;
