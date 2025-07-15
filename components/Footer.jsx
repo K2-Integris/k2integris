@@ -54,17 +54,17 @@ const Footer = () => {
                 
                 <ul className="horizontal">
                     <li>
-                        <Link href="" className="link">
+                        <Link href="" className="link legal">
                             Imprint
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link">
+                        <Link href="" className="link legal">
                             Terms of Use
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link">
+                         <Link href="" className="link legal">
                             Privacy Policy
                         </Link>
                     </li>
@@ -78,22 +78,22 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="" className="link">
+                        <Link href="" className="link page">
                             Business Apps
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link">
+                        <Link href="" className="link page">
                             Custom Websites
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link">
+                         <Link href="" className="link page">
                             E-Commerce
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link">
+                        <Link href="" className="link page">
                            Marketing and SEO
                         </Link>
                     </li>
@@ -105,23 +105,23 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="" className="link">
-                            Our Projects
+                        <Link href="" className="link page">
+                            Projects
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link">
-                            Our Testimonials
+                        <Link href="" className="link page">
+                            Testimonials
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link">
-                            Our Strategy
+                         <Link href="" className="link page">
+                            Strategy
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link">
-                            Our Philosophy
+                         <Link href="" className="link page">
+                            Philosophy
                         </Link>
                     </li>
                 </ul>
