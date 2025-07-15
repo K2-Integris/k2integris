@@ -31,12 +31,12 @@ const Navigation = () => {
     }, []);
 
     return (
-        <nav ref={navRef}>
+        <nav id="nav" ref={navRef}>
             <div className="wrapper">
                 <Link id="logo" href="https://k2integris.com">
                     <Image src="/images/logo.png" width={29} height={17} alt="K2Integris Logo" />
                 </Link>
-                <Link id="text-logo" href="https://k2integris.com">
+                <Link className="text-logo" href="https://k2integris.com">
                     K2INTEGRIS
                 </Link>
 
@@ -45,6 +45,24 @@ const Navigation = () => {
                     <span></span>
                     <span></span>
                 </button>
+
+                <menu className="desktop">
+                    <Link href="" className="link">
+                        Home
+                    </Link>
+                    <Link href="" className="link">
+                        About
+                    </Link>
+                    <Link href="" className="link">
+                        Services
+                    </Link>
+                    <Link href="" className="link">
+                        Work
+                    </Link>
+                    <Link href="" className="link">
+                        Contact
+                    </Link>
+                </menu>
             </div>
         </nav>
     );

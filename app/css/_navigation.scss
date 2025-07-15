@@ -1,4 +1,4 @@
-nav {
+#nav {
     width: 100vw;
     position: fixed;
     top: 0;
@@ -22,10 +22,14 @@ nav {
         justify-content: space-between;
     }
 
-    #text-logo {
+    .text-logo {
         font-size: 1.7rem;
         color: var(--gold);
         font-family: 'Amiri';
+    }
+
+    .desktop {
+        display: none;
     }
 
     #hamburger {
@@ -69,6 +73,46 @@ nav {
                 width: 1.8rem;
                 transition: 0.2s;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    #nav {
+        #hamburger {
+            display: none;
+        }
+
+        .wrapper {
+            position: relative;
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+
+        .desktop {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            align-items: center;
+            
+            width: 100%;
+            justify-content: flex-end;
+
+            .link {
+                color: #ffffffe0;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #nav {
+        .text-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(calc(-50% + 0.45rem));
         }
     }
 }
