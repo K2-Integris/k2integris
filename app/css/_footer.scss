@@ -28,7 +28,7 @@ footer {
         .horizontal {
             display: flex;
             flex-direction: row;
-            gap: 2.2rem;
+            gap: 3.2rem;
             justify-content: center;
 
             a {
@@ -37,6 +37,7 @@ footer {
                 svg {
                     width: 3rem;
                     height: 3rem;
+                    transition: 0.3s;
 
                     stroke: var(--black);
 
@@ -95,6 +96,47 @@ footer {
 @media only screen and (min-width: 860px) {
     footer {
         .wrapper {
+            .horizontal {
+                gap: 4.2rem;
+
+                .social {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4rem;
+                    height: 4rem;
+
+                    &::before {  
+                        content: '';
+                        position: absolute;
+                        width: 8rem;
+                        height: 8rem;
+                        background: #000;
+                        border-radius: 50%;
+                        z-index: -1;
+                        transform: scale(0);
+                        transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+
+                        left: -50%;
+                        top: -50%;
+                    }
+
+                    &:hover {
+                        svg {
+                            stroke: var(--white);
+                            &.x {
+                                stroke: none;
+                                fill: var(--white);
+                            }
+                        }
+                        &::before {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+
             &:last-of-type {
                 border-top: 1px solid #0f0f0f5e;
                 flex-direction: row;
