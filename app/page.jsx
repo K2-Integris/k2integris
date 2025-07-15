@@ -81,12 +81,13 @@ export default function Home() {
             Let's talk about<br /><span>your project</span>
           </h2>
 
-          <Link href="contact">
+          <Link href="contact" className="btn-11">
             GET IN TOUCH
+            <span></span><span></span><span></span><span></span>
           </Link>
         </article>
         <div className="wrap">
-          {Array.from({ length: 200 }).map((_, i) => (
+          {Array.from({ length: 300 }).map((_, i) => (
             <div className="c" key={i} />
           ))}
         </div>
