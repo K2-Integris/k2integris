@@ -354,6 +354,33 @@
     }
 }
 
+@media only screen and (min-width: 1000px) {
+    #contact {
+        h1 {
+            text-align: left;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+
+            gap: 5rem;
+        }
+
+        form {
+            width: 70%;
+        }
+
+        article {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 3.5rem;
+        }
+    }
+}
+
 @keyframes shiny-btn1 {
     0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
     80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
