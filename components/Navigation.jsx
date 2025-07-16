@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
     const menu = useRef();
     const navRef = useRef();
+    const pathname = usePathname();
 
     const handleMenu = () => {
         menu.current.classList.toggle('open');
@@ -22,13 +24,14 @@ const Navigation = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-
         handleScroll();
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const isActive = (href) => pathname === href;
 
     return (
         <nav id="nav" ref={navRef}>
@@ -47,21 +50,21 @@ const Navigation = () => {
                 </button>
 
                 <menu className="desktop">
-                    <Link href="/" className="link">
-                        Home
-                    </Link>
-                    <Link href="about" className="link">
-                        About
-                    </Link>
-                    <Link href="services" className="link">
-                        Services
-                    </Link>
-                    <Link href="work" className="link">
-                        Work
-                    </Link>
-                    <Link href="contact" className="link">
-                        Contact
-                    </Link>
+                    {[
+                        { href: "/", label: "Home" },
+                        { href: "/about", label: "About" },
+                        { href: "/services", label: "Services" },
+                        { href: "/work", label: "Work" },
+                        { href: "/contact", label: "Contact" }
+                    ].map(({ href, label }) => (
+                        <Link
+                            key={href}
+                            href={href}
+                            className={`link${isActive(href) ? " active" : ""}`}
+                        >
+                            {label}
+                        </Link>
+                    ))}
                 </menu>
             </div>
         </nav>

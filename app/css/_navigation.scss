@@ -92,16 +92,24 @@
         .desktop {
             display: flex;
             flex-direction: row;
-            gap: 3rem;
             align-items: center;
             
             width: 100%;
+            gap: 0.5rem;
             justify-content: flex-end;
 
             .link {
                 color: #ffffffe0;
                 font-size: 1.2rem;
                 text-transform: uppercase;
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid transparent;
+                transition: 0.3s;
+
+                &:hover, &.active {
+                    color: var(--gold);
+                    border-color: var(--gold);
+                }
             }
         }
     }
