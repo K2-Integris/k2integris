@@ -13,7 +13,7 @@ const Contact = () => {
                     <ul>
                         <li>
                             <Link href="/">
-                                contact@k2integeis.pl
+                                contact@k2integris.pl
                             </Link>
                         </li>
                         <li>
