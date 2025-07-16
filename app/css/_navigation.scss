@@ -32,6 +32,55 @@
         display: none;
     }
 
+    .mobile {
+        position: fixed;
+        top: 7rem;
+        bottom: 0;
+        width: 100vw;
+        left: 100vw;
+
+        transition: 0.3s;
+
+        background-color: var(--black);
+        transition: 0.3;
+
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+
+        .link {
+            width: 100%;
+            color: #ffffffe0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 2rem 5vw;
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+
+            svg {
+                transform: scale(0.9);
+                transition: 0.3s;
+            }
+
+            &.active {
+                color: var(--gold);
+                background-color: #191919;
+
+                svg path {
+                    stroke: var(--gold);
+                }
+            }
+        }
+
+        &.open {
+            left: 0vw;
+        }
+    }
+
     #hamburger {
         display: flex;
         flex-direction: column;
@@ -87,6 +136,10 @@
             position: relative;
             justify-content: flex-start;
             gap: 3rem;
+        }
+
+        .mobile {
+            display: none;
         }
 
         .desktop {
