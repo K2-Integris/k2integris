@@ -47,19 +47,19 @@ const Navigation = () => {
                 </button>
 
                 <menu className="desktop">
-                    <Link href="" className="link">
+                    <Link href="/" className="link">
                         Home
                     </Link>
-                    <Link href="" className="link">
+                    <Link href="about" className="link">
                         About
                     </Link>
-                    <Link href="" className="link">
+                    <Link href="services" className="link">
                         Services
                     </Link>
-                    <Link href="" className="link">
+                    <Link href="work" className="link">
                         Work
                     </Link>
-                    <Link href="" className="link">
+                    <Link href="contact" className="link">
                         Contact
                     </Link>
                 </menu>

@@ -21,9 +21,9 @@ export default function Home() {
 
         <ScrollSeperator />
 
-        <button className="cta">
+        <a href="contact" className="cta">
           Request a Consultation
-        </button>
+        </a>
        </article>
 
        <div className="transition"></div>

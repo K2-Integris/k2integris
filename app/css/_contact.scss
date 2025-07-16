@@ -168,8 +168,9 @@
     }
 
     textarea {
-        height: 12rem;
+        min-height: 12rem;
         font-family: Outfit;
+        resize: vertical;
     }
 }
 
