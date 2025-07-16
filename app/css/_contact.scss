@@ -318,6 +318,13 @@
     }
 
     #contact {
+        padding-bottom: 8rem;
+
+        h1 {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
         form {
             display: grid;
 
@@ -356,10 +363,6 @@
 
 @media only screen and (min-width: 1000px) {
     #contact {
-        h1 {
-            text-align: left;
-        }
-
         .container {
             display: flex;
             flex-direction: row-reverse;
