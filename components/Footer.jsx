@@ -54,17 +54,17 @@ const Footer = () => {
                 
                 <ul className="horizontal">
                     <li>
-                        <Link href="" className="link legal">
+                        <Link href="imprint" className="link legal">
                             Imprint
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link legal">
+                        <Link href="terms-of-use" className="link legal">
                             Terms of Use
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link legal">
+                         <Link href="privacy-policy" className="link legal">
                             Privacy Policy
                         </Link>
                     </li>
@@ -78,22 +78,22 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="" className="link page">
+                        <Link href="app-development" className="link page">
                             Business Apps
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link page">
+                        <Link href="web-development" className="link page">
                             Custom Websites
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link page">
+                         <Link href="e-commerce" className="link page">
                             E-Commerce
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link page">
+                        <Link href="marketing-and-seo" className="link page">
                            Marketing and SEO
                         </Link>
                     </li>
@@ -105,22 +105,22 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="" className="link page">
-                            Projects
+                        <Link href="work" className="link page">
+                            Our Work
                         </Link>
                     </li>
                     <li>
-                        <Link href="" className="link page">
+                        <Link href="testimonials" className="link page">
                             Testimonials
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link page">
+                         <Link href="strategy" className="link page">
                             Strategy
                         </Link>
                     </li>
                     <li>
-                         <Link href="" className="link page">
+                         <Link href="philosophy" className="link page">
                             Philosophy
                         </Link>
                     </li>
