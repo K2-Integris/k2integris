@@ -99,6 +99,10 @@
 #contact {
     padding-block: 15rem 5rem;
 
+    h1 {
+        margin-bottom: 2rem;
+    }
+
     p {
         margin-top: 2rem;
         opacity: 0.9;
@@ -127,10 +131,15 @@
         gap: 1.5rem;
         padding: 2rem 0;
 
-        li {
-            a {
-                font-size: 1.6rem;
-                opacity: 0.9;
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 1.6rem;
+            opacity: 0.9;
+
+            svg {
+                transform: scale(0.9);
             }
         }
         
@@ -139,6 +148,7 @@
             flex-direction: row;
             align-items: center;
             padding: 0;
+            margin-block: 2rem;
 
             svg {
                 width: 2rem;
@@ -326,6 +336,76 @@
             margin-bottom: 2rem;
         }
 
+        article {
+            ul {
+                gap: 0.5rem;
+
+                &.horizontal {
+                    gap: 2rem;
+                }
+
+                margin-left: -1rem;
+            }
+
+            .link {
+                padding: 1rem 2rem 1rem 1rem;
+                transition: 0.3s;
+                border-radius: 1rem;
+                width: max-content;
+
+                svg path {
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    background-color: #bc976f45;
+                    background-color: var(--gold);
+                    color: var(--black);
+
+                    svg path {
+                        stroke: var(--black);
+                    }
+                }
+            }
+
+            .social {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 4rem;
+                height: 4rem;
+
+                &::before {  
+                    content: '';
+                    position: absolute;
+                    width: 8rem;
+                    height: 8rem;
+                    background: var(--gold);
+                    border-radius: 50%;
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+
+                    left: -50%;
+                    top: -50%;
+                }
+
+                &:hover {
+                    svg {
+                        stroke: var(--black);
+                        &.x {
+                            stroke: none;
+                            fill: var(--black);
+                        }
+                    }
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
         form {
             display: grid;
 
@@ -380,7 +460,7 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            padding-top: 3.5rem;
+            padding-top: 4rem;
         }
     }
 }
