@@ -89,15 +89,17 @@ const Contact = () => {
                                 <textarea name="message" id="message" placeholder="We want..."></textarea>
                             </label>
 
+                            <label className="check-box">
+                                I agree to the processing of my personal data in accordance with the <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
+                                <input type="checkbox" />
+                                <span className="checkmark"></span>
+                            </label>
+
                             <button type="submit">
                                 Send Message
                             </button>
                         </form>
                     </div>
-
-                    <p>
-                       We will get back to you as soon as possible with date suggestions for a meeting.
-                    </p>
                 </div>
             </section>
         </>

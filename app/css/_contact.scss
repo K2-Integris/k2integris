@@ -94,6 +94,13 @@
             }
         }
     }
+
+    @keyframes shiny-btn1 {
+        0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+        80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+        81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+        100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+    }
 }
 
 #contact {
@@ -181,6 +188,68 @@
         min-height: 12rem;
         font-family: Outfit;
         resize: vertical;
+    }
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    position: relative;
+    padding-left: 3.5rem;
+    font-size: 1.6rem;
+
+    a {
+        font-size: 1.6rem;
+        color: var(--gold);
+        padding-left: 0.5rem;
+    }
+
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #ffffff50;
+
+        transition: 0.25s;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &:hover input ~ .checkmark {
+        background-color: #ffffff50;
+    }
+
+    input:checked ~ .checkmark {
+        background-color: var(--gold);
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
     }
 }
 
@@ -413,7 +482,12 @@
                 'company name'
                 'email phone'
                 'message message'
+                'checkbox checkbox'
                 'button button';
+            
+            .check-box {
+                grid-area: checkbox;
+            }
 
             .input-box[for="company"] {
                 grid-area: company;
@@ -463,11 +537,4 @@
             padding-top: 4rem;
         }
     }
-}
-
-@keyframes shiny-btn1 {
-    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
-    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
-    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
-    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
 }
