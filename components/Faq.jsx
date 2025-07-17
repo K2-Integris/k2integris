@@ -6,6 +6,7 @@ const Faq = () => {
 
     const [ category, setCategory ] = useState(0);
     const [openIndex, setOpenIndex] = useState(null);
+    const [renderedCategory, setRenderedCategory] = useState(0);
 
     const faq = [
         // 0: Web / App Development
@@ -214,7 +215,7 @@ const Faq = () => {
     ];
 
     const handle = (ev) => {
-        let el = ev.target.parentElement
+        let el = ev.currentTarget.parentElement
 
         el.classList.toggle('active')
 
@@ -235,20 +236,21 @@ const Faq = () => {
     const handleCategorySwitch = (newCategory) => {
         if (newCategory === category) return;
 
+        setCategory(newCategory);
+
         const openFaq = document.querySelector(".faq-box.active");
+
         if (openFaq) {
-            const content = openFaq.querySelector("p");
+            console.log('hure')
             openFaq.classList.remove("active");
-            content.style.height = "0px";
+            openFaq.children[1].style.height = "0px"
 
             setTimeout(() => {
-                setCategory(newCategory);
-            }, 300);
+                setRenderedCategory(newCategory)
+            }, 350)
         } else {
-            setCategory(newCategory);
+            setRenderedCategory(newCategory)
         }
-
-        setOpenIndex(null);
     };
 
     return (
@@ -309,8 +311,8 @@ const Faq = () => {
                     </div>
                 </article>
 
-                <article className="wrapper faq" key={category}>
-                    {faq[category].map((faq, index) => (
+                <article className="wrapper faq" key={renderedCategory}>
+                    {faq[renderedCategory].map((faq, index) => (
                         <div className="faq-box" key={index} id={"faq-" + index}>
                             <button className="faq-button" onClick={(ev) => handle(ev)}>
                                 <div className="faq-icon">
