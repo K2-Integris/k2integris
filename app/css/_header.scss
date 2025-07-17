@@ -177,7 +177,7 @@ header {
     header {
         .scroll-seperator {
             padding-top: 6rem;
-            left: -5vw;
+            left: calc((100vw - 130rem) / -2);
         }
 
         .wrapper {
