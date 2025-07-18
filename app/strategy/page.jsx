@@ -1,3 +1,5 @@
+import ContactCTA from "@/components/ContactCTA"
+
 const { default: ComingSoon } = require("../coming-soon")
 
 const Strategy = () => {
@@ -7,9 +9,14 @@ const Strategy = () => {
                 <div className="wrapper">
                     <article className="hero">
                         <h1>
-                            Full-Stack<br />Digital <span>Strategy</span>
+                            Full - Stack<br />Digital <span>Strategy</span>
                         </h1>
+
+                        <h4>
+                            Elite presence, fast performance, real results -<br /> all start with a solid plan.
+                        </h4>
                     </article>
+
                     <article className="step">
                         <h1>
                             <span>
@@ -215,6 +222,8 @@ const Strategy = () => {
                     </article>
                 </div>
             </section>
+
+            <ContactCTA />
         </>
     )
 }
