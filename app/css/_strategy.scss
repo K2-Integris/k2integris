@@ -1,0 +1,57 @@
+#strategy {
+    padding-bottom: 10rem;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .hero {
+        padding-top: 15rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .step {
+        display: grid;
+        grid-template-areas: 'number heading' 'number text' 'number text';
+        grid-template-columns: 10rem calc(100% - 10rem);
+
+        h1 {
+            grid-area: number;
+            position: relative;
+
+            &::after {
+                content: "";
+
+                position: absolute;
+
+                width: 2px;
+                height: 100%;
+                background-color: var(--gold);
+                right: 3.2rem;
+            }
+        }
+
+        h2 {
+            grid-area: heading;
+            line-height: 3.5rem !important;
+
+            span {
+                font-size: 2rem;
+                line-height: 2.5rem !important;
+            }
+        }
+
+        p {
+            grid-area: text;
+            padding-top: 2rem;
+
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
+}
