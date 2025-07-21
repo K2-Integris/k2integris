@@ -1,7 +1,5 @@
 import ContactCTA from "@/components/ContactCTA"
 
-const { default: ComingSoon } = require("../coming-soon")
-
 const Strategy = () => {
     return (
         <>

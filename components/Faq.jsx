@@ -5,8 +5,7 @@ import { useState } from "react";
 const Faq = () => {
 
     const [ category, setCategory ] = useState(0);
-    const [openIndex, setOpenIndex] = useState(null);
-    const [renderedCategory, setRenderedCategory] = useState(0);
+    const [ renderedCategory, setRenderedCategory ] = useState(0);
 
     const faq = [
         // 0: Web / App Development
