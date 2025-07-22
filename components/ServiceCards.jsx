@@ -123,7 +123,7 @@ useEffect(() => {
                 We design and develop secure, scalable business applications tailored to your workflow — from internal platforms to client-facing portals. Seamless integration with your existing systems is our standard.
               </p>
 
-              <Link href="business-applications">
+              <Link href="app-development">
                 details
               </Link>
             </div>
@@ -143,7 +143,7 @@ useEffect(() => {
                 Your website is your digital flagship. We build modern, high-performance sites that reflect your brand and drive conversions. Designed from scratch, responsive on all devices<br />and blazing fast.
               </p>
 
-               <Link href="custom-websites">
+               <Link href="web-development">
                 details
               </Link>
             </div>
@@ -183,7 +183,7 @@ useEffect(() => {
                 Get found, get clicks, get results. We offer full-service SEO, Google Ads, LinkedIn, and Meta campaigns tailored to your market. Backed by analytics and ROI tracking, always focused on business outcomes.
               </p>
 
-               <Link href="marketing-seo">
+               <Link href="marketing-and-seo">
                 details
               </Link>
             </div>

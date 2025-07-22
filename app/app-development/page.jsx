@@ -2,8 +2,6 @@ import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from "@/components/ScrollSeperator"
 import Link from "next/link"
 
-const { default: ComingSoon } = require("../coming-soon")
-
 const AppDevelopment = () => {
     return (
         <>
