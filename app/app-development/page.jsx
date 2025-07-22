@@ -61,7 +61,7 @@ const AppDevelopment = () => {
                     <article>
                         <h3>Mobile-First, Cross-Platform</h3>
                         <p>
-                            We build in React Native or Flutter to cover iOS and Android with one codebase — faster delivery, reduced maintenance, full native feel.
+                            Cross-platform doesn’t mean second-rate. Whether React Native, Flutter, Kotlin, or Swift — we deliver sleek, high-performance apps that feel native and ship fast.
                         </p>
                     </article>
 
@@ -142,8 +142,8 @@ const AppDevelopment = () => {
                             <span>Rapid builds with full control.</span>
                         </h2>
                         <p>
-                            - React Native or Flutter<br />
-                            - Laravel or Node.js backend<br />
+                            - React Native, Flutter, Kotlin or Swift<br />
+                            - Laravel, Java or Node.js backend<br />
                             - Dev staging environments<br />
                             - Continuous delivery
                         </p>
