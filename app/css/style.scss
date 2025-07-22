@@ -56,7 +56,7 @@ h1, h1 span, h2, h2 span, h3, h4, h5 {
 
 h1, h1 span, h2, h2 span {
     font-size: 3.2rem;
-    font-weight: 100;
+    font-weight: 200;
     line-height: 4.5rem;
     
     span {
@@ -126,6 +126,7 @@ section, header {
 @import "footer";
 @import "strategy";
 @import "cookies";
+@import "category";
 
 @media only screen and (max-width: 380px) {
     h1, h1 span {
