@@ -43,7 +43,14 @@
     text-decoration: underline;
 }
 
-/* Remove grid layout override completely, so blocks remain stacked on all screen sizes */
+.block button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    background-color: var(--gold);
+    color: var(--black);
+    margin-top: 2rem;
+}
+
 @media screen and (min-width: 860px) {
     .container {
         flex-direction: column;
