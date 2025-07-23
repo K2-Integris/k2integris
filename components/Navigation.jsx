@@ -63,6 +63,7 @@ const Navigation = () => {
                     <span></span>
                     <span></span>
                     <span></span>
+                    Menu
                 </button>
 
                 <menu className="desktop">
