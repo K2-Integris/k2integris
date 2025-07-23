@@ -1,3 +1,44 @@
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Outfit/static/Outfit-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Outfit/static/Outfit-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Outfit/static/Outfit-Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Syncopate";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Syncopate/Syncopate-Regular.ttf") format("truetype");
+}
+
 :root {
     //--black: #111517;
     --black: #0f0f0f;

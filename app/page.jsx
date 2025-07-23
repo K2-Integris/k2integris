@@ -3,7 +3,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata = {
-  title: "K2INTEGRIS – Custom Web, App & E-Commerce Solutions for Ambitious Brands",
+  title: "K2INTEGRIS - Custom Web, App & E-Commerce Solutions for Ambitious Brands",
   description: "K2INTEGRIS is your strategic digital partner. We build high-performance websites, apps, and e-commerce platforms tailored to business outcomes. Elevate your brand with powerful design, clean code, and long-term scalability.",
 };
 
@@ -35,8 +35,6 @@ export default function Home() {
       </header>
 
       <section id="service">
-        <div className="overlay"></div>
-
         <article className="wrapper">
           <h2>
             A Strategic <span>Partner</span>,<br />

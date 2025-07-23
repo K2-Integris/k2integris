@@ -1,5 +1,5 @@
 #service {
-    .overlay {
+    /*.overlay {
         background-image: url('/images/Header-Background.png');
         background-position: center 3rem;
         background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
         position: absolute;
         z-index: 0;
-    }
+    }*/
 
     .cursor {
         display: none;
@@ -135,7 +135,8 @@
                     text-align: center;
                     text-transform: uppercase;
 
-                    background-color: #BC976Fbd;
+                    //background-color: #BC976Fbd;
+                    background-color: var(--gold);
                     color: var(--black);
                 }
             }
@@ -191,10 +192,10 @@
     #service {
         padding-bottom: 0rem;
 
-        .overlay {
+        /*.overlay {
             background: transparent;
             display: none;
-        }
+        }*/
         
         .card-wrapper {
             white-space: wrap;
