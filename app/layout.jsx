@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preload" href="/css/style-min.css" as="style" />
         <link rel="stylesheet" href="/css/style-min.css" />
+        <meta name="apple-mobile-web-app-title" content="K2Integris" />
       </head>
       <body>
         <GTMInjector />

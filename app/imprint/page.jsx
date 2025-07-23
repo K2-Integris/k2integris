@@ -24,7 +24,8 @@ const Imprint = () => {
                                     Registered Office:
                                 </span>
                                 <br />
-                                Przyszowa 146, 34-604 Przyszowa, POLAND
+                                Osiedle Szymony 7/22, 
+                                34-500 Zakopane, POLAND
                             </p>
 
                             <p>
@@ -32,7 +33,7 @@ const Imprint = () => {
                                     Court Of Registration:
                                 </span>
                                 <br />
-                                Przyszowa 146, 34-604 Przyszowa, POLAND
+                                Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego
                             </p>
 
                             <p>
@@ -66,11 +67,13 @@ const Imprint = () => {
                             </h3>
 
                             <p>
-                                +48 731 499 788
+                                <a href="tel:+48000000000">+48 731 499 788</a>
                             </p>
 
                             <p>
-                                karpinski<span className={styles.at}>@</span>k2integris.com
+                                <a href="mailto:karpinski@k2integris.com">
+                                    karpinski<span className={styles.at}>@</span>k2integris.com
+                                </a>
                             </p>
                         </div>
 
@@ -80,12 +83,15 @@ const Imprint = () => {
                             </h3>
 
                             <p>
-                                +48 731 499 788
+                                <a href="tel:+436767007602">+43 676 7007 602</a>
                             </p>
 
                             <p>
-                                kaminski<span className={styles.at}>@</span>k2integris.com
+                                <a href="mailto:kaminski@k2integris.com">
+                                    kaminski<span className={styles.at}>@</span>k2integris.com
+                                </a>
                             </p>
+
                         </div>
                     </article>
                 </div>

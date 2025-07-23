@@ -128,6 +128,7 @@ useEffect(() => {
               <Link href="app-development">
                 details
               </Link>
+              
             </div>
           </article>
 
