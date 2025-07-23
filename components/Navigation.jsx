@@ -69,17 +69,37 @@ const Navigation = () => {
                     {[
                         { href: "/", label: "Home" },
                         { href: "/about", label: "About" },
-                        { href: "/services", label: "Services" },
+                        { href: "/services", label: "Services", dropdown: [
+                            { href: "/web-development", label: "Web - Development" },
+                            { href: "/app-development", label: "App - Development" },
+                            { href: "/e-commerce", label: "E - Commerce" },
+                            { href: "/marketing-and-seo", label: "Marketing & SEO" },
+                        ] },
                         { href: "/work", label: "Work" },
                         { href: "/contact", label: "Contact" }
-                    ].map(({ href, label }) => (
-                        <Link
-                            key={href}
-                            href={href}
-                            className={`link${isActive(href) ? " active" : ""}`}
-                        >
-                            {label}
-                        </Link>
+                    ].map(({ href, label, dropdown }) => (
+                        <div key={href}>
+                            <Link
+                                key={href}
+                                href={href}
+                                className={`link${isActive(href) ? " active" : ""}`}
+                            >
+                                {label}
+                            </Link>
+                            {dropdown !== undefined && (
+                                <div className="dropdown">
+                                    {dropdown.map(({href, label}) => (
+                                        <Link
+                                            key={href}
+                                            href={href}
+                                            className={`sublink${isActive(href) ? " active" : ""}`}
+                                        >
+                                            {label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     ))}
                 </menu>
             </div>

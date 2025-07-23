@@ -153,15 +153,49 @@
             gap: 0.5rem;
             justify-content: flex-end;
 
-            .link {
-                color: #ffffffe0;
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                padding: 1rem 1.5rem;
-                border-bottom: 1px solid transparent;
-                transition: 0.3s;
+            div {
+                position: relative;
 
-                &:hover, &.active {
+                 .dropdown {
+                    position: absolute;
+                    top: 2.8rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: 0.3s;
+
+                    height: 0px;
+                    overflow: hidden;
+
+                    width: max-content;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    background-color: var(--black);
+                    border: 1px solid transparent;
+                    border-top: 0;
+                }
+
+                .link, .sublink {
+                    color: #ffffffe0;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    padding: 1rem 1.5rem;
+                    border-bottom: 1px solid transparent;
+                    transition: 0.3s;
+
+                    &:hover, &.active {
+                        color: var(--gold);
+                        border-color: var(--gold);
+                    }
+                }
+
+                .link:hover + .dropdown, .dropdown:hover {
+                    height: 144px;
+                    border-color: var(--gold);
+                }
+
+                &:hover .link {
                     color: var(--gold);
                     border-color: var(--gold);
                 }
