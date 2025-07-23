@@ -108,7 +108,11 @@ const Navigation = () => {
                 {[
                     { href: "/", label: "Home", svg: <HomeIcon /> },
                     { href: "/about", label: "About", svg: <AboutIcon /> },
-                    { href: "/services", label: "Services", svg: <ServicesIcon /> },
+                    //{ href: "/services", label: "Services", svg: <ServicesIcon /> },
+                    { href: "/web-development", label: "Web - Development", svg: <ServicesIcon /> },
+                    { href: "/app-development", label: "App - Development", svg: <ServicesIcon /> },
+                    { href: "/e-commerce", label: "E - Commerce", svg: <ServicesIcon /> },
+                    { href: "/marketing-and-seo", label: "Marketing & SEO", svg: <ServicesIcon /> },
                     { href: "/work", label: "Work", svg: <WorkIcon /> },
                     { href: "/contact", label: "Contact", svg: <ContactIcon /> }
                 ].map(({ href, label, svg }) => (
