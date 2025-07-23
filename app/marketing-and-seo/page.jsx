@@ -2,6 +2,11 @@ import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from "@/components/ScrollSeperator"
 import Link from "next/link"
 
+export const metadata = {
+  title: "Marketing & SEO Services | Data-Driven Growth Strategy by K2Integris",
+  description: "Boost your business with full-funnel SEO and digital marketing services. Custom strategies, technical SEO, paid campaigns, CRO, and analytics — built for ROI.",
+}
+
 const MarketingAndSeo = () => {
     return (
         <>

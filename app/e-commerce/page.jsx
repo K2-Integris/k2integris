@@ -2,6 +2,11 @@ import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from "@/components/ScrollSeperator"
 import Link from "next/link"
 
+export const metadata = {
+  title: "E-Commerce Development Services | Scalable Online Store Solutions",
+  description: "Custom e-commerce development by K2Integris. We build high-performance, conversion-driven online stores using Shopify, WooCommerce, or headless setups. Optimized for SEO, speed, and long-term growth.",
+}
+
 const Ecommerce = () => {
     return (
         <>

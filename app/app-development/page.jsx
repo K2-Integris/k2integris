@@ -2,6 +2,11 @@ import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from "@/components/ScrollSeperator"
 import Link from "next/link"
 
+export const metadata = {
+  title: "Custom App Development Services | Mobile & Business Solutions | K2Integris",
+  description: "Scalable, high-performance mobile and business applications custom-built for growth. From UX design to backend architecture — K2Integris delivers end-to-end app development that solves real problems and integrates with your systems.",
+}
+
 const AppDevelopment = () => {
     return (
         <>

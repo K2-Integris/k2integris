@@ -2,6 +2,11 @@ import Link from 'next/link'
 import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from '@/components/ScrollSeperator'
 
+export const metadata = {
+  title: "Custom Web Development for Businesses | Scalable, ROI-Focused Websites",
+  description: "We build high-performance websites tailored to your business goals. Custom-coded, SEO-optimized, and engineered for conversion — no templates, just results.",
+};
+
 const WebDevelopment = () => {
     return (
         <>

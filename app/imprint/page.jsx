@@ -1,5 +1,10 @@
 import styles from './styles.module.css'
 
+export const metadata = {
+  title: "Imprint | Legal Disclosure of K2Integris Sp. z o.o.",
+  description: "Official company information and legal disclosure for K2Integris Sp. z o.o., including address, registration numbers, and contact details of managing directors.",
+}
+
 const Imprint = () => {
     return (
         <>
