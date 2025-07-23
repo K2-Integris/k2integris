@@ -31,10 +31,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const handleCookies = (state) => {
-    console.log("Cookie Attribute: ", state)
-  }
-
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${amiri.variable}  ${syncopate.variable}`}>

@@ -73,7 +73,7 @@ const AppDevelopment = () => {
                     <article>
                         <h3>Ownership Without Limitations</h3>
                         <p>
-                            You get the full codebase, documentation, and control. No bloat, no license traps — just your product, ready to evolve.
+                            Full codebase, full autonomy. Our builds are engineered to evolve with your operations — not tie you down. You stay in control, always.
                         </p>
                     </article>
                 </div>
@@ -122,7 +122,7 @@ const AppDevelopment = () => {
                         <h2>
                             UX/UI Design
                             <br />
-                            <span>Built for real-world usage.</span>
+                            <span>Visual clarity with business intent.</span>
                         </h2>
                         <p>
                             - Wireframes<br />

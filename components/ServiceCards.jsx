@@ -176,7 +176,7 @@ useEffect(() => {
               </h3>
 
               <h4>
-                We don't just build — we help you <span className="small"></span>grow.
+                We architect digital growth — not just <span className="small"></span>presence.
               </h4>
 
               <p>
