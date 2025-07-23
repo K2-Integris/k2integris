@@ -110,11 +110,6 @@
         margin-bottom: 2rem;
     }
 
-    p {
-        margin-top: 2rem;
-        opacity: 0.9;
-    }
-
     form {
         display: flex;
         flex-direction: column;
@@ -194,15 +189,16 @@
 .check-box {
     display: flex;
     align-items: center;
-    height: 2.5rem;
+
     position: relative;
-    padding-left: 3.5rem;
+    padding-left: 4rem;
+
     font-size: 1.6rem;
 
     a {
         font-size: 1.6rem;
         color: var(--gold);
-        padding-left: 0.5rem;
+        display: inline;
     }
 
     user-select: none;
@@ -217,13 +213,18 @@
 
     .checkmark {
         position: absolute;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: 0;
         height: 2.5rem;
         width: 2.5rem;
         background-color: #ffffff50;
 
         transition: 0.25s;
+
+        p {
+            margin: 0 !important;
+        }
 
         &:after {
             content: "";

@@ -6,7 +6,7 @@ const Contact = () => {
         <>
             <section id="contact">
                 <div className="wrapper">
-                     <h1>
+                    <h1>
                         Contact
                     </h1>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                             </label>
 
                             <label className="check-box">
-                                I agree to the processing of my personal data in accordance with the <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
+                                <p>I agree to the processing of my personal data in accordance with the <Link href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.</p>
                                 <input type="checkbox" />
                                 <span className="checkmark"></span>
                             </label>
