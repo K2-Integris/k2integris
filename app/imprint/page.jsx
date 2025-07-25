@@ -41,7 +41,7 @@ const Imprint = () => {
                                     KRS Number:
                                 </span>
                                 <br />
-                                0000123456
+                                0001185218
                             </p>
 
                             <p>
@@ -49,7 +49,15 @@ const Imprint = () => {
                                     Tax Identification Number (NIP):
                                 </span>
                                 <br />
-                                123-456-78-90
+                                7361754020
+                            </p>
+
+                            <p>
+                                <span>
+                                    REGON:
+                                </span>
+                                <br />
+                                54230069100000
                             </p>
 
                             <p>
@@ -58,6 +66,16 @@ const Imprint = () => {
                                 </span>
                                 <br />
                                 PLN 5.000,00 (fully paid)
+                            </p>
+
+                            <p>
+                                <span>
+                                    E-Mail:
+                                </span>
+                                <br />
+                                <a href="mailto:partner@k2integris.com">
+                                    partner<span className={styles.at}>@</span>k2integris.com
+                                </a>
                             </p>
                         </div>
 

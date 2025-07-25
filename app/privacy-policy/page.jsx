@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
 
                     <section id="data-controller" className={styles.block}>
                         <h2>Data Controller and Contact Information</h2>
-                        <p>The Data Controller responsible for processing your personal data is <strong>K2Integris Sp. z o.o.</strong>, a Polish limited liability company. Our registered office is at Osiedle Szymony 7/22, 34-500 Zakopane, POLAND. Our company is registered in Poland under the following identifiers: KRS: <strong>[KRS Number]</strong>, NIP: <strong>[NIP Number]</strong>, REGON: <strong>[REGON Number]</strong>. For full legal details, please refer to our <Link href="imprint">Imprint</Link>.</p>
+                        <p>The Data Controller responsible for processing your personal data is <strong>K2Integris Sp. z o.o.</strong>, a Polish limited liability company. Our registered office is at Osiedle Szymony 7/22, 34-500 Zakopane, POLAND. Our company is registered in Poland under the following identifiers: KRS: <strong>0001185218</strong>, NIP: <strong>7361754020</strong>, REGON: <strong>54230069100000</strong>. For full legal details, please refer to our <Link href="imprint">Imprint</Link>.</p>
                         <p>If you have any questions or requests regarding your personal data or this Privacy Policy, you can contact us by email at <a href="mailto:privacy@k2integris.com">privacy@k2integris.com</a> or by mail at the address provided above.</p>
                     </section>
 
