@@ -20,8 +20,8 @@ const About = () => {
                 </div>
 
                
-               <div className="wrapper" id="about">
-                 <section id="heading">
+                <div className="wrapper" id="about">
+                    <article className="heading">
                         <h1>
                             About <span>Us</span>
                         </h1>
@@ -35,14 +35,10 @@ const About = () => {
                             <br />
                             If you're someone who thinks long-term, embraces bold ideas, and expects more than cookie-cutter solutions — you're in the right place.
                         </h3>
-                </section>
+                    </article>
 
-                <section id="team">
-                        <article className="box">
-                            <div className="profile-box">
-                                <img src="images/profiles/mateusz-kaminski.png" alt="PERSON !" />
-                            </div>
-
+                    <article className="team">
+                        <div className="box">
                             <div className="info-box">
                                 <h2>
                                     <span className="ceo">
@@ -58,13 +54,9 @@ const About = () => {
                                     When he’s not coding, you’ll probably find him training Muay Thai, doing calisthenics, or fixing something under the hood of an old car.
                                 </p>
                             </div>
-                        </article>
+                        </div>
 
-                        <article className="box">
-                            <div className="profile-box">
-                                <img src="images/profiles/mateusz-kaminski.png" alt="PERSON !" />
-                            </div>
-
+                        <div className="box">
                             <div className="info-box">
                                 <h2>
                                     <span className="ceo">
@@ -80,8 +72,8 @@ const About = () => {
                                     He’s all about 3D design, psychology, and pushing limits — both in the gym and in code. Also: never afraid to outwork everyone in the room (even if it involves a whiskey or two).
                                 </p>
                             </div>
-                        </article>
-                </section>
+                        </div>
+                    </article>
                </div>
 
                 <div className="transition"></div>
