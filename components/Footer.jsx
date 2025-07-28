@@ -115,12 +115,12 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li>
-                         <Link href="strategy" className="link page">
-                            Strategy
+                         <Link href="about" className="link page">
+                            Who We Are
                         </Link>
                     </li>
                     <li>
-                         <Link href="philosophy" className="link page">
+                         <Link href="about#philosophy" className="link page">
                             Philosophy
                         </Link>
                     </li>
