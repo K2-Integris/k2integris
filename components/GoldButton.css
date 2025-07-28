@@ -1,0 +1,72 @@
+.btn-11 {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1.5rem 6.2rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.6rem;
+    font-weight: 750;
+    text-align: center;
+    word-spacing: 0.3rem;
+
+    color: black;
+    background-color: var(--gold-transparent);
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-11::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 5s ease-in-out infinite;
+}
+
+.btn-11::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: var(--black);
+    transition: all 0.3s ease;
+}
+
+.btn-11:hover {
+    color: white !important;
+    transform: scale(0.95);
+    border: 1px solid var(--gold);
+}
+
+.btn-11:hover::before {
+    animation-play-state: paused;
+    display: none;
+}
+
+.btn-11:hover::after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+@keyframes shiny-btn1 {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}
