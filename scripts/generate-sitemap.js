@@ -5,23 +5,39 @@ const { resolve } = require("path");
 (async () => {
   const sitemap = new SitemapStream({ hostname: "https://k2integris.com" });
 
-  const links = [
-    { url: "/", changefreq: "weekly", priority: 1.0 },
-    { url: "/about", changefreq: "monthly" },
-    { url: "/services", changefreq: "monthly" },
-    { url: "/web-development", changefreq: "monthly" },
-    { url: "/app-development", changefreq: "monthly" },
-    { url: "/e-commerce", changefreq: "monthly" },
-    { url: "/marketing-and-seo", changefreq: "monthly" },
-    { url: "/work", changefreq: "monthly" },
-    { url: "/contact", changefreq: "yearly" },
-    { url: "/privacy-policy", changefreq: "yearly" },
-    { url: "/imprint", changefreq: "yearly" },
-    { url: "/terms-of-use", changefreq: "yearly" },
-    { url: "/testimonials", changefreq: "monthly" },
+  const baseUrls = [
+    { lang: "en", domain: "https://k2integris.com" },
+    { lang: "pl", domain: "https://k2integris.pl" },
   ];
 
-  links.forEach((link) => sitemap.write(link));
+  const pages = [
+    { path: "/", changefreq: "weekly", priority: 1.0 },
+    { path: "/about", changefreq: "monthly" },
+    { path: "/services", changefreq: "monthly" },
+    { path: "/web-development", changefreq: "monthly" },
+    { path: "/app-development", changefreq: "monthly" },
+    { path: "/e-commerce", changefreq: "monthly" },
+    { path: "/marketing-and-seo", changefreq: "monthly" },
+    { path: "/work", changefreq: "monthly" },
+    { path: "/contact", changefreq: "yearly" },
+    { path: "/privacy-policy", changefreq: "yearly" },
+    { path: "/imprint", changefreq: "yearly" },
+    { path: "/terms-of-use", changefreq: "yearly" },
+    { path: "/testimonials", changefreq: "monthly" },
+  ];
+
+  pages.forEach(({ path, changefreq, priority }) => {
+    sitemap.write({
+      url: path,
+      changefreq,
+      priority,
+      links: baseUrls.map(({ lang, domain }) => ({
+        lang,
+        url: domain + path,
+      })),
+    });
+  });
+
   sitemap.end();
 
   const xml = await streamToPromise(sitemap);
