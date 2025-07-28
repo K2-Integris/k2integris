@@ -1,3 +1,4 @@
+import ContactCTA from "@/components/ContactCTA";
 import ScrollSeperator from "@/components/ScrollSeperator";
 import Link from "next/link";
 
@@ -54,15 +55,16 @@ const About = () => {
                     <p>
                         At K2Integris, we don’t believe in generic solutions — we believe in intentional digital craftsmanship. Every project begins with deep listening and strategy, not assumptions. From enterprise-grade apps to data-driven marketing, our work is guided by one principle: measurable business impact.
 
-We merge design elegance with robust engineering to create solutions that don't just look great — they scale, convert, and endure.
+                        We merge design elegance with robust engineering to create solutions that don't just look great — they scale, convert, and endure.
 
-Our agile methodology means you stay in control, with full transparency at every stage. We act not as vendors, but as strategic partners invested in your growth.
+                        Our agile methodology means you stay in control, with full transparency at every stage. We act not as vendors, but as strategic partners invested in your growth.
 
-Clarity. Speed. Ownership. That’s our operating system.
-
+                        Clarity. Speed. Ownership. That’s our operating system.
                     </p>
                 </div>
             </section>
+
+            <ContactCTA />
         </>
     )
 }
