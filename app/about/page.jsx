@@ -19,16 +19,73 @@ const About = () => {
                     <div className="line"></div>
                 </div>
 
-                <div className="wrapper">
-                    <h1>
-                        Meet <span>K2INTEGRIS</span>
-                    </h1>
-                </div>
+               
+               <div className="wrapper" id="about">
+                 <section id="heading">
+                        <h1>
+                            About <span>Us</span>
+                        </h1>
+
+                        <h3>
+                            We are K2Integris — a name that reflects both our founders, Viktor Karpinski and Mateusz Kaminski (K2), and our commitment to integrity, clarity, and high-end digital craftsmanship. Just like the mountain we share a name with, we set the bar high — in standards, execution, and ambition.
+                            <br />
+                            <br />
+                            We don't believe in bureaucracy, vague promises, or bloated processes. Every project we take on is executed directly by us — no middlemen. Just focused work, measurable results, and strong relationships with people who value ownership and innovation.
+                            <br />
+                            <br />
+                            If you're someone who thinks long-term, embraces bold ideas, and expects more than cookie-cutter solutions — you're in the right place.
+                        </h3>
+                </section>
+
+                <section id="team">
+                        <article className="box">
+                            <div className="profile-box">
+                                <img src="images/profiles/mateusz-kaminski.png" alt="PERSON !" />
+                            </div>
+
+                            <div className="info-box">
+                                <h2>
+                                    <span className="ceo">
+                                        CO-founder
+                                    </span>
+                                    Viktor Karpinski
+                                </h2>
+
+                                <p>
+                                    Viktor is a full-stack developer with a love for bridging the technical and the human — clean backend logic meets thoughtful front-end execution. After building multiple projects with Mateusz in school and in the professional world, he knew this partnership had more potential.
+                                    <br />
+                                    <br />
+                                    When he’s not coding, you’ll probably find him training Muay Thai, doing calisthenics, or fixing something under the hood of an old car.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article className="box">
+                            <div className="profile-box">
+                                <img src="images/profiles/mateusz-kaminski.png" alt="PERSON !" />
+                            </div>
+
+                            <div className="info-box">
+                                <h2>
+                                    <span className="ceo">
+                                        CO-founder
+                                    </span>
+                                    Mateusz Kaminski
+                                </h2>
+
+                                <p>
+                                    Mateusz is a creative problem-solver and full-stack developer with a drive to explore new ideas — technically, visually, and strategically. Currently finishing his degree at Hochschule Campus Wien, he brings academic structure into a fast-moving, design-driven mindset.
+                                    <br />
+                                    <br />
+                                    He’s all about 3D design, psychology, and pushing limits — both in the gym and in code. Also: never afraid to outwork everyone in the room (even if it involves a whiskey or two).
+                                </p>
+                            </div>
+                        </article>
+                </section>
+               </div>
 
                 <div className="transition"></div>
             </header>
-
-            <ContactCTA />
         </>
     )
 }
