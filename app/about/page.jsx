@@ -21,18 +21,22 @@ const About = () => {
 
                 <div className="wrapper">
                     <h1>
-                        Your Strategic <span>Partner</span><br />for Growth - Centered<br />Digital <span>Solutions</span>
+                        Meet <span>K2INTEGRIS</span>
                     </h1>
-
-                    <h3>
-                        K2Integris empowers forward - thinking brands with bespoke web, app, e‑commerce, and marketing solutions - focused on conversion, scalability, and full control.
-                    </h3>
                 </div>
 
                 <div className="transition"></div>
             </header>
 
-            <section id="what-sets-us-apart">
+            <ContactCTA />
+        </>
+    )
+}
+
+export default About
+
+/*
+<section id="what-sets-us-apart">
                 <div className="wrapper">
                     <h2>
                         What Sets Us Apart
@@ -63,10 +67,4 @@ const About = () => {
                     </p>
                 </div>
             </section>
-
-            <ContactCTA />
-        </>
-    )
-}
-
-export default About
+*/

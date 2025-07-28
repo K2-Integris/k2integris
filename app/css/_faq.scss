@@ -32,9 +32,8 @@
                     margin-left: 1rem;
 
                     &.active {
-                        background-color: #BC976Fbd;
-                        background-color: var(--gold);
-                        color: var(--black);
+                        background-color: var(--gold-transparent);
+                        color: black;
                         font-weight: 700;
                     }
 

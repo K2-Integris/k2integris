@@ -38,8 +38,10 @@
             font-weight: 750;
             text-align: center;
             word-spacing: 0.3rem;
-            color: var(--black);
-            background-color: var(--gold);
+
+            color: black;
+            background-color: var(--gold-transparent);
+
             backdrop-filter: blur(10px);
             
             position: relative;
@@ -115,8 +117,8 @@
 
         button {
             font-size: 1.6rem;
-            background-color: var(--gold);
-            color: var(--black);
+            background-color: var(--gold-transparent);
+            color: black;
             padding: 1.8rem 0;
             font-weight: 700;
             text-transform: uppercase;
