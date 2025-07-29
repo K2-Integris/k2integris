@@ -70,26 +70,37 @@ const Navigation = () => {
                     {[
                         { href: "/", label: "Home" },
                         { href: "/about", label: "About" },
-                        { href: "/services", label: "Services", dropdown: [
+                        {
+                            href: "/services",
+                            label: "Services",
+                            dropdown: [
                             { href: "/web-development", label: "Web - Development" },
                             { href: "/app-development", label: "App - Development" },
                             { href: "/e-commerce", label: "E - Commerce" },
                             { href: "/marketing-and-seo", label: "Marketing & SEO" },
-                        ] },
+                            ],
+                        },
                         { href: "/work", label: "Work" },
-                        { href: "/contact", label: "Contact" }
-                    ].map(({ href, label, dropdown }) => (
-                        <div key={href}>
-                            <TransitionLink
-                                key={href}
-                                href={href}
-                                className={`link${isActive(href) ? " active" : ""}`}
-                            >
-                                {label}
-                            </TransitionLink>
-                            {dropdown !== undefined && (
-                                <div className="dropdown">
-                                    {dropdown.map(({href, label}) => (
+                        { href: "/contact", label: "Contact" },
+                    ].map(({ href, label, dropdown }) => {
+                        const isSubActive = dropdown?.some(d => isActive(d.href));
+                        const activeClass = isActive(href) || isSubActive ? " active" : "";
+
+                        return (
+                            <div key={href}>
+                                {dropdown ? (
+                                    <span className={`link${activeClass}`}>{label}</span> // NOT clickable
+                                ) : (
+                                    <TransitionLink
+                                    href={href}
+                                    className={`link${activeClass}`}
+                                    >
+                                    {label}
+                                    </TransitionLink>
+                                )}
+                                {dropdown && (
+                                    <div className="dropdown">
+                                    {dropdown.map(({ href, label }) => (
                                         <TransitionLink
                                             key={href}
                                             href={href}
@@ -98,10 +109,11 @@ const Navigation = () => {
                                             {label}
                                         </TransitionLink>
                                     ))}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        )}
+                    </div>
+                    );
+                    })}
                 </menu>
             </div>
 
