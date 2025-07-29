@@ -1,6 +1,5 @@
 import PrivacyCookie from '@/components/PrivacyCookie';
-import styles from './privacy.module.css'
-import Link from "next/link";
+import TransitionLink from '@/components/TransitionLink';
 
 export const metadata = {
   title: "Privacy Policy | GDPR-Compliant Data Protection at K2Integris",
@@ -9,25 +8,24 @@ export const metadata = {
 };
 
 const PrivacyPolicy = () => {
-    
     return (
-        <section className={styles.privacy}>
+        <section className="privacy">
             <div className="wrapper">
-                <article className={styles.container}>
+                <article className="container">
                     <h1>Privacy Policy</h1>
-                    <section id="introduction" className={styles.block}>
+                    <section id="introduction" className="block">
                         <h2>Introduction</h2>
                         <p>K2Integris Sp. z o.o. (referred to as "K2Integris", "we", "us", or "our") is committed to protecting your personal data and respecting your privacy. This Privacy Policy describes how we collect, use, and protect personal data when you use our website, in compliance with the EU General Data Protection Regulation (GDPR) and applicable privacy laws. We aim to be transparent about our data practices and ensure that your rights are safeguarded.</p>
                         <p>This policy applies to the website operated by K2Integris Sp. z o.o. and any personal data collected through it. By using our website, you acknowledge that you have read and understood this Privacy Policy.</p>
                     </section>
 
-                    <section id="data-controller" className={styles.block}>
+                    <section id="data-controller" className="block">
                         <h2>Data Controller and Contact Information</h2>
-                        <p>The Data Controller responsible for processing your personal data is <strong>K2Integris Sp. z o.o.</strong>, a Polish limited liability company. Our registered office is at Osiedle Szymony 7/22, 34-500 Zakopane, POLAND. Our company is registered in Poland under the following identifiers: KRS: <strong>0001185218</strong>, NIP: <strong>7361754020</strong>, REGON: <strong>54230069100000</strong>. For full legal details, please refer to our <Link href="imprint">Imprint</Link>.</p>
+                        <p>The Data Controller responsible for processing your personal data is <strong>K2Integris Sp. z o.o.</strong>, a Polish limited liability company. Our registered office is at Osiedle Szymony 7/22, 34-500 Zakopane, POLAND. Our company is registered in Poland under the following identifiers: KRS: <strong>0001185218</strong>, NIP: <strong>7361754020</strong>, REGON: <strong>54230069100000</strong>. For full legal details, please refer to our <TransitionLink href="imprint">Imprint</TransitionLink>.</p>
                         <p>If you have any questions or requests regarding your personal data or this Privacy Policy, you can contact us by email at <a href="mailto:privacy@k2integris.com">privacy@k2integris.com</a> or by mail at the address provided above.</p>
                     </section>
 
-                    <section id="data-collection" className={styles.block}>
+                    <section id="data-collection" className="block">
                         <h2>Personal Data We Collect</h2>
                         <p><strong>Contact Form Data:</strong> We only collect personal data that you voluntarily provide to us through our contact form. This may include:</p>
                         <ul>
@@ -41,14 +39,14 @@ const PrivacyPolicy = () => {
                         <p><strong>No Other Data Collection:</strong> We do not use our website to collect any personal data beyond the contact form. We do not have user accounts or profiles, we do not offer a newsletter subscription, and we do not use any advertising or marketing trackers that collect personal information. Furthermore, we do not use the personal data we collect to perform any kind of automated decision-making or profiling of individuals. We also do not knowingly collect any sensitive personal data.</p>
                     </section>
 
-                    <section id="purpose-use" className={styles.block}>
+                    <section id="purpose-use" className="block">
                         <h2>Purpose and Use of Collected Data</h2>
                         <p>Any personal data you submit through our contact form will be used solely for the purpose of responding to your inquiry and communicating with you. For example, we will use your email address (and phone number, if provided) to contact you regarding your message or request. We will not use the information you provide for any unrelated purposes such as marketing without your explicit consent.</p>
                         <p>The legal basis for processing your contact form data is your consent (GDPR Article 6(1)(a)) when you choose to submit the form and provide your data to us. In some cases, responding to your inquiry may also be considered a step at your request prior to entering into a contract, or it may fall under our legitimate interest (GDPR Article 6(1)(f)) to effectively communicate with website users. We will rely on the appropriate legal basis depending on the context of your inquiry.</p>
                         <p><strong>Data Processing Method:</strong> When you submit the contact form, the data is sent to us via email (SMTP). We do not store your contact form submissions in a website database. Instead, the information is delivered directly to our email inbox. This means your data is retained in our email system for as long as needed to address your inquiry or as required for record-keeping. We treat this correspondence confidentially and do not share it with third parties except as described in this policy.</p>
                     </section>
 
-                    <section id="cookies-analytics" className={styles.block}>
+                    <section id="cookies-analytics" className="block">
                         <h2>Use of Cookies and Analytics</h2>
                         <p>Our website uses cookies and similar technologies to enhance user experience and gather analytics data. Upon your first visit, you will be presented with a cookie banner that allows you to accept or reject the use of non-essential cookies (such as analytics cookies). You have the choice to opt in to analytics tracking or to decline it. If you reject, we will not load analytics cookies or trackers on your device.</p>
                         <p><strong>Google Analytics:</strong> We use Google Analytics (a web analytics service provided by Google LLC) to collect anonymous statistical information about how visitors use our site. This helps us understand website traffic and improve our services. Google Analytics may set cookies on your device to collect data such as your IP address, browser type, pages visited, and time spent on the site. We have configured Google Analytics for basic analytics purposes only; we do not enable advertising features or personal identification through Analytics. IP anonymization is enabled where possible, so Google truncates/anonymizes the last octet of your IP address within the European Economic Area. </p>
@@ -58,7 +56,7 @@ const PrivacyPolicy = () => {
                         <PrivacyCookie />
                     </section>
 
-                    <section id="third-party-services" className={styles.block}>
+                    <section id="third-party-services" className="block">
                         <h2>Third-Party Services and Data Processing</h2>
                         <p>We utilize a few third-party services in operating our website, which may process personal data to some extent:</p>
                         <ul>
@@ -71,7 +69,7 @@ const PrivacyPolicy = () => {
                         <p>Apart from the services listed above, we do not share your personal data with any third parties unless it is necessary to comply with a legal obligation or a lawful request from authorities. We do not sell, rent, or trade your personal information to anyone.</p>
                     </section>
 
-                    <section id="data-retention" className={styles.block}>
+                    <section id="data-retention" className="block">
                         <h2>Data Retention</h2>
                         <p>We keep personal data only for as long as it is necessary to fulfill the purposes for which it was collected, or to comply with legal and contractual obligations. Specifically:</p>
                         <ul>
@@ -81,7 +79,7 @@ const PrivacyPolicy = () => {
                         </ul>
                     </section>
 
-                    <section id="your-rights" className={styles.block}>
+                    <section id="your-rights" className="block">
                         <h2>Your Rights Under GDPR</h2>
                         <p>Under the GDPR, you have the following rights regarding your personal data:</p>
                         <ul>
@@ -93,23 +91,23 @@ const PrivacyPolicy = () => {
                             <li><strong>Right to Object:</strong> You have the right to object to our processing of your personal data when we base it on legitimate interests (including for analytics purposes). If you object, we will cease processing your data for that purpose unless we have compelling legitimate grounds to continue or if it is needed for legal reasons. Additionally, if we were to process your data for direct marketing (which we do not), you have the absolute right to object at any time to that processing.</li>
                             <li><strong>Right to Withdraw Consent:</strong> If we are processing your personal data based on your consent, you have the right to withdraw that consent at any time. This will not affect the lawfulness of processing based on consent before its withdrawal – once consent is withdrawn, we will stop the processing that was based on it.</li>
                         </ul>
-                        <p>To exercise any of your rights, please contact us using the contact details provided in the <a href="#data-controller">Data Controller and Contact Information</a> section above, or as listed on our <Link href="imprint">Imprint</Link> page. We will respond to your request as soon as possible, and no later than one month from receipt, in accordance with applicable law. Please note that we may need to verify your identity before fulfilling certain requests, to ensure that your data is not disclosed to an unauthorized person.</p>
+                        <p>To exercise any of your rights, please contact us using the contact details provided in the <a href="#data-controller">Data Controller and Contact Information</a> section above, or as listed on our <TransitionLink href="imprint">Imprint</TransitionLink> page. We will respond to your request as soon as possible, and no later than one month from receipt, in accordance with applicable law. Please note that we may need to verify your identity before fulfilling certain requests, to ensure that your data is not disclosed to an unauthorized person.</p>
                         <p>If you believe that our processing of your personal data infringes the GDPR or other applicable data protection laws, you have the right to lodge a complaint with a data protection supervisory authority. In Poland, the supervisory authority is the President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych Osobowych, or UODO). If you reside or work in another European Union country, you may alternatively contact the supervisory authority in that country.</p>
                     </section>
 
-                    <section id="data-security" className={styles.block}>
+                    <section id="data-security" className="block">
                         <h2>Data Security</h2>
                         <p>We take the security of your personal data very seriously. We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction. These measures include using secure transmission (our website is protected by HTTPS encryption to safeguard data in transit) and maintaining up-to-date systems and software. We also restrict access to personal data to authorized personnel who need to process it.</p>
                         <p>Furthermore, any third-party service providers we engage (such as our hosting provider or analytics services) are chosen for their trustworthiness and commitment to security and privacy. They are bound by contracts to process personal data in compliance with GDPR and to implement adequate security measures. While we strive to protect your information, please note that no method of internet transmission or electronic storage is completely infallible. However, we continuously review and enhance our security practices to help ensure your personal data is safe.</p>
                     </section>
 
-                    <section id="policy-updates" className={styles.block}>
+                    <section id="policy-updates" className="block">
                         <h2>Changes to this Privacy Policy</h2>
                         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or for other operational reasons. If we make significant changes, we will notify users by appropriate means (for example, by posting a prominent notice on our website or informing you via email, if we have your contact details for this purpose). We encourage you to review this page periodically to stay informed about how we are protecting your personal data.</p>
                         <p>Any updates to this policy will include a new "Last updated" date below. Continued use of our website after any changes to the Privacy Policy constitutes acceptance of those changes, to the extent permitted by law.</p>
                     </section>
 
-                    <section id="contact-info" className={styles.block}>
+                    <section id="contact-info" className="block">
                         <h2>Contact Information</h2>
                         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please do not hesitate to contact us:</p>
                         <p>
@@ -118,7 +116,7 @@ const PrivacyPolicy = () => {
                             Email: <a href="mailto:privacy@k2integris.com">privacy@k2integris.com</a><br />
                             Phone: [Phone Number]<br />
                         </p>
-                        <p>For additional information about our company, including legal registration details, please visit our <Link href="imprint">Imprint</Link> page.</p>
+                        <p>For additional information about our company, including legal registration details, please visit our <TransitionLink href="imprint">Imprint</TransitionLink> page.</p>
                         <br /><i><p>Last updated: 23/07/2025</p></i>
                     </section>
                 </article>

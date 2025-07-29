@@ -1,7 +1,10 @@
-import GoldButton from '@/components/GoldButton'
+//import GoldButton from '@/components/GoldButton'
 import Image from 'next/image'
+import ComingSoon from '../coming-soon'
 
 const Services = () => {
+    return <ComingSoon />
+
     return (
         <section className="gridContainer">
             <div className="wrapper">

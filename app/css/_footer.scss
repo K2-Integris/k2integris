@@ -2,7 +2,7 @@ footer {
     width: 100vw;
     height: calc(100vh - 7.1rem);
     background-color: var(--gold);
-    padding: 2rem 0 2rem;
+    padding: 2rem 0;
 
     position: fixed;
     bottom: 0;
@@ -96,6 +96,18 @@ footer {
             gap: 5rem;
         }
     
+    }
+}
+
+@media only screen and (max-height: 761) {
+    footer {
+        padding: 1rem 0rem;
+
+        .wrapper {
+            &:first-of-type {
+                padding-bottom: 2rem;
+            }
+        }
     }
 }
 
