@@ -114,10 +114,11 @@ const PrivacyPolicy = () => {
                             K2Integris Sp. z o.o.<br />
                             Osiedle Szymony 7/22, 34-500 Zakopane, POLAND<br />
                             Email: <a href="mailto:privacy@k2integris.com">privacy@k2integris.com</a><br />
-                            Phone: [Phone Number]<br />
+                            Phone: +48 731 499 788<br />
+                            Phone: +48 453 633 138<br />
                         </p>
                         <p>For additional information about our company, including legal registration details, please visit our <TransitionLink href="imprint">Imprint</TransitionLink> page.</p>
-                        <br /><i><p>Last updated: 23/07/2025</p></i>
+                        <br /><i><p>Last updated: 29/07/2025</p></i>
                     </section>
                 </article>
             </div>
