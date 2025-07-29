@@ -344,7 +344,7 @@
         height: $particle-size;
         border-radius: 50%;
         opacity: 0; 
-    }
+    } 
 
     @keyframes rotate {
         100% {
@@ -550,4 +550,13 @@
             padding-top: 4rem;
         }
     }
+}
+
+
+.form-error {
+    color: #ff6666;
+}
+
+.form-error-general {
+    color: #ff6666;
 }
