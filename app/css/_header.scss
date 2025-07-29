@@ -8,9 +8,13 @@ header {
         z-index: 1;
         overflow: visible;
 
-        h3 {
+        h2 {
           margin-top: 3rem;
           text-transform: none !important;
+
+          font-size: 2rem !important;
+          font-weight: 300 !important;
+          line-height: 3rem !important;
         }
 
         .cta {
@@ -186,7 +190,7 @@ header {
         }
 
         .wrapper {
-            h3 {
+            h2 {
               text-align: center;
             }
             

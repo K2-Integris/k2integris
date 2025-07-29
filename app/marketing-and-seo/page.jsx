@@ -24,9 +24,9 @@ const MarketingAndSeo = () => {
                         Marketing &<br />SEO Services
                     </h1>
 
-                    <h3>
+                    <h2>
                         Data-backed, performance-focused, and engineered<br />to grow your brand and revenue — not just your traffic.
-                    </h3>
+                    </h2>
 
                     <ScrollSeperator />
 

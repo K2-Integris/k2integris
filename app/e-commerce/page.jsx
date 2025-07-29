@@ -24,9 +24,9 @@ const Ecommerce = () => {
                         E-Commerce<br />Development
                     </h1>
 
-                    <h3>
+                    <h2>
                         High-converting storefronts, custom-built for scale,<br />performance, and real revenue.
-                    </h3>
+                    </h2>
 
                     <ScrollSeperator />
 

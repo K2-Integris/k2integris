@@ -13,9 +13,9 @@ const Imprint = () => {
                             Imprint
                         </h1>
                         <div className="block">
-                            <h3>
+                            <h2>
                                 K2Integris Sp. z o.o.
-                            </h3>
+                            </h2>
 
                             <p>
                                 <span>
