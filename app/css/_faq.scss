@@ -184,8 +184,15 @@
                     grid-area: faq;
                     margin: 0;
                     padding-top: 0.5rem;
-                    align-items:normal;
+                    align-items: normal;
                     gap: 3.5rem;
+
+                    .faq-box {
+                        p {
+                            padding-right: 4rem;
+                            white-space: break-spaces;
+                        }
+                    }
                 }
             }
         }

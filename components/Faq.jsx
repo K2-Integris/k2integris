@@ -7,7 +7,7 @@ const Faq = () => {
     const [ category, setCategory ] = useState(0);
     const [ renderedCategory, setRenderedCategory ] = useState(0);
 
-    const faq = [
+   const faq = [
         // 0: Web / App Development
         [
             {
@@ -23,44 +23,24 @@ const Faq = () => {
                 answer: "Yes, absolutely. We have experience with various third-party system integrations and APIs. We analyze your current setup and ensure a smooth connection between your tools and the new solution."
             },
             {
-                question: "How scalable will the solution be if my business grows?",
-                answer: "Scalability is part of our engineering mindset. We design systems that are prepared for growth — whether that means handling more users, transactions, or internationalization. Your infrastructure should never be the bottleneck of your success."
-            },
-            {
-                question: "Can you guarantee the website/app speed and performance?",
-                answer: "We build with performance-first principles. From clean code and optimized assets to proper caching and server configurations — speed and reliability are always part of the delivery. We use tools like Google PageSpeed, Lighthouse, and GTmetrix to ensure your website or app loads fast, works smoothly, and performs reliably on all devices."
-            },
-            /*{
-                question: "Do you offer responsive design for mobile and tablet?",
-                answer: "Yes, all our solutions are fully responsive and mobile-friendly by default. We design with every device in mind to ensure a seamless experience for your users."
-            },
-            {
                 question: "Will I be able to update the content on my own after launch?",
                 answer: "Absolutely. If needed, we provide intuitive admin panels or CMS solutions that allow you to manage your content without technical knowledge. Training and documentation can be included."
             },
             {
-                question: "Can you assist with website security and data protection (e.g. GDPR compliance)?",
-                answer: "Yes. Security is non-negotiable. We implement best practices for data protection, encryption, backups, and GDPR compliance, including cookie policies and data processing agreements if required."
-            },
-            {
-                question: "Do you handle the deployment, hosting, and maintenance?",
-                answer: "Yes, we can fully manage hosting and deployment for you — either on your infrastructure or on our own self-managed hosting solutions. We also offer maintenance packages to keep your system secure and up to date."
-            },
-            {
-                question: "Will there be support after the project is finished?",
-                answer: "Yes. We offer various post-launch support options, including retainers for continuous development, maintenance, or ad-hoc support. Our goal is to build long-term partnerships, not one-off projects."
-            }*/
+                question: "Do you offer responsive design for mobile and tablet?",
+                answer: "Yes, all our solutions are fully responsive and mobile-friendly by default. We design with every device in mind to ensure a seamless experience for your users."
+            }
         ],
 
         // 1: Marketing / SEO
         [
             {
-                question: "What advertising platforms do you work with (Google Ads, Facebook, LinkedIn, etc.)?",
-                answer: "We work with Google Ads, Facebook/Meta, LinkedIn, and can advise on other platforms depending on your target audience. We also assist with SEO and organic strategies to complement paid advertising."
-            },
-            {
                 question: "Can you help us rank on Google (SEO)?",
                 answer: "Yes, we offer technical SEO optimization, including keyword analysis, page speed improvements, and on-page SEO. If needed, we work with content specialists for broader SEO campaigns."
+            },
+            {
+                question: "What advertising platforms do you work with (Google Ads, Facebook, LinkedIn, etc.)?",
+                answer: "We work with Google Ads, Facebook/Meta, LinkedIn, and can advise on other platforms depending on your target audience. We also assist with SEO and organic strategies to complement paid advertising."
             },
             {
                 question: "Do you offer ongoing SEO optimization or only initial setup?",
@@ -71,13 +51,9 @@ const Faq = () => {
                 answer: "We combine competitive analysis, keyword research tools, and our experience in your industry to define the right strategy. Content is crafted for your audience, not just for search engines."
             },
             {
-                question: "Can you help improve my current website’s SEO performance without rebuilding it?",
-                answer: "Yes, we can audit your existing site and optimize it without a full rebuild if the current structure allows. If major technical issues are found, we’ll advise transparently on whether a rebuild makes sense."
-            },
-            /*{
                 question: "Do you offer analytics and reporting on campaign performance?",
                 answer: "Yes. Our campaigns include performance dashboards and regular reports. We prioritize clarity: you will know exactly where your budget goes and what results it brings."
-            }*/
+            }
         ],
 
         // 2: Design / Branding
@@ -91,16 +67,16 @@ const Faq = () => {
                 answer: "Yes. Every serious project starts with a clear plan. We design wireframes and mockups so you can review and approve the structure, layout, and visual direction before we move into development."
             },
             {
-                question: "What is your process for understanding our brand’s style and audience?",
-                answer: "We start every project with a discovery phase. This includes strategic meetings, questionnaires, and audience research. Our goal is to fully understand your brand’s voice, mission, and target group — so we can translate that into effective digital experiences."
-            },
-            {
                 question: "Do you offer UI/UX testing with real users?",
                 answer: "If desired, yes. We can organize user testing sessions and feedback loops during the design phase to validate usability and gather insights directly from your target audience."
             },
             {
                 question: "Can you help modernize or redesign our existing branding?",
                 answer: "Yes, whether it’s a subtle refresh or a complete overhaul. We respect the core of your brand while ensuring your visual presence stays contemporary and relevant."
+            },
+            {
+                question: "Can you design for accessibility and WCAG compliance?",
+                answer: "Yes. We prioritize inclusive design practices, ensuring your digital product is usable and accessible for people with disabilities, in line with WCAG 2.1 standards."
             }
         ],
 
@@ -119,17 +95,13 @@ const Faq = () => {
                 answer: "Flexibility is built into our process. We work in Agile iterations. If you want to add features mid-project, we assess the scope, provide a time and cost estimate, and proceed with mutual agreement."
             },
             {
-                question: "How often will we receive progress updates?",
-                answer: "We provide regular progress updates — the exact frequency (daily, weekly, or biweekly) is agreed with you at the start of the project. You will always know the current status and next steps."
-            },
-            {
                 question: "What project management tools do you use (e.g. Jira, Trello, ClickUp)?",
                 answer: "We work with ClickUp, Trello, or Jira, depending on the project scale and your preference. You’ll have full visibility into your project board."
             },
-            /*{
+            {
                 question: "Who will be working on our project? Do you outsource or is your team in-house?",
                 answer: "Our core team handles strategy, project management, and development. We may involve trusted external specialists, but you’ll always work directly with K2INTEGRIS."
-            }*/
+            }
         ],
 
         // 4: Pricing / Legal
@@ -151,17 +123,9 @@ const Faq = () => {
                 answer: "Yes — once paid in full, you own all code, designs, and IP. We only ask (but don’t require) for a small credit link, if you're open to it."
             },
             {
-                question: "Do you provide NDAs or contracts to protect confidentiality?",
-                answer: "Yes. We provide NDAs and contracts by default to safeguard your ideas and sensitive data. Confidentiality is a core value."
-            },
-            /*{
                 question: "What happens if we decide to terminate the project early?",
                 answer: "Our contracts include fair termination terms. Work completed to date is billed and handed over. We ensure a professional handoff."
-            },
-            {
-                question: "How do you handle intellectual property rights?",
-                answer: "You own all IP upon project completion and payment. If any third-party tools or licenses are involved, we’ll disclose and document them fully to avoid surprises."
-            }*/
+            }
         ],
 
         // 5: Technical / Hosting
@@ -183,8 +147,8 @@ const Faq = () => {
                 answer: "Our response times vary by support level. Retainer clients receive priority responses — typically within hours for emergencies."
             },
             {
-                question: "How quickly can you respond to technical issues or emergencies?",
-                answer: "Our response times vary by support level. Retainer clients receive priority responses — typically within hours for emergencies."
+                question: "Do you offer uptime monitoring and automated backups?",
+                answer: "Yes. We can set up proactive uptime monitoring and daily backups to ensure your website or application remains online and secure."
             }
         ],
 
@@ -203,15 +167,16 @@ const Faq = () => {
                 answer: "We’ve worked with startups, corporates, eCommerce, and NGOs. Our structured process fits any sector."
             },
             {
-                question: "How do you ensure the solution aligns with our business goals?",
-                answer: "We start with strategy sessions and align through regular check-ins. We don’t just build what you say — we build what gets you results."
-            },
-            {
                 question: "Can you help us scale internationally or localize the product for different regions?",
                 answer: "Yes. We support multilingual, multi-currency, and compliance-friendly development from the start."
+            },
+            {
+                question: "Do you provide competitor analysis to support product decisions?",
+                answer: "Yes. We can benchmark your competitors, identify market gaps, and suggest features or positioning strategies that give you an edge."
             }
         ]
     ];
+
 
     const handle = (ev) => {
         let el = ev.currentTarget.parentElement
