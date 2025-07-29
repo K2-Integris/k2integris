@@ -1,4 +1,4 @@
-//import "./css/style.css";
+import "./css/style.css";
 import Navigation from "@/components/Navigation";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preload" href="/css/style-min.css" as="style" />
-        <link rel="stylesheet" href="/css/style-min.css" />
+        {/*<link rel="preload" href="/css/style-min.css" as="style" />
+        <link rel="stylesheet" href="/css/style-min.css" />*/}
         <meta name="apple-mobile-web-app-title" content="K2Integris" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="application-name" content="K2Integris" />

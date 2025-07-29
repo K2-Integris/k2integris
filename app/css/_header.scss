@@ -184,11 +184,6 @@ header {
 
 @media only screen and (min-width: 1000px) {
     header {
-        .scroll-seperator {
-            padding-top: 6rem;
-            left: calc((100vw - 130rem) / -2);
-        }
-
         .wrapper {
             h2 {
               text-align: center;
@@ -202,5 +197,14 @@ header {
 
     .transition {
         height: 16rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        .scroll-seperator {
+            padding-top: 6rem;
+            left: calc((100vw - 130rem) / -2);
+        }
     }
 }
