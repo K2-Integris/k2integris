@@ -1,5 +1,3 @@
-import styles from './styles.module.css'
-
 export const metadata = {
   title: "Imprint | Legal Disclosure of K2Integris Sp. z o.o.",
   description: "Official company information and legal disclosure for K2Integris Sp. z o.o., including address, registration numbers, and contact details of managing directors.",
@@ -8,13 +6,13 @@ export const metadata = {
 const Imprint = () => {
     return (
         <>
-            <section className={styles.imprint}>
+            <section className="imprint">
                 <div className="wrapper">
-                    <article className={styles.container}>
+                    <article className="container">
                         <h1>
                             Imprint
                         </h1>
-                        <div className={styles.block}>
+                        <div className="block">
                             <h3>
                                 K2Integris Sp. z o.o.
                             </h3>
@@ -33,7 +31,7 @@ const Imprint = () => {
                                     Court Of Registration:
                                 </span>
                                 <br />
-                                Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego
+                                Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie,<br />XII Wydział Gospodarczy Krajowego Rejestru Sądowego
                             </p>
 
                             <p>
@@ -74,12 +72,12 @@ const Imprint = () => {
                                 </span>
                                 <br />
                                 <a href="mailto:partner@k2integris.com">
-                                    partner<span className={styles.at}>@</span>k2integris.com
+                                    partner<span className="at">@</span>k2integris.com
                                 </a>
                             </p>
                         </div>
 
-                        <div className={styles.block}>
+                        <div className="block">
                             <h3>
                                 Viktor Karpinski
                             </h3>
@@ -90,12 +88,12 @@ const Imprint = () => {
 
                             <p>
                                 <a href="mailto:karpinski@k2integris.com">
-                                    karpinski<span className={styles.at}>@</span>k2integris.com
+                                    karpinski<span className="at">@</span>k2integris.com
                                 </a>
                             </p>
                         </div>
 
-                        <div className={styles.block}>
+                        <div className="block">
                             <h3>
                                 Mateusz Kaminski
                             </h3>
@@ -106,7 +104,7 @@ const Imprint = () => {
 
                             <p>
                                 <a href="mailto:kaminski@k2integris.com">
-                                    kaminski<span className={styles.at}>@</span>k2integris.com
+                                    kaminski<span className="at">@</span>k2integris.com
                                 </a>
                             </p>
 
