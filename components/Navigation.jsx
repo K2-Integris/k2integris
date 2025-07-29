@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import TransitionLink from "./TransitionLink";
@@ -53,12 +52,12 @@ const Navigation = () => {
     return (
         <nav id="nav" ref={nav}>
             <div className="wrapper">
-                <Link id="logo" href="https://k2integris.com">
+                <TransitionLink id="logo" href="https://k2integris.com">
                     <Image src="/images/logo.png" width={29} height={17} alt="K2Integris Logo" />
-                </Link>
-                <Link className="text-logo" href="https://k2integris.com">
+                </TransitionLink>
+                <TransitionLink className="text-logo" href="https://k2integris.com">
                     K2INTEGRIS
-                </Link>
+                </TransitionLink>
 
                 <button id="hamburger" onClick={handleMenu} ref={burger}>
                     <span></span>

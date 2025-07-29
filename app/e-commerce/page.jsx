@@ -1,6 +1,6 @@
 import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from "@/components/ScrollSeperator"
-import Link from "next/link"
+import TransitionLink from "@/components/TransitionLink"
 
 export const metadata = {
   title: "E-Commerce Development Services | Scalable Online Store Solutions",
@@ -30,9 +30,9 @@ const Ecommerce = () => {
 
                     <ScrollSeperator />
 
-                    <Link href="contact" className="cta">
+                    <TransitionLink href="contact" className="cta">
                         Request a Consultation
-                    </Link>
+                    </TransitionLink>
                 </div>
 
                 <div className="transition"></div>
