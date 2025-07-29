@@ -2,53 +2,45 @@
 
 import { useEffect } from "react";
 
-const GTM_ID = "GTM-MF464BBD";
+const GA_MEASUREMENT_ID = "G-44XBTF444Z";
 
-const injectGTM = () => {
-  if (document.getElementById("gtm-script")) return;
+const injectGA = () => {
+  if (document.getElementById("gtag-script")) return;
 
-  // Inject <script>
-  const script = document.createElement("script");
-  script.id = "gtm-script";
-  script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','${GTM_ID}');`;
-  document.head.appendChild(script);
+  // Load external GA script
+  const scriptTag = document.createElement("script");
+  scriptTag.id = "gtag-script";
+  scriptTag.async = true;
+  scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(scriptTag);
 
-  // Inject <noscript>
-  const iframe = document.createElement("iframe");
-  iframe.src = `https://www.googletagmanager.com/ns.html?id=${GTM_ID}`;
-  iframe.height = 0;
-  iframe.width = 0;
-  iframe.style.display = "none";
-  iframe.style.visibility = "hidden";
-
-  const noscript = document.createElement("noscript");
-  noscript.appendChild(iframe);
-  document.body.prepend(noscript);
+  // Inline config script
+  const inlineScript = document.createElement("script");
+  inlineScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '${GA_MEASUREMENT_ID}');
+  `;
+  document.head.appendChild(inlineScript);
 };
 
-const GTMInjector = () => {
+const GAInjector = () => {
   useEffect(() => {
-    const check = () => {
+    const checkConsentAndInject = () => {
       if (window.localStorage.getItem("cookies") === "true") {
-        injectGTM();
-        console.log("Injected GTM")
+        injectGA();
+        console.log("Injected GA4 gtag.js");
       }
     };
 
-    // Run initially
-    check();
+    checkConsentAndInject();
+    window.addEventListener("cookieAccepted", checkConsentAndInject);
 
-    // Listen to acceptance
-    window.addEventListener("cookieAccepted", check);
-
-    return () => window.removeEventListener("cookieAccepted", check);
+    return () => window.removeEventListener("cookieAccepted", checkConsentAndInject);
   }, []);
 
   return null;
 };
 
-export default GTMInjector;
+export default GAInjector;
