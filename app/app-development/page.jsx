@@ -24,9 +24,9 @@ const AppDevelopment = () => {
                         Mobile & Business<br />Application Development
                     </h1>
 
-                    <h3 >
+                    <h2>
                         Fully custom, user-tested, and engineered to solve<br />real business problems at scale.
-                    </h3>
+                    </h2>
 
                     <ScrollSeperator />
 

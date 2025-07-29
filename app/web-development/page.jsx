@@ -24,9 +24,9 @@ const WebDevelopment = () => {
                         Web - Development
                     </h1>
 
-                    <h3 >
+                    <h2>
                         Custom - coded, strategically designed, and laser - focused<br />on your bottom line.
-                    </h3>
+                    </h2>
 
                     <ScrollSeperator />
 
