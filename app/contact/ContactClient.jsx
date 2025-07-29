@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "next/link"; 
 
 const ContactClient = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
