@@ -106,27 +106,30 @@ const Navigation = () => {
             </div>
 
             <menu className="mobile" ref={menu}>
-                {[
-                    { href: "/", label: "Home", svg: <HomeIcon /> },
-                    { href: "/about", label: "About", svg: <AboutIcon /> },
-                    //{ href: "/services", label: "Services", svg: <ServicesIcon /> },
-                    { href: "/web-development", label: "Web - Development", svg: <ServicesIcon /> },
-                    { href: "/app-development", label: "App - Development", svg: <ServicesIcon /> },
-                    { href: "/e-commerce", label: "E - Commerce", svg: <ServicesIcon /> },
-                    { href: "/marketing-and-seo", label: "Marketing & SEO", svg: <ServicesIcon /> },
-                    { href: "/work", label: "Work", svg: <WorkIcon /> },
-                    { href: "/contact", label: "Contact", svg: <ContactIcon /> }
-                ].map(({ href, label, svg }) => (
-                    <TransitionLink
-                        key={href}
-                        href={href}
-                        className={`link${isActive(href) ? " active" : ""}`}
-                        onClicked={handleMenu}
-                    >
-                        {svg}
-                        {label}
-                    </TransitionLink>
-                ))}
+                <div className="transparent" onClick={handleMenu}></div>
+                <div className="menu-container">
+                    {[
+                        { href: "/", label: "Home", svg: <HomeIcon /> },
+                        { href: "/about", label: "About", svg: <AboutIcon /> },
+                        //{ href: "/services", label: "Services", svg: <ServicesIcon /> },
+                        { href: "/web-development", label: "Web - Development", svg: <ServicesIcon /> },
+                        { href: "/app-development", label: "App - Development", svg: <ServicesIcon /> },
+                        { href: "/e-commerce", label: "E - Commerce", svg: <ServicesIcon /> },
+                        { href: "/marketing-and-seo", label: "Marketing & SEO", svg: <ServicesIcon /> },
+                        { href: "/work", label: "Work", svg: <WorkIcon /> },
+                        { href: "/contact", label: "Contact", svg: <ContactIcon /> }
+                    ].map(({ href, label, svg }) => (
+                        <TransitionLink
+                            key={href}
+                            href={href}
+                            className={`link${isActive(href) ? " active" : ""}`}
+                            onClicked={handleMenu}
+                        >
+                            {svg}
+                            {label}
+                        </TransitionLink>
+                    ))}
+                </div>
             </menu>
         </nav>
     );

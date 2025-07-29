@@ -34,19 +34,15 @@
     .mobile {
         position: fixed;
         top: 7.1rem;
-        width: 60vw;
+        width: 100vw;
         height: 100vh;
         left: 100vw;
         border-left: 0px solid var(--gold);
 
-        transition: 0.4s;
-
-        background-color: var(--black-transparent);
-        backdrop-filter: blur(8px);
-        transition: 0.3;
+        transition: 0.3s;
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 0rem;
 
         .link {
@@ -77,8 +73,23 @@
             }
         }
 
+        .menu-container {
+            width: 60%;
+            background-color: var(--black-transparent);
+            backdrop-filter: blur(8px);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .transparent {
+            width: 40%;
+            height: 100%;
+            background-color: transparent;
+        }
+
         &.open {
-            left: 40vw;
+            left: 0vw;
         }
     }
 
