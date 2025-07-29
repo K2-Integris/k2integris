@@ -89,7 +89,7 @@ const Navigation = () => {
                         return (
                             <div key={href}>
                                 {dropdown ? (
-                                    <span className={`link${activeClass}`}>{label}</span> // NOT clickable
+                                    <span className={`link${activeClass}`}>{label}</span>
                                 ) : (
                                     <TransitionLink
                                     href={href}
