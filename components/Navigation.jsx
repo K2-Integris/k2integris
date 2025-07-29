@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import TransitionLink from "./TransitionLink";
 
 const Navigation = () => {
     const burger = useRef();
@@ -80,23 +81,23 @@ const Navigation = () => {
                         { href: "/contact", label: "Contact" }
                     ].map(({ href, label, dropdown }) => (
                         <div key={href}>
-                            <Link
+                            <TransitionLink
                                 key={href}
                                 href={href}
                                 className={`link${isActive(href) ? " active" : ""}`}
                             >
                                 {label}
-                            </Link>
+                            </TransitionLink>
                             {dropdown !== undefined && (
                                 <div className="dropdown">
                                     {dropdown.map(({href, label}) => (
-                                        <Link
+                                        <TransitionLink
                                             key={href}
                                             href={href}
                                             className={`sublink${isActive(href) ? " active" : ""}`}
                                         >
                                             {label}
-                                        </Link>
+                                        </TransitionLink>
                                     ))}
                                 </div>
                             )}
@@ -117,14 +118,15 @@ const Navigation = () => {
                     { href: "/work", label: "Work", svg: <WorkIcon /> },
                     { href: "/contact", label: "Contact", svg: <ContactIcon /> }
                 ].map(({ href, label, svg }) => (
-                    <Link
+                    <TransitionLink
                         key={href}
                         href={href}
                         className={`link${isActive(href) ? " active" : ""}`}
+                        onClicked={handleMenu}
                     >
                         {svg}
                         {label}
-                    </Link>
+                    </TransitionLink>
                 ))}
             </menu>
         </nav>

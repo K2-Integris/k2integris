@@ -1,6 +1,7 @@
 import ScrollSeperator from "@/components/ScrollSeperator";
 import ServiceCards from "@/components/ServiceCards";
 import ContactCTA from "@/components/ContactCTA";
+import TransitionLink from "@/components/TransitionLink";
 
 export const metadata = {
   title: "K2INTEGRIS - Custom Web, App & E-Commerce Solutions for Ambitious Brands",
@@ -26,9 +27,9 @@ export default function Home() {
 
         <ScrollSeperator />
 
-        <a href="contact" className="cta">
+        <TransitionLink href="contact" className="cta">
           Request a Consultation
-        </a>
+        </TransitionLink>
        </article>
 
        <div className="transition"></div>
