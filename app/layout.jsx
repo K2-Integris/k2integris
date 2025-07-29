@@ -4,6 +4,8 @@ import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Cookies from "@/components/Cookies";
 import GTMInjector from "@/components/GTMInjector";
+import PageTransition from "@/components/PageTransition";
+import { PageTransitionProvider } from "@/components/PageTransitionContext";
 
 export const metadata = {
   title: "K2INTEGRIS",
@@ -21,14 +23,18 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <GTMInjector />
-        <Navigation />
+        <PageTransitionProvider>
+          <Navigation />
 
-        {children}
+          <PageTransition />
 
-         <Faq />
+          {children}
 
-         <Cookies />
-        <Footer />
+          <Faq />
+
+          <Cookies />
+          <Footer />
+        </PageTransitionProvider>
       </body>
     </html>
   );

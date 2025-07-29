@@ -1,4 +1,4 @@
-import Link from "next/link";
+import TransitionLink from "./TransitionLink";
 
 const ContactCTA = () => {
     return (
@@ -8,10 +8,10 @@ const ContactCTA = () => {
                 Let's talk about<br /><span>your project</span>
             </h2>
 
-            <Link href="contact" className="btn-11">
+            <TransitionLink href="contact" className="btn-11">
                 GET IN TOUCH
                 <span></span><span></span><span></span><span></span>
-            </Link>
+            </TransitionLink>
             </article>
             <div className="wrap">
                 {Array.from({ length: 300 }).map((_, i) => (

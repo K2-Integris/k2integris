@@ -1,8 +1,8 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
+import TransitionLink from "./TransitionLink";
 
 const Footer = () => {
     const footerRef = useRef();
@@ -26,47 +26,47 @@ const Footer = () => {
     return (
         <footer ref={footerRef}>
             <article className="wrapper">
-                <Link className="logo" href="https://k2integris.com">
+                <TransitionLink className="logo" href="https://k2integris.com">
                     <Image src="/images/logo-black.png" width={79} height={50} alt="K2Integris Logo" />
-                </Link>
+                </TransitionLink>
 
                 <ul className="horizontal">
                     <li>
-                        <Link href="https://www.linkedin.com/company/k2integris/" target="_blank" className="link social" title="Our LinkedIn">
+                        <TransitionLink href="https://www.linkedin.com/company/k2integris/" target="_blank" className="link social" title="Our LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </Link>
+                        </TransitionLink>
                     </li>
 
                     <li>
-                        <Link href="https://www.instagram.com/k2integris/" target="_blank" className="link social" title="Our Instagram">
+                        <TransitionLink href="https://www.instagram.com/k2integris/" target="_blank" className="link social" title="Our Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </Link>
+                        </TransitionLink>
                     </li>
 
                     <li>
-                        <Link href="https://x.com/k2integris" target="_blank" className="link social" title="Our X">
+                        <TransitionLink href="https://x.com/k2integris" target="_blank" className="link social" title="Our X">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="x">
                                 <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
                             </svg>
-                        </Link>
+                        </TransitionLink>
                     </li>
                 </ul>
                 
                 <ul className="horizontal">
                     <li>
-                        <Link href="imprint" className="link legal">
+                        <TransitionLink href="imprint" className="link legal">
                             Imprint
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link href="terms-of-use" className="link legal">
+                        <TransitionLink href="terms-of-use" className="link legal">
                             Terms of Use
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                         <Link href="privacy-policy" className="link legal">
+                         <TransitionLink href="privacy-policy" className="link legal">
                             Privacy Policy
-                        </Link>
+                        </TransitionLink>
                     </li>
                 </ul>
             </article>
@@ -78,24 +78,24 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="app-development" className="link page">
+                        <TransitionLink href="app-development" className="link page">
                             Business Apps
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link href="web-development" className="link page">
+                        <TransitionLink href="web-development" className="link page">
                             Custom Websites
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                         <Link href="e-commerce" className="link page">
+                         <TransitionLink href="e-commerce" className="link page">
                             E-Commerce
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link href="marketing-and-seo" className="link page">
+                        <TransitionLink href="marketing-and-seo" className="link page">
                            Marketing and SEO
-                        </Link>
+                        </TransitionLink>
                     </li>
                 </ul>
 
@@ -105,24 +105,24 @@ const Footer = () => {
                     </li>
                     <li className="heading"></li>
                     <li>
-                        <Link href="work" className="link page">
+                        <TransitionLink href="work" className="link page">
                             Our Work
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link href="testimonials" className="link page">
+                        <TransitionLink href="testimonials" className="link page">
                             Testimonials
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                         <Link href="about" className="link page">
+                         <TransitionLink href="about" className="link page">
                             Who We Are
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                         <Link href="about#philosophy" className="link page">
+                         <TransitionLink href="about#philosophy" className="link page">
                             Philosophy
-                        </Link>
+                        </TransitionLink>
                     </li>
                 </ul>
             </article>

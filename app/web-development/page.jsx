@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import ContactCTA from "@/components/ContactCTA"
 import ScrollSeperator from '@/components/ScrollSeperator'
+import TransitionLink from '@/components/TransitionLink';
 
 export const metadata = {
   title: "Custom Web Development for Businesses | Scalable, ROI-Focused Websites",
@@ -30,9 +30,9 @@ const WebDevelopment = () => {
 
                     <ScrollSeperator />
 
-                    <Link href="contact" className="cta">
+                    <TransitionLink href="contact" className="cta">
                         Request a Consultation
-                    </Link>
+                    </TransitionLink>
                 </div>
 
                 <div className="transition"></div>
