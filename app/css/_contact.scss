@@ -483,38 +483,51 @@
                 'email phone'
                 'message message'
                 'checkbox checkbox'
+                'error error'
                 'button button';
-            
-            .check-box {
-                grid-area: checkbox;
-            }
 
-            .input-box[for="company"] {
+            .form-group[data-field="company"] {
                 grid-area: company;
             }
 
-            .input-box[for="name"] {
+            .form-group[data-field="name"] {
                 grid-area: name;
             }
 
-            .input-box[for="email"] {
+            .form-group[data-field="email"] {
                 grid-area: email;
             }
 
-            .input-box[for="phone"] {
+            .form-group[data-field="phone"] {
                 grid-area: phone;
             }
 
-            .input-box[for="message"] {
+            .form-group[data-field="message"] {
                 grid-area: message;
+            }
+
+            .form-group[data-field="checkbox"] {
+                grid-area: checkbox;
+            }
+
+            .form-error-general {
+                grid-area: error;
+                color: #ff6666;
             }
 
             button[type="submit"] {
                 grid-area: button;
             }
+
+            .form-error {
+                color: #ff6666;
+            }
+
         }
+
     }
 }
+
 
 @media only screen and (min-width: 1000px) {
     #contact {
