@@ -1,6 +1,6 @@
 'use client'
 
-import './GoldButton.css';
+//import './GoldButton.css';
 import TransitionLink from "./TransitionLink";
 
 const GoldButton = ({ href = "#", children = "Click Me" }) => {
