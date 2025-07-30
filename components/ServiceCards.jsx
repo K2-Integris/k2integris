@@ -118,7 +118,7 @@ useEffect(() => {
               </h3>
 
               <h4>
-                Custom-built toolsto streamline your operations.
+                Custom-built tools to streamline your operations.
               </h4>
 
               <p>
