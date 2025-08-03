@@ -38,22 +38,24 @@
         background-color: var(--black);
 
         border-right: 1px solid var(--gray);
+
+        &:first-of-type {
+            border-top: 1px solid var(--gray);
+        }
         
-        &:nth-of-type(odd) {
+        &:nth-of-type(even) {
             border-bottom: 1px solid var(--gray);
         }
     }
 
-    .time-column {
-        padding-top: 5.2rem;
-    }
-
     .time-label {
+        display: block;
         height: 4rem;
         border-bottom: 0;
         font-size: 1.2rem;
 
         padding-right: 2rem;
+        margin-top: -0.7px;
 
         color: var(--gray);
     }
