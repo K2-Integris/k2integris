@@ -47,6 +47,8 @@
     //--gold: #ffcf9bbd;
     --gold-transparent: #BC976Fbd;
     --white: #ffffff;
+
+    --gray: #ffffff50;
   }
   
 html,
@@ -200,6 +202,7 @@ section, header {
 @import "category";
 @import "privacy";
 @import "imprint";
+@import "booking-calendar";
 
 @media only screen and (max-width: 380px) {
     h1, h1 span {

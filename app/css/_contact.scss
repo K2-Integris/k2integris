@@ -486,6 +486,7 @@
                 'company name'
                 'email phone'
                 'message message'
+                'booking booking'
                 'checkbox checkbox'
                 'error error'
                 'button button';
@@ -512,6 +513,10 @@
 
             .form-group[data-field="checkbox"] {
                 grid-area: checkbox;
+            }
+
+            #booking-calendar {
+                grid-area: booking;
             }
 
             .form-error-general {
