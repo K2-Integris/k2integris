@@ -140,5 +140,9 @@
                 opacity: 1;
             }
         }
+
+        &.booked {
+            background-color: var(--gray);
+        }
     }
 }
