@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 export default function BookingCalendar({
-  startHour = 10,
-  endHour = 18,
+  startHour = 12,
+  endHour = 14,
   days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
   blockedSlots = [], // [{ day: 'Monday', time: '10:00' }]
 }) {
