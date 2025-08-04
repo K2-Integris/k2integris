@@ -32,7 +32,20 @@ export default function BookingCalendar({
     const formatTime = (h, m) =>
         `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
 
-    const handleMouseDown = (e, day) => {
+    // Helper: is a given day in the current view today or before today?
+    const isDayPastOrToday = (dayIndex) => {
+        const today = new Date();
+        const target = new Date();
+        // Align to Monday-start week (add +1)
+        target.setDate(today.getDate() - today.getDay() + dayIndex + weekOffset * 7 + 1);
+        // Compare by date only
+        const t0 = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
+        const d0 = new Date(target.getFullYear(), target.getMonth(), target.getDate()).getTime();
+        return d0 <= t0;
+    };
+
+    const handleMouseDown = (e, day, isDisabledDay) => {
+        if (isDisabledDay) return; // prevent starting a drag on past/today
         const rect = e.currentTarget.getBoundingClientRect();
         const y = e.clientY - rect.top;
         setDragging({ day, startY: y, containerTop: rect.top });
@@ -145,65 +158,70 @@ export default function BookingCalendar({
                     <div className="time-label">{endHour}:00</div>
                 </div>
 
-                {days.map((day) => (
-                    <div
-                        key={day}
-                        className="day-container"
-                        style={{ position: 'relative' }}
-                        onMouseDown={(e) => handleMouseDown(e, day)}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                    >
+                {days.map((day, dayIndex) => {
+                    const isPastOrToday = isDayPastOrToday(dayIndex);
 
-                    {timeSlots.map((time) => (
-                    <div key={time} className="slot-container">
-                        <div className="booking-area">
-                        {isBlocked(day, time) ? '⛔' : ''}
-                        </div>
-                    </div>
-                    ))}
-
-                    {dragging?.day === day && dragging.height >= SNAP_PX && typeof dragging.top === 'number' && (
+                    return (
                         <div
-                            className="booking-block dragging"
-                            style={{
-                                top: `${dragging.top}px`,
-                                height: `${dragging.height}px`,
-                            }}
+                            key={day}
+                            className="day-container"
+                            style={{ position: 'relative' }}
+                            onMouseDown={(e) => handleMouseDown(e, day, isPastOrToday)}
+                            onMouseMove={handleMouseMove}
+                            onMouseUp={handleMouseUp}
                         >
-                            {(() => {
-                                const minutesFromStart = dragging.top / SLOT_HEIGHT_PER_MINUTE;
-                                const durationMinutes = dragging.height / SLOT_HEIGHT_PER_MINUTE;
-                                const fromHour = startHour + Math.floor(minutesFromStart / 60);
-                                const fromMin = minutesFromStart % 60;
-                                const toHour = startHour + Math.floor((minutesFromStart + durationMinutes) / 60);
-                                const toMin = (minutesFromStart + durationMinutes) % 60;
-                                return `${formatTime(fromHour, fromMin)} – ${formatTime(toHour, toMin)}`;
-                            })()}
-                        </div>
-                    )}
+                            {timeSlots.map((time) => (
+                                <div
+                                    key={time}
+                                    className={`slot-container ${isPastOrToday ? 'unavailable' : ''}`}
+                                >
+                                    <div className="booking-area">
+                                        {isBlocked(day, time) ? '⛔' : ''}
+                                    </div>
+                                </div>
+                            ))}
 
+                            {dragging?.day === day && dragging.height >= SNAP_PX && typeof dragging.top === 'number' && (
+                                <div
+                                    className="booking-block dragging"
+                                    style={{
+                                        top: `${dragging.top}px`,
+                                        height: `${dragging.height}px`,
+                                    }}
+                                >
+                                    {(() => {
+                                        const minutesFromStart = dragging.top / SLOT_HEIGHT_PER_MINUTE;
+                                        const durationMinutes = dragging.height / SLOT_HEIGHT_PER_MINUTE;
+                                        const fromHour = startHour + Math.floor(minutesFromStart / 60);
+                                        const fromMin = minutesFromStart % 60;
+                                        const toHour = startHour + Math.floor((minutesFromStart + durationMinutes) / 60);
+                                        const toMin = (minutesFromStart + durationMinutes) % 60;
+                                        return `${formatTime(fromHour, fromMin)} - ${formatTime(toHour, toMin)}`;
+                                    })()}
+                                </div>
+                            )}
 
-                    {blocks
-                    .filter((b) => b.day === day)
-                    .map((b, i) => (
-                        <div
-                        key={i}
-                        className="booking-block"
-                        style={{
-                            top: `${b.top}px`,
-                            height: `${b.height}px`,
-                        }}
-                        >
-                        {b.from} – {b.to}
-                        <div
-                            className="resize-handle"
-                            onMouseDown={(e) => startResizingBlock(e, i)}
-                        />
+                            {blocks
+                                .filter((b) => b.day === day)
+                                .map((b, i) => (
+                                    <div
+                                        key={i}
+                                        className="booking-block"
+                                        style={{
+                                            top: `${b.top}px`,
+                                            height: `${b.height}px`,
+                                        }}
+                                    >
+                                        {b.from} - {b.to}
+                                        <div
+                                            className="resize-handle"
+                                            onMouseDown={(e) => startResizingBlock(e, i)}
+                                        />
+                                    </div>
+                                ))}
                         </div>
-                    ))}
-                </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );

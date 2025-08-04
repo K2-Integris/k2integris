@@ -48,6 +48,11 @@
         &:nth-of-type(even) {
             border-bottom: 1px solid var(--gray);
         }
+
+        &.unavailable {
+            background-color: #39383850;
+            cursor: not-allowed;
+        }
     }
 
     .time-label {
