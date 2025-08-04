@@ -5,7 +5,8 @@ export default function BookingCalendar({
   endHour = 18,
   days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
   slotMinutes = 30,
-  initialDate, 
+  initialDate,
+  disablePriorDates = true,
 }) {
   const TODAY_CONST = useMemo(() => {
     const d = initialDate ? new Date(initialDate) : new Date();
@@ -17,8 +18,8 @@ export default function BookingCalendar({
 
   const startOfWeekMonday = useCallback((d) => {
     const x = new Date(d);
-    const day = x.getDay();
-    const diffToMon = (day + 6) % 7;    // 0 for Mon, 6 for Sun
+    const day = x.getDay(); 
+    const diffToMon = (day + 6) % 7; // 0 for Mon, 6 for Sun
     x.setDate(x.getDate() - diffToMon);
     x.setHours(0, 0, 0, 0);
     return x;
@@ -27,9 +28,9 @@ export default function BookingCalendar({
   const addDays = (d, n) => {
     const x = new Date(d);
     x.setDate(x.getDate() + n);
+    x.setHours(0, 0, 0, 0);
     return x;
   };
-
   const addWeeks = (d, n) => addDays(d, n * 7);
 
   const fmt2 = (n) => String(n).padStart(2, '0');
@@ -39,7 +40,10 @@ export default function BookingCalendar({
     ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()];
   const sameDay = (a, b) => a.getTime() === b.getTime();
 
+  const isOnOrBeforeToday = (d) => d.getTime() <= TODAY_CONST.getTime();
+
   const weekStart = useMemo(() => startOfWeekMonday(focusedDate), [focusedDate, startOfWeekMonday]);
+
   const visibleDates = useMemo(() => {
     return days.map((_, idx) => addDays(weekStart, idx));
   }, [days, weekStart]);
@@ -80,35 +84,31 @@ export default function BookingCalendar({
   return (
     <div id="booking-calendar">
       <div className="controls">
-        <button type="button" onClick={goPrevWeek} aria-label="Previous week">
-            prev
-        </button>
+        <button type="button" onClick={goPrevWeek} aria-label="Previous week">prev</button>
 
-        <label className='range-jumper' htmlFor='jumper'>
+        <label className="range-jumper" htmlFor="jumper">
           {weekRangeLabel}
           <input
+            id="jumper"
             type="date"
             value={fmtDateYYMMDD(focusedDate)}
             onChange={onDatePick}
-            id='jumper'
           />
         </label>
 
-        <button type="button" onClick={goNextWeek} aria-label="Next week">
-            Next
-        </button>
+        <button type="button" onClick={goNextWeek} aria-label="Next week">Next</button>
       </div>
 
-        <div className='day-labels'>
-            {days.map((label, i) => {
-                const d = visibleDates[i];
-                return (
-                    <div className="day-label" key={label}>
-                        {fmtDayShort(d)} {fmt2(d.getDate())} {fmtMonthShort(d)}
-                    </div>
-                )
-            })}
-        </div>
+      <div className="day-labels">
+        {days.map((label, i) => {
+          const d = visibleDates[i];
+          return (
+            <div className="day-label" key={label}>
+              {fmtDayShort(d)} {fmt2(d.getDate())} {fmtMonthShort(d)}
+            </div>
+          );
+        })}
+      </div>
 
       <div className="booking-grid">
         <div className="time-column">
@@ -121,13 +121,26 @@ export default function BookingCalendar({
         {days.map((label, i) => {
           const d = visibleDates[i];
           const isActive = sameDay(d, focusedDate);
+          const isDisabled = disablePriorDates && isOnOrBeforeToday(d);
+
+          const className = [
+            'day-container',
+            isDisabled ? 'disabled' : '',
+          ].filter(Boolean).join(' ');
+
+          const onDayClick = () => {
+            if (isDisabled) return; 
+            setFocusedDate(d);
+          };
+
           return (
             <div
               key={`${label}-${i}`}
-              className="day-container"
+              className={className}
               style={{ position: 'relative' }}
               data-active={isActive ? 'true' : 'false'}
-              onClick={() => setFocusedDate(d)}
+              aria-disabled={isDisabled ? 'true' : 'false'}
+              onClick={onDayClick}
             >
               {timeSlots.map((t, idx) => (
                 <div key={`${t}-${idx}`} className="slot-container">
@@ -141,6 +154,7 @@ export default function BookingCalendar({
     </div>
   );
 }
+
 
 
 
