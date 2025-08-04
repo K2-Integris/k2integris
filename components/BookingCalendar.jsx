@@ -77,11 +77,11 @@ export default function BookingCalendar({
         setBlocks((prev) => [
             ...prev,
             {
-            day: dragging.day,
-            top: dragging.top,
-            height: dragging.height,
-            from: formatTime(fromHour, fromMin),
-            to: formatTime(toHour, toMin),
+                day: dragging.day,
+                top: dragging.top,
+                height: dragging.height,
+                from: formatTime(fromHour, fromMin),
+                to: formatTime(toHour, toMin),
             },
         ]);
         setDragging(null);
@@ -97,35 +97,36 @@ export default function BookingCalendar({
         if (resizingIndex === null) return;
 
         const onMouseMove = (e) => {
-        setBlocks((prev) => {
-            const block = prev[resizingIndex];
-            const newHeight = Math.max(SNAP_PX, block.height + e.movementY);
-            const snappedHeight = Math.round(newHeight / SNAP_PX) * SNAP_PX;
+            setBlocks((prev) => {
+                const block = prev[resizingIndex];
+                const newHeight = Math.max(SNAP_PX, block.height + e.movementY);
+                const snappedHeight = Math.round(newHeight / SNAP_PX) * SNAP_PX;
 
-            const minutesFromStart = block.top / SLOT_HEIGHT_PER_MINUTE;
-            const durationMinutes = snappedHeight / SLOT_HEIGHT_PER_MINUTE;
-            const toHour = startHour + Math.floor((minutesFromStart + durationMinutes) / 60);
-            const toMin = (minutesFromStart + durationMinutes) % 60;
+                const minutesFromStart = block.top / SLOT_HEIGHT_PER_MINUTE;
+                const durationMinutes = snappedHeight / SLOT_HEIGHT_PER_MINUTE;
+                const toHour = startHour + Math.floor((minutesFromStart + durationMinutes) / 60);
+                const toMin = (minutesFromStart + durationMinutes) % 60;
 
-            const updated = [...prev];
-            updated[resizingIndex] = {
-            ...block,
-            height: snappedHeight,
-            to: formatTime(toHour, toMin),
-            };
-            return updated;
-        });
+                const updated = [...prev];
+                updated[resizingIndex] = {
+                    ...block,
+                    height: snappedHeight,
+                    to: formatTime(toHour, toMin),
+                };
+                return updated;
+            });
         };
 
         const onMouseUp = () => {
-        setResizingIndex(null);
+            setResizingIndex(null);
         };
 
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
+
         return () => {
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
         };
     }, [resizingIndex]);
 
@@ -166,17 +167,8 @@ export default function BookingCalendar({
                         <div
                             className="booking-block dragging"
                             style={{
-                            position: 'absolute',
-                            top: `${dragging.top}px`,
-                            height: `${dragging.height}px`,
-                            left: 0,
-                            right: 0,
-                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                            border: '1px dashed white',
-                            pointerEvents: 'none',
-                            fontSize: '0.9rem',
-                            padding: '0.2rem 0.4rem',
-                            color: '#fff',
+                                top: `${dragging.top}px`,
+                                height: `${dragging.height}px`,
                             }}
                         >
                             {(() => {
@@ -199,31 +191,13 @@ export default function BookingCalendar({
                         key={i}
                         className="booking-block"
                         style={{
-                            position: 'absolute',
                             top: `${b.top}px`,
                             height: `${b.height}px`,
-                            left: 0,
-                            right: 0,
-                            backgroundColor: 'rgba(0, 153, 255, 0.4)',
-                            color: 'white',
-                            fontSize: '0.9rem',
-                            padding: '0.2rem 0.4rem',
-                            boxSizing: 'border-box',
-                            userSelect: 'none',
                         }}
                         >
                         {b.from} – {b.to}
                         <div
                             className="resize-handle"
-                            style={{
-                            position: 'absolute',
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                            height: '6px',
-                            cursor: 'ns-resize',
-                            backgroundColor: 'rgba(255,255,255,0.3)',
-                            }}
                             onMouseDown={(e) => startResizingBlock(e, i)}
                         />
                         </div>
