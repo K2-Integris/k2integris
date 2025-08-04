@@ -1,4 +1,153 @@
-import { useState, useEffect } from 'react';
+import { useMemo, useState, useCallback } from 'react';
+
+export default function BookingCalendar({
+  startHour = 10,
+  endHour = 18,
+  days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  slotMinutes = 30,
+  initialDate, 
+}) {
+  const TODAY_CONST = useMemo(() => {
+    const d = initialDate ? new Date(initialDate) : new Date();
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }, [initialDate]);
+
+  const [focusedDate, setFocusedDate] = useState(TODAY_CONST);
+
+  const startOfWeekMonday = useCallback((d) => {
+    const x = new Date(d);
+    const day = x.getDay();
+    const diffToMon = (day + 6) % 7;    // 0 for Mon, 6 for Sun
+    x.setDate(x.getDate() - diffToMon);
+    x.setHours(0, 0, 0, 0);
+    return x;
+  }, []);
+
+  const addDays = (d, n) => {
+    const x = new Date(d);
+    x.setDate(x.getDate() + n);
+    return x;
+  };
+
+  const addWeeks = (d, n) => addDays(d, n * 7);
+
+  const fmt2 = (n) => String(n).padStart(2, '0');
+  const fmtDateYYMMDD = (d) => `${d.getFullYear()}-${fmt2(d.getMonth() + 1)}-${fmt2(d.getDate())}`;
+  const fmtDayShort = (d) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getDay()];
+  const fmtMonthShort = (d) =>
+    ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()];
+  const sameDay = (a, b) => a.getTime() === b.getTime();
+
+  const weekStart = useMemo(() => startOfWeekMonday(focusedDate), [focusedDate, startOfWeekMonday]);
+  const visibleDates = useMemo(() => {
+    return days.map((_, idx) => addDays(weekStart, idx));
+  }, [days, weekStart]);
+
+  const weekRangeLabel = useMemo(() => {
+    const start = visibleDates[0];
+    const end = visibleDates[visibleDates.length - 1];
+    if (!start || !end) return '';
+    return `${fmtMonthShort(start)} ${start.getDate()} – ${fmtMonthShort(end)} ${end.getDate()}, ${end.getFullYear()}`;
+  }, [visibleDates]);
+
+  const timeSlots = useMemo(() => {
+    const slots = [];
+    for (let h = startHour; h < endHour; h++) {
+      slots.push(`${fmt2(h)}:00`);
+      if (slotMinutes < 60) {
+        const steps = Math.floor(60 / slotMinutes) - 1;
+        for (let i = 1; i <= steps; i++) {
+          slots.push(`${fmt2(h)}:${fmt2(i * slotMinutes)}`);
+        }
+      }
+    }
+    return slots;
+  }, [startHour, endHour, slotMinutes]);
+
+  const goPrevWeek = () => setFocusedDate((d) => addWeeks(d, -1));
+  const goNextWeek = () => setFocusedDate((d) => addWeeks(d, +1));
+  const goToday = () => setFocusedDate(TODAY_CONST);
+  const onDatePick = (e) => {
+    const val = e.target.value; // yyyy-mm-dd
+    if (!val) return;
+    const [y, m, dd] = val.split('-').map(Number);
+    const d = new Date(y, m - 1, dd);
+    d.setHours(0, 0, 0, 0);
+    setFocusedDate(d);
+  };
+
+  return (
+    <div id="booking-calendar">
+      <div className="controls">
+        <button type="button" onClick={goPrevWeek} aria-label="Previous week">
+            prev
+        </button>
+
+        <label className='range-jumper' htmlFor='jumper'>
+          {weekRangeLabel}
+          <input
+            type="date"
+            value={fmtDateYYMMDD(focusedDate)}
+            onChange={onDatePick}
+            id='jumper'
+          />
+        </label>
+
+        <button type="button" onClick={goNextWeek} aria-label="Next week">
+            Next
+        </button>
+      </div>
+
+        <div className='day-labels'>
+            {days.map((label, i) => {
+                const d = visibleDates[i];
+                return (
+                    <div className="day-label" key={label}>
+                        {fmtDayShort(d)} {fmt2(d.getDate())} {fmtMonthShort(d)}
+                    </div>
+                )
+            })}
+        </div>
+
+      <div className="booking-grid">
+        <div className="time-column">
+          {timeSlots.map((t) => (
+            <div key={t} className="time-label">{t}</div>
+          ))}
+          <div className="time-label">{fmt2(endHour)}:00</div>
+        </div>
+
+        {days.map((label, i) => {
+          const d = visibleDates[i];
+          const isActive = sameDay(d, focusedDate);
+          return (
+            <div
+              key={`${label}-${i}`}
+              className="day-container"
+              style={{ position: 'relative' }}
+              data-active={isActive ? 'true' : 'false'}
+              onClick={() => setFocusedDate(d)}
+            >
+              {timeSlots.map((t, idx) => (
+                <div key={`${t}-${idx}`} className="slot-container">
+                  <div className="booking-area" />
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+/*import { useState, useEffect } from 'react';
 
 export default function BookingCalendar({
   startHour = 12,
@@ -314,3 +463,5 @@ export default function BookingCalendar({
     </div>
   );
 }
+
+*/
