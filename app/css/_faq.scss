@@ -1,6 +1,6 @@
 #faq {
     padding-top: 2rem;
-    background-color: var(--black);
+    background-color: var(--primary);
     margin-top: -2px;
 
     .faq-wrapper {
@@ -22,7 +22,7 @@
                 button {
                     flex-shrink: 0;
                     padding: 1rem;
-                    border: 1px solid #BC976Fbd;
+                    border: 1px solid var(--gold-transparent);
                     font-size: 1.4rem;
                     background-color: transparent;
                     color: #ffffffbd;
@@ -30,10 +30,11 @@
                     scroll-snap-align: start;
                     transition: background 0.3s ease;
                     margin-left: 1rem;
+                    line-height: normal;
 
                     &.active {
                         background-color: var(--gold-transparent);
-                        color: black;
+                        color: var(--text-accent);
                         font-weight: 700;
                     }
 
@@ -56,7 +57,7 @@
                 gap: 4rem;
 
                 .faq-box {
-                    border-bottom: 1px solid #BC976Fbd;
+                    border-bottom: 1px solid var(--gold-transparent);
 
                     .faq-button {
                         display: flex;
@@ -64,10 +65,8 @@
                         gap: 2rem;
 
                         background-color: transparent;
-                        color: white;
-                        font-size: 1.6rem;
+                        color: var(--text);
                         font-weight: 700;
-                        text-align: left;
                         line-height: 2.6rem;
 
                         .faq-icon {
@@ -78,7 +77,7 @@
                             .faq-line {
                                 width: 2rem;
                                 height: 0.1rem;
-                                background-color: var(--white);
+                                background-color: var(--text);
                                 display: block;
 
                                 position: absolute;
