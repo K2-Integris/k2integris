@@ -61,6 +61,7 @@
     --accent: var(--gold);
     --text: var(--white);
     --text-accent: var(--black);
+    --error: #ff6666;
 }
   
 html,
@@ -156,7 +157,7 @@ h4 {
     font-weight: 200;
 }
 
-p, li, strong, button, a {
+p, li, strong, button, a, textarea, input, label {
     font-size: 1.6rem;
     line-height: 2.5rem;
     font-weight: 300;
