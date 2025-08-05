@@ -9,9 +9,11 @@ export default function BookingCalendar({
   disablePriorDates = true,
   bookings = [
     { date: '2025-08-08', fromtime: '11:00', tilltime: '12:30', type: 'booked' },
-    { date: '2025-08-05', fromtime: '15:00', tilltime: '16:00', type: 'booked' },
+    { date: '2025-08-06', fromtime: '15:00', tilltime: '16:00', type: 'booked' },
     { date: '2025-08-07', fromtime: '10:30', tilltime: '11:30', type: 'booked' },
   ],
+  myBookings: myBookingsProp,
+  onMyBookingsChange, // pass setState from parent
 }) {
   const TODAY_CONST = useMemo(() => {
     const d = initialDate ? new Date(initialDate) : new Date();
@@ -20,12 +22,16 @@ export default function BookingCalendar({
   }, [initialDate]);
 
   const [focusedDate, setFocusedDate] = useState(TODAY_CONST);
-
   const [hover, setHover] = useState(null);
+
+  // controlled/uncontrolled
+  const [myBookingsInternal, setMyBookingsInternal] = useState([]);
+  const myBookings = myBookingsProp ?? myBookingsInternal;
+  const setMyBookings = onMyBookingsChange ?? setMyBookingsInternal;
 
   const startOfWeekMonday = useCallback((d) => {
     const x = new Date(d);
-    const day = x.getDay(); 
+    const day = x.getDay();
     const diffToMon = (day + 6) % 7;
     x.setDate(x.getDate() - diffToMon);
     x.setHours(0, 0, 0, 0);
@@ -70,7 +76,7 @@ export default function BookingCalendar({
     return slots;
   }, [startHour, endHour, slotMinutes]);
 
-  const ROW_REM = 4; 
+  const ROW_REM = 4;
   const windowStartMin = startHour * 60;
   const windowEndMin = endHour * 60;
 
@@ -89,8 +95,6 @@ export default function BookingCalendar({
     const step = slotMinutes;
     return Math.round(mins / step) * step;
   };
-
-  const [myBookings, setMyBookings] = useState([]);
 
   const parseHHMM = (t) => {
     const [hh, mm] = t.split(':').map(Number);
@@ -133,16 +137,15 @@ export default function BookingCalendar({
     if (disabled) return;
     const container = e.currentTarget;
     const rect = container.getBoundingClientRect();
-    const y = e.clientY - rect.top; 
+    const y = e.clientY - rect.top;
 
-    const slotIdx = Math.max(0, Math.min(timeSlots.length, Math.floor(y / (ROW_REM * 16)))); 
+    const slotIdx = Math.max(0, Math.min(timeSlots.length, Math.floor(y / (ROW_REM * 16))));
     const totalRows = (windowEndMin - windowStartMin) / slotMinutes;
 
     const yRatio = Math.max(0, Math.min(1, y / rect.height));
     const approxMin = windowStartMin + yRatio * (windowEndMin - windowStartMin);
     const startMinRaw = snapMin(approxMin);
 
-    // reject if inside an obstacle
     const obstacles = mergedRangesForDate(dateKey);
     const inside = obstacles.some(([s, e]) => startMinRaw >= s && startMinRaw < e);
     if (inside) return;
@@ -165,15 +168,12 @@ export default function BookingCalendar({
 
     const obstacles = mergedRangesForDate(drag.dateKey);
 
-    // clamp against nearest obstacles
     const sorted = obstacles.slice().sort((a, b) => a[0] - b[0]);
     let minClamp = windowStartMin;
     let maxClamp = windowEndMin;
 
-    // next obstacle after start
     const next = sorted.find(([s]) => s >= start);
     if (next) maxClamp = Math.min(maxClamp, next[0]);
-    // prev obstacle before start
     const prev = [...sorted].reverse().find(([, e]) => e <= start);
     if (prev) minClamp = Math.max(minClamp, prev[1]);
 
@@ -239,12 +239,11 @@ export default function BookingCalendar({
     setFocusedDate(d);
   };
 
-    const removeMyBooking = (date, fromtime, tilltime) => {
-        setMyBookings((prev) =>
-            prev.filter((b) => !(b.date === date && b.fromtime === fromtime &&  b.tilltime === tilltime))
-        );
-    };
-
+  const removeMyBooking = (date, fromtime, tilltime) => {
+    setMyBookings((prev) =>
+      prev.filter((b) => !(b.date === date && b.fromtime === fromtime && b.tilltime === tilltime))
+    );
+  };
 
   return (
     <div id="booking-calendar">
@@ -313,12 +312,12 @@ export default function BookingCalendar({
                 const snappedMin = snapMin(approxMin);
 
                 setHover({ dateKey, minutes: snappedMin });
-            }}
+              }}
               onMouseUp={endDrag}
-                onMouseLeave={() => {
-                    endDrag();
-                    setHover(null);
-                }}
+              onMouseLeave={() => {
+                endDrag();
+                setHover(null);
+              }}
             >
               {timeSlots.map((t, idx) => (
                 <div key={`${t}-${idx}`} className="slot-container">
@@ -360,26 +359,26 @@ export default function BookingCalendar({
                   >
                     {b.fromtime} - {b.tilltime}
 
-                    <button type="button" className="delete" onClick={() => {removeMyBooking(b.date, b.fromtime, b.tilltime)}}>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
+                    <button type="button" className="delete" onClick={() => { removeMyBooking(b.date, b.fromtime, b.tilltime); }}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
                     </button>
                   </div>
                 );
               })}
 
-            {hover && hover.dateKey === dateKey && (
+              {hover && hover.dateKey === dateKey && (
                 <div
-                    className="hover-indicator"
-                    style={{ top: `${minToRem(hover.minutes)}rem` }}
+                  className="hover-indicator"
+                  style={{ top: `${minToRem(hover.minutes)}rem` }}
                 >
-                    <span className="hover-label">
-                        {toHHMM(hover.minutes)} • {label}
-                    </span>
+                  <span className="hover-label">
+                    {toHHMM(hover.minutes)} • {label}
+                  </span>
                 </div>
-            )}
+              )}
 
               {drag && drag.dateKey === dateKey && drag.heightRem > 0 && (
                 <div
