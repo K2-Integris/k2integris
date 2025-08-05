@@ -13,7 +13,7 @@ export default function BookingCalendar({
     { date: '2025-08-07', fromtime: '10:30', tilltime: '11:30', type: 'booked' },
   ],
   myBookings: myBookingsProp,
-  onMyBookingsChange, // pass setState from parent
+  onMyBookingsChange,
 }) {
   const TODAY_CONST = useMemo(() => {
     const d = initialDate ? new Date(initialDate) : new Date();
@@ -24,7 +24,6 @@ export default function BookingCalendar({
   const [focusedDate, setFocusedDate] = useState(TODAY_CONST);
   const [hover, setHover] = useState(null);
 
-  // controlled/uncontrolled
   const [myBookingsInternal, setMyBookingsInternal] = useState([]);
   const myBookings = myBookingsProp ?? myBookingsInternal;
   const setMyBookings = onMyBookingsChange ?? setMyBookingsInternal;

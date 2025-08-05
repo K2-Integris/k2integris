@@ -1,5 +1,6 @@
 #nav {
     width: 100vw;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +13,7 @@
     transition: 0.3s;
 
     &.background {
-        background-color: var(--black);
+        background-color: var(--primary);
     }
 
     .wrapper {
@@ -23,8 +24,8 @@
 
     .text-logo {
         font-size: 1.7rem;
-        color: var(--gold);
-        font-family: 'Amiri';
+        font-family: serif;
+        color: var(--accent);
     }
 
     .desktop {
@@ -32,31 +33,35 @@
     }
 
     .mobile {
-        position: fixed;
-        top: 7.1rem;
         width: 100vw;
         height: 100vh;
-        left: 100vw;
-        border-left: 0px solid var(--gold);
 
-        transition: 0.3s;
+        position: fixed;
+        top: 7rem;
+        left: 100vw;
 
         display: flex;
         flex-direction: row;
-        padding-top: 0rem;
+
+        border-left: 0px solid var(--accent);
+
+        transition: 0.3s;
 
         .link {
             width: 100%;
-            color: #ffffffe0;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            padding: 2rem 5vw;
-            transition: 0.3s;
 
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 1.5rem;
+
+            padding: 2rem 5vw;
+
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: var(--text);
+            
+            transition: 0.3s;
 
             svg {
                 transform: scale(0.9);
@@ -64,22 +69,20 @@
             }
 
             &.active {
-                color: var(--gold);
-                background-color: #191919;
+                color: var(--accent);
+                background-color: var(--secondary);
 
                 svg path {
-                    stroke: var(--gold);
+                    stroke: var(--accent);
                 }
             }
         }
 
         .menu-container {
             width: 60%;
+
             background-color: var(--black-transparent);
             backdrop-filter: blur(8px);
-
-            display: flex;
-            flex-direction: column;
         }
 
         .transparent {
@@ -121,15 +124,17 @@
         }
 
         span {
-            display: block;
-            transition: 0.3s;
-
             width: 2.3rem;
             height: 0.1rem;
 
-            background-color: var(--gold);
             position: relative;
             top: 0;
+
+            display: block;
+
+            background-color: var(--gold);
+
+            transition: 0.3s;
 
             &:nth-of-type(2) {
                 width: 1.8rem;
@@ -146,8 +151,6 @@
         }
 
         .wrapper {
-            position: relative;
-            justify-content: flex-start;
             gap: 3rem;
         }
 
@@ -156,12 +159,10 @@
         }
 
         .desktop {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            
             width: 100%;
-            gap: 0.5rem;
+
+            display: flex;
+            align-items: center;
             justify-content: flex-end;
 
             div {
@@ -171,6 +172,7 @@
                     position: absolute;
                     top: 2.8rem;
                     left: 50%;
+                    
                     transform: translateX(-50%);
                     transition: 0.3s;
 
@@ -188,27 +190,29 @@
                 }
 
                 .link, .sublink {
-                    color: #ffffffe0;
                     font-size: 1.2rem;
                     text-transform: uppercase;
+                    color: var(--text);
+
                     padding: 1rem 1.5rem;
                     border-bottom: 1px solid transparent;
+
                     transition: 0.3s;
 
                     &:hover, &.active {
-                        color: var(--gold);
-                        border-color: var(--gold);
+                        color: var(--accent);
+                        border-color: var(--accent);
                     }
                 }
 
                 .link:hover + .dropdown, .dropdown:hover {
                     height: 144px;
-                    border-color: var(--gold);
+                    border-color: var(--accent);
                 }
 
                 &:hover .link {
-                    color: var(--gold);
-                    border-color: var(--gold);
+                    color: var(--accent);
+                    border-color: var(--accent);
                 }
             }
         }
@@ -220,7 +224,7 @@
         .text-logo {
             position: absolute;
             left: 50%;
-            transform: translateX(calc(-50% + 0.45rem));
+            transform: translateX(calc(-50% + 0.62rem));
         }
     }
 }

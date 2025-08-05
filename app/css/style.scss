@@ -6,6 +6,7 @@
   src: url("/fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
 }
 
+// IS THERE
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -14,6 +15,7 @@
   src: url("/fonts/Outfit/static/Outfit-Medium.ttf") format("truetype");
 }
 
+// IS THERE
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -41,14 +43,26 @@
 
 :root {
     //--black: #111517;
+    //--gold: #ffcf9bbd;
+
     --black: #0f0f0f;
     --black-transparent: #1111110d;
+
+    --light-black: #191919;
+
     --gold: #BC976F;
-    //--gold: #ffcf9bbd;
     --gold-transparent: #BC976Fbd;
+
     --white: #ffffff;
 
     --gray: #ffffff50;
+    --dark-gray: #39383850;
+
+    --primary: var(--black);
+    --secondary:var(--light-black);
+    --accent: var(--gold);
+    --text: var(--white);
+    --text-accent: var(--black);
   }
   
 html,
@@ -58,7 +72,7 @@ body {
 }
 
 html, section, header {
-    background-color: var(--black);
+    background-color: var(--primary);
 }
 
 body {
@@ -66,7 +80,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
-    background: var(--black);
+    background: var(--primary);
     padding-bottom: 772px;
 }
 
@@ -82,7 +96,7 @@ body {
     list-style-type: none;
     scrollbar-width: none;
 
-    color: var(--white);
+    color: var(--text);
 }
 
 a {
@@ -90,7 +104,7 @@ a {
     text-decoration: none;
 }
 
-a, button, label, input, textarea {
+a, button, label, input, textarea, select {
     cursor: pointer;
 }
 
@@ -115,9 +129,9 @@ h1, h1 span, h2, h2 span {
         -webkit-text-fill-color: transparent;
 
         font-weight: 500;
-        //color: var(--gold);
+
         &::selection {
-            color: var(--white) !important;
+            color: var(--text) !important;
         }
     }
 }
@@ -145,7 +159,6 @@ h4 {
 }
 
 p, li, strong {
-    color: white;
     font-size: 1.5rem;
     line-height: 2.5rem;
     font-weight: 300;
@@ -157,7 +170,7 @@ strong {
 }
 
 ::selection {
-    background-color: var(--gold);
+    background-color: var(--accent);
 }
 
 .wrapper {
