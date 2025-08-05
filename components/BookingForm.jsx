@@ -92,8 +92,7 @@ export default function BookingForm({
 
   return (
     <form onSubmit={validateAndAdd} className="booking-form" style={{ display: 'grid', gap: '0.8rem' }}>
-      <div>
-        <label>
+        <label className="input-box">
           Date&nbsp;
           <input
             type="date"
@@ -102,10 +101,8 @@ export default function BookingForm({
             min={disablePriorDates ? todayKey : undefined}
           />
         </label>
-      </div>
 
-      <div>
-        <label>
+        <label className="input-box">
           From&nbsp;
           <input
             type="time"
@@ -116,10 +113,8 @@ export default function BookingForm({
             onChange={(e) => setFrom(e.target.value)}
           />
         </label>
-      </div>
 
-      <div>
-        <label>
+        <label className="input-box">
           Till&nbsp;
           <input
             type="time"
@@ -130,23 +125,26 @@ export default function BookingForm({
             onChange={(e) => setTill(e.target.value)}
           />
         </label>
-      </div>
 
       {error && <div style={{ color: 'var(--gold)' }}>{error}</div>}
 
-      <div>
-        <button type="submit">Add booking</button>
-      </div>
+    <button type="submit" className='gold-button'>Add Availability</button>
 
-      {/* Your current bookings list (quick remove) */}
       {myBookings.length > 0 && (
-        <div style={{ marginTop: '0.8rem' }}>
-          <strong>My bookings</strong>
-          <ul style={{ listStyle: 'none', padding: 0, margin: '0.4rem 0' }}>
+        <div className='bookings'>
+          <h4>
+            Your Availability
+          </h4>
+          <ul>
             {myBookings.map((b, i) => (
-              <li key={`${b.date}-${b.fromtime}-${b.tilltime}-${i}`} style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                <span>{b.date} • {b.fromtime}–{b.tilltime}</span>
-                <button type="button" onClick={() => onRemove?.(b)}>Delete</button>
+              <li key={`${b.date}-${b.fromtime}-${b.tilltime}-${i}`}>
+                <span>{b.date} | {b.fromtime} - {b.tilltime}</span>
+                <button type="button" onClick={() => onRemove?.(b)}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
               </li>
             ))}
           </ul>

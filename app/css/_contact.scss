@@ -109,24 +109,14 @@
         margin-bottom: 2rem;
     }
 
-    form {
+    .contact-form {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
         padding: 3rem 0;
-
-        button {
-            font-size: 1.6rem;
-            background-color: var(--gold-transparent);
-            color: black;
-            padding: 1.8rem 0;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-        }
     }
 
-    ul {
+    .contact-ul {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -170,7 +160,7 @@
         padding: 1.8rem 1.5rem;
         color: white;
         font-size: 1.6rem;
-        transition: 0.3s;
+        transition: border-color 0.3s;
         letter-spacing: 0.1rem;
 
         &:focus {
@@ -183,6 +173,16 @@
         font-family: Outfit;
         resize: vertical;
     }
+}
+
+.gold-button {
+    font-size: 1.6rem;
+    background-color: var(--gold-transparent);
+    color: black;
+    padding: 1.8rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 .check-box {
@@ -410,7 +410,7 @@
         }
 
         article {
-            ul {
+            .contact-ul {
                 gap: 0.5rem;
 
                 &.horizontal {
@@ -479,7 +479,7 @@
             }
         }
 
-        form {
+        .contact-form {
             display: grid;
 
             grid-template-areas: 
@@ -547,7 +547,7 @@
             gap: 5rem;
         }
 
-        form {
+        .contact-form {
             width: 70%;
         }
 

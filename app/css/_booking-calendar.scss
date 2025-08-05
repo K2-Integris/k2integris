@@ -190,3 +190,64 @@
         }
     }
 }
+
+.booking-form {
+    display: grid;
+    grid-template-areas: 'date date' 'from till' 'button button' 'bookings bookings';
+    row-gap: 2.5rem !important;
+    column-gap: 1.5rem !important;
+    margin-top: 13.8rem;
+
+   .input-box {
+        &:nth-of-type(1) {
+            grid-area: date;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: from;
+        }
+
+        &:nth-of-type(3) {
+            grid-area: till;
+        }
+    }
+
+    button {
+        grid-area: button;
+    }
+
+    .bookings {
+        grid-area: bookings;
+
+        h4 {
+            letter-spacing: 1.1;
+            margin-block: 2rem 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+                align-items: center;
+                justify-content: space-between;
+
+                background-color: #39383850;
+                padding: 0rem 0rem 0rem 1.2rem;
+
+                span {
+                    font-size: 1.2rem;
+                }
+
+                button {
+                    background-color: transparent;
+                    padding: 0.7rem 1rem 0.35rem;
+                }
+            }
+        }
+    }
+}
