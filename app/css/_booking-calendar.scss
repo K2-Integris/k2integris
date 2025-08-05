@@ -161,8 +161,26 @@
             opacity: 0;
         }
 
+        .delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            padding: 0.2rem;
+            opacity: 0;
+            transition: 0.3s;
+            
+            svg {
+                stroke-width: 1px;
+            }
+        }
+
         &:hover {
             .resize-handle {
+                opacity: 1;
+            }
+
+            .delete {
                 opacity: 1;
             }
         }

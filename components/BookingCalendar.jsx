@@ -239,6 +239,13 @@ export default function BookingCalendar({
     setFocusedDate(d);
   };
 
+    const removeMyBooking = (date, fromtime, tilltime) => {
+        setMyBookings((prev) =>
+            prev.filter((b) => !(b.date === date && b.fromtime === fromtime &&  b.tilltime === tilltime))
+        );
+    };
+
+
   return (
     <div id="booking-calendar">
       <div className="controls">
@@ -352,6 +359,13 @@ export default function BookingCalendar({
                     title={`${b.fromtime} - ${b.tilltime}`}
                   >
                     {b.fromtime} - {b.tilltime}
+
+                    <button type="button" className="delete" onClick={() => {removeMyBooking(b.date, b.fromtime, b.tilltime)}}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                   </div>
                 );
               })}
