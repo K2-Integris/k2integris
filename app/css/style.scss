@@ -6,7 +6,6 @@
   src: url("/fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
 }
 
-// IS THERE
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -15,7 +14,6 @@
   src: url("/fonts/Outfit/static/Outfit-Medium.ttf") format("truetype");
 }
 
-// IS THERE
 @font-face {
   font-family: "Outfit";
   font-style: normal;
@@ -63,7 +61,7 @@
     --accent: var(--gold);
     --text: var(--white);
     --text-accent: var(--black);
-  }
+}
   
 html,
 body {

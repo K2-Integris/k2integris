@@ -23,13 +23,14 @@
     }
 
     #logo {
-        line-height: 0;
+        line-height: 0 !important;
     }
 
     .text-logo {
         font-size: 1.7rem;
         font-family: serif;
-        line-height: 0;
+        line-height: 0 !important;
+        letter-spacing: 0 !important;
         color: var(--accent);
     }
 
@@ -196,8 +197,11 @@
                 }
 
                 .link, .sublink {
-                    font-size: 1.2rem;
+                    font-size: 1.2rem !important;
+                    line-height: 1.25 !important;
                     text-transform: uppercase;
+                    letter-spacing: 1 !important;
+                    font-weight: 100;
                     color: var(--text);
 
                     padding: 1rem 1.5rem;

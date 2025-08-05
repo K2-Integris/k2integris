@@ -1,5 +1,4 @@
 #service {
-
     .cursor {
         display: none;
 
@@ -49,7 +48,7 @@
             }
 
             svg {
-                stroke: var(--gold);
+                stroke: var(--accent);
             }
         }
     }
@@ -58,7 +57,6 @@
         margin: 0rem 0 0rem 0;
 
         white-space: nowrap;
-        overflow-x: scroll;
 
         overflow: scroll;
         scroll-snap-type: x mandatory;
@@ -70,14 +68,14 @@
 
             scroll-snap-align: center;
             
-            background: #1111110D;
+            background: var(--black-transparent);
             backdrop-filter: blur(3px);
             
             padding: 3.5rem 0rem 0;
             margin-left: 5vw;
-
-            border: 1px solid #BC976Fbd;
             margin-bottom: 3rem;
+
+            border: 1px solid var(--gold-transparent);
 
             position: relative;
             z-index: 3;
@@ -116,14 +114,13 @@
                     padding: 0 2rem;
                     margin-top: 1rem;
 
-                    font-size: 1.6rem;
                     font-weight: 700;
                     letter-spacing: 0.2rem;
                     line-height: 4.4rem;
                     text-align: center;
                     text-transform: uppercase;
 
-                    color: black;
+                    color: var(--text-accent);
                     background-color: var(--gold-transparent);
                 }
             }
@@ -140,8 +137,8 @@
         .bullet {
             width: 1.5rem;
             aspect-ratio: 1 / 1;
-            background: #1111110D;
-            border: 1px solid var(--gold);
+            background: var(--black-transparent);
+            border: 1px solid var(--accent);
             border-radius: 50%;
             opacity: 0.21;
             transition: 0.3s;
@@ -159,12 +156,12 @@
         margin-top: 4rem;
 
         h3 {
-            color: var(--gold);
+            color: var(--accent);
             margin-bottom: 2rem;
             letter-spacing: 0.05rem;
 
             &::selection {
-                color: var(--black) !important;
+                color: var(--text-accent) !important;
             }
         }
 
@@ -184,14 +181,12 @@
             display: grid;
             grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
 
-            margin: 0;
             width: Min(90vw, 130rem);
             margin: 3rem auto 0;
             gap: 2rem;
             overflow: hidden;
 
             .card {
-                margin: 0;
                 width: 100%;
                 margin: 0 !important;
 
@@ -202,7 +197,7 @@
 
                 a {
                     transition: 0.3s;
-                    border: 1px solid var(--gold);
+                    border-top: 1px solid var(--gold-transparent);
                     
                     &::after {
                         position: absolute;
@@ -212,12 +207,12 @@
                         top: 0;
                         left: 0;
                         z-index: -1;
-                        background: var(--black);
+                        background: var(--primary);
                         transition: all 0.3s ease;
                     }
 
                     &:hover {
-                        color: white !important;
+                        color: var(--text) !important;
                         transform: scale(1);
 
                         &::after {
@@ -271,7 +266,7 @@
 
 // ------------- SERVICES PAGE -------------
 
-
+/*
 .gridContainer {
     padding-top: 15rem;
     padding-bottom: 10rem;
@@ -353,3 +348,4 @@
     }
 }
 
+*/

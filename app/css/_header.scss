@@ -18,10 +18,12 @@ header {
 
         .cta {
             display: inline-block;
-            padding: 2rem 4rem;
+            padding: 2.8rem 4rem;
             margin: 15rem auto 0;
             width: max-content;
             
+            font-size: 1.4rem;
+            line-height: 0;
             font-weight: 500;
 
             color: var(--text);
