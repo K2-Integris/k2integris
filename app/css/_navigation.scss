@@ -22,9 +22,14 @@
         justify-content: space-between;
     }
 
+    #logo {
+        line-height: 0;
+    }
+
     .text-logo {
         font-size: 1.7rem;
         font-family: serif;
+        line-height: 0;
         color: var(--accent);
     }
 
@@ -103,6 +108,7 @@
 
         background-color: transparent;
         font-size: 0;
+        line-height: 0;
 
         &.open {
             span {

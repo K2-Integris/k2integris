@@ -6,7 +6,6 @@ header {
     .wrapper {
         position: relative;
         z-index: 1;
-        overflow: visible;
 
         h2 {
           margin-top: 3rem;
@@ -23,12 +22,9 @@ header {
             margin: 15rem auto 0;
             width: max-content;
             
-            font-size: 1.4rem;
-            font-weight: 400;
+            font-weight: 500;
 
-            color: var(--white);
-
-            border-radius: 0rem;
+            color: var(--text);
 
             background-color: var(--black-transparent);
 
@@ -37,7 +33,7 @@ header {
             backdrop-filter: blur(10px);
 
             text-transform: uppercase;
-            letter-spacing: 0.3rem;
+            letter-spacing: 3px;
 
             position: relative;
             left: 50%;
@@ -46,9 +42,9 @@ header {
     }
 
     .scroll-seperator {
+        position: absolute;
         white-space: nowrap;
         padding: 2rem 1rem 0;
-        position: absolute;
         transform: translateX(0);
         transition: transform 0s linear;
         z-index: 10;
@@ -62,7 +58,7 @@ header {
         }
         
         p {
-            color: var(--white);
+            color: var(--text);
 
             font-size: 1rem;
             font-family: 'Syncopate';
@@ -72,20 +68,19 @@ header {
         div {
             height: 1.5rem;
             width: 0.1rem;
-            background-color: var(--white);
+            background-color: var(--text);
             margin: 0 1rem -0.4rem;
         }
     }
 }
 
-
 .transition {
     width: 100vw;
     height: 10rem;
-    background: linear-gradient(to bottom, transparent, var(--black));
+    background: linear-gradient(to bottom, transparent, var(--primary));
 
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
 .lines {
@@ -97,25 +92,29 @@ header {
   margin: auto;
   width: 90vw;
 
-  z-index: 1;
-
   .line {
     position: absolute;
-    width: 1px;
-    height: 100%;
     top: 0;
     left: 50%;
+
+    width: 1px;
+    height: 100%;
+    
     background: linear-gradient(#705c4626, #ffffff03);
     overflow: hidden;
 
     &::after {
       content: '';
+
       display: block;
+
       position: absolute;
-      height: 15vh;
-      width: 100%;
       top: -50%;
       left: 0;
+
+      height: 15vh;
+      width: 100%;
+      
       background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 0%,
