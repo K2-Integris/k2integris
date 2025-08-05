@@ -2,6 +2,32 @@
     display: flex;
     flex-direction: column;
 
+    .hover-indicator {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--gold);
+        pointer-events: none;
+
+        &::after {
+            content: attr(data-label);
+        }
+
+        .hover-label {
+            position: absolute;
+            right: 0.5rem;
+            top: -0.7rem;
+            font-size: 0.9rem;
+            background: var(--black);
+            color: var(--gold);
+            padding: 0.1rem 0.3rem;
+            border-radius: 2px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+    }
+
     .day-labels {
         display: flex;
         flex-direction: row;

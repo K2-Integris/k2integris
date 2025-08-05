@@ -21,6 +21,8 @@ export default function BookingCalendar({
 
   const [focusedDate, setFocusedDate] = useState(TODAY_CONST);
 
+  const [hover, setHover] = useState(null);
+
   const startOfWeekMonday = useCallback((d) => {
     const x = new Date(d);
     const day = x.getDay(); 
@@ -293,9 +295,23 @@ export default function BookingCalendar({
               aria-disabled={isDisabled ? 'true' : 'false'}
               onClick={onDayClick}
               onMouseDown={(e) => beginDrag(e, dateKey, isDisabled)}
-              onMouseMove={onDragMove}
+              onMouseMove={(e) => {
+                onDragMove(e);
+                if (isDisabled) return;
+
+                const rect = e.currentTarget.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                const yRatio = Math.max(0, Math.min(1, y / rect.height));
+                const approxMin = windowStartMin + yRatio * (windowEndMin - windowStartMin);
+                const snappedMin = snapMin(approxMin);
+
+                setHover({ dateKey, minutes: snappedMin });
+            }}
               onMouseUp={endDrag}
-              onMouseLeave={endDrag}
+                onMouseLeave={() => {
+                    endDrag();
+                    setHover(null);
+                }}
             >
               {timeSlots.map((t, idx) => (
                 <div key={`${t}-${idx}`} className="slot-container">
@@ -339,6 +355,17 @@ export default function BookingCalendar({
                   </div>
                 );
               })}
+
+            {hover && hover.dateKey === dateKey && (
+                <div
+                    className="hover-indicator"
+                    style={{ top: `${minToRem(hover.minutes)}rem` }}
+                >
+                    <span className="hover-label">
+                        {toHHMM(hover.minutes)} • {label}
+                    </span>
+                </div>
+            )}
 
               {drag && drag.dateKey === dateKey && drag.heightRem > 0 && (
                 <div
