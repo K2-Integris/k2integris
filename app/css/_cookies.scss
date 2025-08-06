@@ -7,7 +7,7 @@
     backdrop-filter: blur(10px);
     z-index: 101;
     padding-block: 3rem;
-    border-top: 1px solid var(--gold);
+    border-top: 1px solid var(--accent);
 
     transition: 0.4s;
 
@@ -40,12 +40,12 @@
             text-transform: uppercase;
 
             &#accept {
-                background-color: var(--gold);
-                color: var(--black);
+                background-color: var(--accent);
+                color: var(--primary);
             }
 
             &#reject {
-                border: 1px solid var(--gold);
+                border: 1px solid var(--accent);
             }
         }
 
@@ -58,7 +58,7 @@
     #cookiebanner {
         width: 60rem;
         padding: 3rem;
-        border: 1px solid var(--gold);
+        border: 1px solid var(--accent);
         right: -70rem;
         bottom: 1rem;
 

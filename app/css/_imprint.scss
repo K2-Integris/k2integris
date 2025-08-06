@@ -1,7 +1,7 @@
 .imprint {
     padding-block: 15rem 10rem;
 
-    background: var(--black);
+    background: var(--primary);
 
     h1 {
         text-align: left;
@@ -14,12 +14,12 @@
 
     p span {
         font-size: 1.4rem;
-        color: var(--gold);
+        color: var(--accent);
     }
 
     .at {
         font-size: 2rem !important;
-        color: white !important;
+        color: var(--text) !important;
     }
 
     p {

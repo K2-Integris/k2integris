@@ -20,7 +20,7 @@
     .block h2 {
         margin-bottom: 1.5rem;
         text-transform: uppercase;
-        color: var(--gold);
+        color: var(--accent);
     }
 
     .block p,
@@ -39,15 +39,15 @@
 
     .block a {
         font-size: 1.5rem;
-        color: var(--gold);
+        color: var(--accent);
         text-decoration: underline;
     }
 
     .block button {
         font-size: 1.6rem;
         padding: 1rem 2rem;
-        background-color: var(--gold);
-        color: var(--black);
+        background-color: var(--accent);
+        color: var(--primary);
         margin-top: 2rem;
     }
 }
