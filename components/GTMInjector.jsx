@@ -41,13 +41,12 @@ const GAInjector = () => {
         const checkConsentAndInject = () => {
           if (window.localStorage.getItem("cookies") === "true") {
             injectGA();
-            console.log("Injected GA4 gtag.js");
           }
         };
 
         checkConsentAndInject();
         window.addEventListener("cookieAccepted", checkConsentAndInject);
-      }, 300)
+      }, 100)
     };
 
     window.addEventListener("load", handleLoad);
