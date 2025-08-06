@@ -1,11 +1,11 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+//import { useEffect, useRef } from "react";
 import TransitionLink from "./TransitionLink";
 
 const Footer = () => {
-    const footerRef = useRef();
+    /*const footerRef = useRef();
 
     useEffect(() => {
         const updateBodyPadding = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
         return () => {
             window.removeEventListener("resize", updateBodyPadding);
         };
-    }, []);
+    }, []);*/
 
     return (
-        <footer ref={footerRef}>
+        <footer> {/*ref={footerRef}*/}
             <article className="wrapper">
                 <TransitionLink className="logo" href="https://k2integris.com">
                     <Image src="/images/logo-black.png" width={79} height={50} alt="K2Integris Logo" />

@@ -24,9 +24,9 @@ const PrivacyCookie = () => {
     return (
         <div>
             {cookiesAccepted ? (
-                <button onClick={handleRejection}>REJECT COOKIES</button>
+                <button onClick={handleRejection} style={{backgroundColor: "#bc976f", color: "black"}}>REJECT COOKIES</button>
             ) : (
-                <button onClick={handleApproval}>ACCEPT COOKIES</button>
+                <button onClick={handleApproval} style={{backgroundColor: "#bc976f", color: "black"}}>ACCEPT COOKIES</button>
             )}
         </div>
     )

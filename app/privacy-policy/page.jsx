@@ -9,18 +9,18 @@ export const metadata = {
 
 const PrivacyPolicy = () => {
     return (
-        <section className="privacy">
+        <section className="privacy default">
             <div className="wrapper">
-                <article className="container">
-                    <h1>Privacy Policy</h1>
+                <article className="container" style={{display: "flex", flexDirection: "column", gap: "3rem"}}>
+                    <h1 style={{marginBottom: "2rem"}}>Privacy Policy</h1>
                     <section id="introduction" className="block">
-                        <h2>Introduction</h2>
-                        <p>K2Integris Sp. z o.o. (referred to as "K2Integris", "we", "us", or "our") is committed to protecting your personal data and respecting your privacy. This Privacy Policy describes how we collect, use, and protect personal data when you use our website, in compliance with the EU General Data Protection Regulation (GDPR) and applicable privacy laws. We aim to be transparent about our data practices and ensure that your rights are safeguarded.</p>
-                        <p>This policy applies to the website operated by K2Integris Sp. z o.o. and any personal data collected through it. By using our website, you acknowledge that you have read and understood this Privacy Policy.</p>
+                        <h2 style={{marginBottom: "1.5rem", color: "#bc976f"}}>Introduction</h2>
+                        <p style={{marginBottom: "1rem", lineHeight: "1.8"}}>K2Integris Sp. z o.o. (referred to as "K2Integris", "we", "us", or "our") is committed to protecting your personal data and respecting your privacy. This Privacy Policy describes how we collect, use, and protect personal data when you use our website, in compliance with the EU General Data Protection Regulation (GDPR) and applicable privacy laws. We aim to be transparent about our data practices and ensure that your rights are safeguarded.</p>
+                        <p style={{marginBottom: "1rem", lineHeight: "1.8"}}>This policy applies to the website operated by K2Integris Sp. z o.o. and any personal data collected through it. By using our website, you acknowledge that you have read and understood this Privacy Policy.</p>
                     </section>
 
                     <section id="data-controller" className="block">
-                        <h2>Data Controller and Contact Information</h2>
+                        <h2 style={{marginBottom: "1.5rem", color: "#bc976f"}}>Data Controller and Contact Information</h2>
                         <p>The Data Controller responsible for processing your personal data is <strong>K2Integris Sp. z o.o.</strong>, a Polish limited liability company. Our registered office is at Osiedle Szymony 7/22, 34-500 Zakopane, POLAND. Our company is registered in Poland under the following identifiers: KRS: <strong>0001185218</strong>, NIP: <strong>7361754020</strong>, REGON: <strong>54230069100000</strong>. For full legal details, please refer to our <TransitionLink href="imprint">Imprint</TransitionLink>.</p>
                         <p>If you have any questions or requests regarding your personal data or this Privacy Policy, you can contact us by email at <a href="mailto:privacy@k2integris.com">privacy@k2integris.com</a> or by mail at the address provided above.</p>
                     </section>

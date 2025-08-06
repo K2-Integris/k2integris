@@ -1,20 +1,13 @@
 .privacy {
-    padding-block: 15rem 10rem;
-
     h1 {
         text-align: left;
         margin-bottom: 2rem;
     }
 
-
     .container {
         display: flex;
         flex-direction: column;
         gap: 3rem;
-    }
-
-    .block {
-        padding: 1rem;
     }
 
     .block h2 {
@@ -47,8 +40,9 @@
         font-size: 1.6rem;
         padding: 1rem 2rem;
         background-color: var(--accent);
-        color: var(--primary);
+        color: var(--text-accent);
         margin-top: 2rem;
+        font-weight: 500;
     }
 }
 

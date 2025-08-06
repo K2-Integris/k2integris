@@ -231,18 +231,21 @@ const Faq = () => {
                         <button 
                             className={category === 0 ? "active" : ""}
                             onClick={() => handleCategorySwitch(0) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Web- / App-Development
                         </button>
                         <button 
                             className={category === 1 ? "active" : ""}
                             onClick={() => handleCategorySwitch(1) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Marketing / SEO
                         </button>
                         <button 
                             className={category === 3 ? "active" : ""}
                             onClick={() => handleCategorySwitch(3) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Process / Communication
                         </button>
@@ -251,24 +254,28 @@ const Faq = () => {
                         <button 
                             className={category === 2 ? "active" : ""}
                             onClick={() => handleCategorySwitch(2) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Design / Branding
                         </button>
                         <button 
                             className={category === 4 ? "active" : ""}
                             onClick={() => handleCategorySwitch(4) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Pricing / Legal
                         </button>
                         <button 
                             className={category === 5 ? "active" : ""}
                             onClick={() => handleCategorySwitch(5) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Technical / Hosting
                         </button>
                         <button 
                             className={category === 6 ? "active" : ""}
                             onClick={() => handleCategorySwitch(6) }
+                            style={{backgroundColor: "transparent", color: "white"}}
                         >
                             Strategy / Business
                         </button>
@@ -278,7 +285,7 @@ const Faq = () => {
                 <article className="wrapper faq" key={renderedCategory}>
                     {faq[renderedCategory].map((faq, index) => (
                         <div className="faq-box" key={index} id={"faq-" + index}>
-                            <button className="faq-button" onClick={(ev) => handle(ev)}>
+                            <button className="faq-button" onClick={(ev) => handle(ev)} style={{backgroundColor: "transparent", color: "white"}}>
                                 <div className="faq-icon">
                                     <span className="faq-line"></span>
                                     <span className="faq-line"></span>

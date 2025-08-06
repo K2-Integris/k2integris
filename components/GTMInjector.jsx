@@ -25,19 +25,37 @@ const injectGA = () => {
   document.head.appendChild(inlineScript);
 };
 
+const injectStyle = () => {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/css/rest.css';
+  document.head.appendChild(link);
+}
+
 const GAInjector = () => {
   useEffect(() => {
-    const checkConsentAndInject = () => {
-      if (window.localStorage.getItem("cookies") === "true") {
-        injectGA();
-        console.log("Injected GA4 gtag.js");
-      }
+    const handleLoad = () => {
+      setTimeout(() => {
+        injectStyle();
+
+        const checkConsentAndInject = () => {
+          if (window.localStorage.getItem("cookies") === "true") {
+            injectGA();
+            console.log("Injected GA4 gtag.js");
+          }
+        };
+
+        checkConsentAndInject();
+        window.addEventListener("cookieAccepted", checkConsentAndInject);
+      }, 300)
     };
 
-    checkConsentAndInject();
-    window.addEventListener("cookieAccepted", checkConsentAndInject);
+    window.addEventListener("load", handleLoad);
 
-    return () => window.removeEventListener("cookieAccepted", checkConsentAndInject);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      window.removeEventListener("cookieAccepted", handleLoad);
+    };
   }, []);
 
   return null;

@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import TransitionLink from "@/components/TransitionLink";
-import BookingCalendar from "./BookingCalendar";
-import BookingForm from "./BookingForm";
+//import BookingCalendar from "./BookingCalendar";
+//import BookingForm from "./BookingForm";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,7 +65,7 @@ const ContactForm = () => {
     setIsSubmitting(false);
   };
 
-   const [myBookings, setMyBookings] = useState([]);
+  /*const [myBookings, setMyBookings] = useState([]);
 
   const bookings = [
     { date: '2025-08-08', fromtime: '11:00', tilltime: '12:30', type: 'booked' },
@@ -76,7 +77,18 @@ const ContactForm = () => {
   const removeMyBooking = (b) =>
     setMyBookings((prev) => prev.filter(
       (x) => !(x.date === b.date && x.fromtime === b.fromtime && x.tilltime === b.tilltime)
-    ));
+    ));*/
+
+    const [render, setRender] = useState(false)
+
+    useEffect(() => {
+      setTimeout(() => {
+        setRender(true)
+      }, 300)
+    }, [])
+
+    if (!render)
+      return <div style={{height: "1076px"}}></div>
   
   return (
     <div className="container">
@@ -140,7 +152,7 @@ const ContactForm = () => {
                 </li>
             </ul>
 
-            <BookingForm
+            {/*<BookingForm
               bookings={bookings}
               myBookings={myBookings}
               onAdd={addMyBooking}
@@ -149,7 +161,7 @@ const ContactForm = () => {
               endHour={18}
               slotMinutes={30}
               disablePriorDates
-            />
+            />*/}
           </article>
 
           <form onSubmit={handleSubmit} className="contact-form">
@@ -193,7 +205,7 @@ const ContactForm = () => {
                 </label>
             </div>
 
-            <BookingCalendar
+            {/*<BookingCalendar
               bookings={bookings}
               myBookings={myBookings}
               onMyBookingsChange={setMyBookings}
@@ -201,7 +213,7 @@ const ContactForm = () => {
               endHour={18}
               slotMinutes={30}
               disablePriorDates
-            />
+            />*/}
 
             <div className="form-group" data-field="checkbox">
                 <label className="check-box">

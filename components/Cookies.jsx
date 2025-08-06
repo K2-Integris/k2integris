@@ -8,7 +8,9 @@ const Cookies = () => {
 
     useEffect(() => {
         if (!window.localStorage.getItem("cookies") || window.localStorage.getItem("cookies") === "false") {
-            banner.current.classList.add("active")
+            setTimeout(() => {
+                banner.current.classList.add("active")
+            }, 2000)
         }
     }, [])
 

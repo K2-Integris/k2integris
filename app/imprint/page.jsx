@@ -6,19 +6,19 @@ export const metadata = {
 const Imprint = () => {
     return (
         <>
-            <section className="imprint">
+            <section className="imprint default">
                 <div className="wrapper">
-                    <article className="container">
-                        <h1>
+                    <article className="container" style={{display: "flex", flexDirection: "column", gap: "5rem"}}>
+                        <h1 style={{marginBottom: "2rem"}}>
                             Imprint
                         </h1>
-                        <div className="block">
+                        <div className="block" style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
                             <h2>
                                 K2Integris Sp. z o.o.
                             </h2>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     Registered Office:
                                 </span>
                                 <br />
@@ -26,48 +26,48 @@ const Imprint = () => {
                                 34-500 Zakopane, POLAND
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     Court Of Registration:
                                 </span>
                                 <br />
                                 Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie,<br />XII Wydział Gospodarczy Krajowego Rejestru Sądowego
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     KRS Number:
                                 </span>
                                 <br />
                                 0001185218
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     Tax Identification Number (NIP):
                                 </span>
                                 <br />
                                 7361754020
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     REGON:
                                 </span>
                                 <br />
                                 54230069100000
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     Share Capital:
                                 </span>
                                 <br />
                                 PLN 5.000,00 (fully paid)
                             </p>
 
-                            <p>
-                                <span>
+                            <p style={{textTransform: "uppercase"}}>
+                                <span style={{fontSize: "1.4rem"}}>
                                     E-Mail:
                                 </span>
                                 <br />

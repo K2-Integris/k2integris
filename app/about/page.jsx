@@ -18,11 +18,11 @@ const About = () => {
                
                 <div className="wrapper" id="about">
                     <article className="heading">
-                        <h1>
+                        <h1 style={{marginBottom: "5rem"}}>
                             About <span>Us</span>
                         </h1>
 
-                        <p>
+                        <h2 style={{textAlign: "left", textTransform: "none", lineHeight: "4rem"}}>
                             We are K2Integris — a name that reflects both our founders, Viktor Karpinski and Mateusz Kaminski (K2), and our commitment to integrity, clarity, and high-end digital craftsmanship. Just like the mountain we share a name with, we set the bar high — in standards, execution, and ambition.
                             <br />
                             <br />
@@ -30,7 +30,7 @@ const About = () => {
                             <br />
                             <br />
                             If you're someone who thinks long-term, embraces bold ideas, and expects more than cookie-cutter solutions — you're in the right place.
-                        </p>
+                        </h2>
                     </article>
 
                     <article className="team">

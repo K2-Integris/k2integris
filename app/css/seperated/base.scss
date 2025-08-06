@@ -50,6 +50,7 @@
 
     --gold: #BC976F;
     --gold-transparent: #BC976Fbd;
+    --gold-transparent: #8f7456;
 
     --white: #ffffff;
 
@@ -61,7 +62,7 @@
     --secondary:var(--light-black);
     --accent: var(--gold);
     --text: var(--white);
-    --text-accent: var(--black);
+    --text-accent: black;
     --error: #ff6666;
 }
   
@@ -81,7 +82,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     
     background: var(--primary);
-    padding-bottom: 772px;
+    padding-bottom: 100vh;
 }
 
 * {
@@ -122,7 +123,7 @@ h1, h1 span, h2, h2 span {
         background: linear-gradient(
             130deg,
             var(--gold) 0%,
-            #0a0a0a 200% 
+            #0a0a0a 250% 
         );
     
         -webkit-background-clip: text;
@@ -162,7 +163,7 @@ p, li, strong, button, a, textarea, input, label {
     font-size: 1.6rem;
     line-height: 2.5rem;
     font-weight: 300;
-    letter-spacing: 1.1;
+    letter-spacing: 0.5px;
 }
 
 strong {
@@ -185,10 +186,10 @@ section, header {
 
 .default {
     padding-block: 15rem 10rem;
+}
 
-    &.small {
-        padding-block: 15rem 5rem;
-    }
+#contact .container {
+    display: none;
 }
 
 .page-transition-overlay {
@@ -207,19 +208,14 @@ section, header {
     justify-content: center;
 }
 
-@import "navigation";
-@import "header";
-@import "service";
-@import "contact";
-@import "faq";
-@import "footer";
-@import "cookies";
-@import "strategy";
-@import "about";
-@import "category";
-@import "privacy";
-@import "imprint";
-@import "booking-calendar";
+@import "../navigation";
+@import "../header";
+@import "../service";
+@import "../cookies";
+
+#footer {
+    display: none;
+}
 
 @media only screen and (max-width: 380px) {
     h1, h1 span {

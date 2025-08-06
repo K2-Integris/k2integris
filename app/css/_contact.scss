@@ -21,6 +21,7 @@
             span {
                 font-size: 3.6rem;
                 font-weight: 500;
+                -webkit-text-fill-color: white;
             }
         }
 
@@ -100,10 +101,12 @@
 }
 
 #contact {
-    padding-block: 15rem 5rem;
-
     h1 {
         margin-bottom: 2rem;
+    }
+
+    .container {
+        display: block !important;
     }
 
     .contact-form {
@@ -397,8 +400,6 @@
     }
 
     #contact {
-        padding-bottom: 8rem;
-
         h1 {
             text-align: left;
             margin-bottom: 2rem;
@@ -529,7 +530,7 @@
 @media only screen and (min-width: 1000px) {
     #contact {
         .container {
-            display: flex;
+            display: flex !important;
             flex-direction: row-reverse;
 
             gap: 5rem;
