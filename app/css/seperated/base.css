@@ -205,6 +205,49 @@ section, header {
           justify-content: center;
 }
 
+#footer {
+  display: none;
+}
+
+@media only screen and (max-width: 380px) {
+  h1, h1 span {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+  h2, h2 span {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+  .small {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  h1, h1 span {
+    font-size: 4.2rem;
+    line-height: 5.5rem;
+  }
+  h2, h2 span {
+    font-size: 3.8rem !important;
+    line-height: 4.8rem;
+  }
+  .default.small {
+    padding-bottom: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1, h1 span {
+    font-size: 6.2rem;
+    line-height: 8.2rem;
+    text-align: center;
+  }
+  .page-transition-overlay h2 {
+    font-size: 15rem !important;
+  }
+}
+
 #nav {
   width: 100vw;
   position: fixed;
@@ -1090,49 +1133,6 @@ header .scroll-seperator div {
   }
   #cookiebanner .wrapper {
     width: auto;
-  }
-}
-
-#footer {
-  display: none;
-}
-
-@media only screen and (max-width: 380px) {
-  h1, h1 span {
-    font-size: 2.5rem;
-    line-height: 4rem;
-  }
-  h2, h2 span {
-    font-size: 2rem;
-    line-height: 3.5rem;
-  }
-  .small {
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 860px) {
-  h1, h1 span {
-    font-size: 4.2rem;
-    line-height: 5.5rem;
-  }
-  h2, h2 span {
-    font-size: 3.8rem !important;
-    line-height: 4.8rem;
-  }
-  .default.small {
-    padding-bottom: 8rem;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  h1, h1 span {
-    font-size: 6.2rem;
-    line-height: 8.2rem;
-    text-align: center;
-  }
-  .page-transition-overlay h2 {
-    font-size: 15rem !important;
   }
 }
 /*# sourceMappingURL=base.css.map */
