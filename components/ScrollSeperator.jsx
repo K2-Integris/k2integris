@@ -19,27 +19,33 @@ const ScrollSeperator = () => {
     return (
         <div className="scroll-seperator">
             <p>
-            Your Partner in Digital Growth
+              Your Partner in Digital Growth
             </p>
             <div className="seperator"></div>
             <p>
-            Your Partner in Digital Growth
+              Custom Web Development
             </p>
             <div className="seperator"></div>
             <p>
-            Your Partner in Digital Growth
+              UX & UI Design
             </p>
             <div className="seperator"></div>
             <p>
-            Your Partner in Digital Growth
+              Enterprise-Grade E-Commerce Development
             </p>
             <div className="seperator"></div>
             <p>
-            Your Partner in Digital Growth
+              Your End-to-End Digital Agency Partner
             </p>
             <div className="seperator"></div>
             <p>
-            Your Partner in Digital Growth
+              Digital Strategy That Drives Results
+            </p>
+            <p>
+              Future-Proof Software for Modern Companies
+            </p>
+            <p>
+              SEO & Marketing That Converts
             </p>
             <div className="seperator"></div>
        </div>

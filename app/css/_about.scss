@@ -1,0 +1,67 @@
+#about {
+    display: flex;
+
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+
+    .heading {
+        background-color: transparent;
+
+        h1 {
+            text-align: left !important;
+            margin-bottom: 5rem;
+        }
+    }
+
+    .team {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        .box {
+            width: 100%;
+
+            .info-box {
+                background-color: transparent;
+
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            h2, p {
+                text-align: left;
+            }
+
+            .ceo {
+                font-size: 1.4rem !important;
+                line-height: 2rem !important;
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #about {
+        flex-direction: row;
+        gap: 10rem;
+
+        .heading {
+            width: 60%;
+        }
+
+        .team {
+            width: 40%;
+
+            .box {
+                .info-box {
+                    background-color: #121212;
+                    padding: 4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.privacy {
+    h1 {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .block h2 {
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        color: var(--accent);
+    }
+
+    .block p,
+    .block li,
+    .block strong {
+        line-height: 1.8;
+        color: #ccc;
+        margin-bottom: 1rem;
+        list-style-type: disc;
+    }
+
+    .block ul {
+        margin-left: 2rem;
+        list-style: disc;
+    }
+
+    .block a {
+        font-size: 1.5rem;
+        color: var(--accent);
+        text-decoration: underline;
+    }
+
+    .block button {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        background-color: var(--accent);
+        color: var(--text-accent);
+        margin-top: 2rem;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .privacy {
+        .container {
+            flex-direction: column;
+        }
+    }
+}

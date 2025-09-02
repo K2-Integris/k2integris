@@ -1,0 +1,32 @@
+.category-detail {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            h3 {
+                color: var(--gold);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .category-detail {
+        padding-bottom: 5rem;
+        .wrapper {
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            article {
+                width: calc(50% - 2.5rem);
+            }
+        }
+    }
+}

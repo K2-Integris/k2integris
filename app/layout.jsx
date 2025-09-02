@@ -1,32 +1,39 @@
-import { Outfit, Amiri, Syncopate } from "next/font/google";
-import "./css/style.css";
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const amiri = Amiri({
-  variable: "--font-amiri",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const syncopate = Syncopate({
-  variable: "--font-syncopate",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-export const metadata = {
-  title: "K2INTEGRIS",
-  description: "Grow your business with our help",
-};
+//import "./css/style.css";
+import Navigation from "@/components/Navigation";
+import Faq from "@/components/Faq";
+import Footer from "@/components/Footer";
+import Cookies from "@/components/Cookies";
+import GTMInjector from "@/components/GTMInjector";
+import PageTransition from "@/components/PageTransition";
+import { PageTransitionProvider } from "@/components/PageTransitionContext";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${amiri.variable}  ${syncopate.variable}`}>{children}</body>
+      <head>
+       
+        <link rel="preload" href="/css/base.css" as="style" />
+        <link rel="stylesheet" href="/css/base.css" />
+        
+        <meta name="apple-mobile-web-app-title" content="K2Integris" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="application-name" content="K2Integris" />
+      </head>
+      <body>
+        <GTMInjector />
+        <PageTransitionProvider>
+          <Navigation />
+
+          <PageTransition />
+
+          {children}
+
+          <Faq />
+
+          <Cookies />
+          <Footer />
+        </PageTransitionProvider>
+      </body>
     </html>
   );
 }

@@ -1,61 +1,15 @@
-:root {
-    --black: #111517;
-    --black: #0f0f0f;
-    --gold: #BC976F;
-    --white: #ffffff;
-  }
-  
-html,
-body {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-html {
-    background-color: var(--black);
-}
-
-body {
-    font-family: Outfit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    background: linear-gradient(to bottom, var(--black) 5%, #161919 20%, #2E2B26 45%, #463D32 90%, #514638 100%, var(--gold) 120%);
-    
-    background: var(--black);
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-
-    font-size: 62.5%;
-    outline: none;
-    border: none;
-
-    list-style-type: none;
-    scrollbar-width: none;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a, button, label, input, textarea {
-    cursor: pointer;
-}
-
-::selection {
-    background-color: var(--gold);
-}
-
-.wrapper {
-    width: Min(90vw, 130rem);
-    margin: auto;
-}
-
+@import "base";
 @import "navigation";
 @import "header";
 @import "service";
+@import "contact";
+@import "contactAnimation";
+@import "faq";
+@import "footer";
+@import "cookies";
+@import "strategy";
+@import "about";
+@import "category";
+@import "privacy";
+@import "imprint";
+@import "booking-calendar";
