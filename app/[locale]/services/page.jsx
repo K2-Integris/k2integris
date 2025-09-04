@@ -1,6 +1,6 @@
 //import GoldButton from '@/components/GoldButton'
 import Image from 'next/image'
-import ComingSoon from '../coming-soon'
+import ComingSoon from '../../coming-soon'
 
 const Services = () => {
     return <ComingSoon />

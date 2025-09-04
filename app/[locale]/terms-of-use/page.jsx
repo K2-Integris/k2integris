@@ -1,4 +1,4 @@
-const { default: ComingSoon } = require("../coming-soon")
+const { default: ComingSoon } = require("../../coming-soon")
 
 const TermsOfUse = () => {
     return (
